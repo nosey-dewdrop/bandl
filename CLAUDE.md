@@ -30,8 +30,10 @@
 
 **AÇIK İŞ (blokör):**
 1. 26 Eyl GarajX MVP. Damla: Lovable Pro, Mapbox `pk.` token. Ben: Lovable repo adı gelince `data/` → `src/data/`.
-2. "Sonraki ürün" spec'i. Blokörler: ilan kaynağı, yetki belgesi ve tavsiye hukuku, mahalle fiyat lisansı (PROJECT.md).
-3. Premium aksta mahalle düzeyi "neden". ABB katmanları (mahalle, bina yaşı, imar değişikliği) hazır; fiyat serisi yok.
+2. "Sonraki ürün": blokörler 25 Eyl gece araştırıldı (PROJECT.md "Blokörler: ne bulundu?", kaynaklar README'de).
+   Karar Damla'da: ürün şekli (sadece analiz / EİDS'li ilan platformu / yetki belgeli aracı). Türkiye'de "Fine Estate" adlı şirket bulunamadı; tahminle bir şirkete bağlama.
+3. Premium aks: 18 mahalle için ABB bina yaşı, plan değişikliği, dönüşüm tablosu PROJECT.md'de. Mahalle fiyat serisi hâlâ yok
+   (açık seri yok; Endeksa ya da REIDIN lisansı; TKGM Değer Bilgi Merkezi Ankara'ya 2027 ortası).
 
 **KALICI KARARLAR:**
 - Uydurma veri yok. Her sayı kaynak URL'li; kaynak yoksa "kaynak bulunamadı".

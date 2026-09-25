@@ -44,18 +44,129 @@ Etkinlik MVP'si bunun ilk parçası (yatırım katmanı).
 - v1'in ilçe düzeyinde "değerlenebilir" dediği yerler (Çubuk, Akyurt, Sincan) bu alıcının baktığı yer değil.
 - **Bu ürün mahalle düzeyinde, premium aksta analiz ister.** Sıradaki asıl iş bu.
 
-**Açık sorular ve blokörler** (araştırılacak; (D) = doğrulanmadı):
-1. **İlan kaynağı:**
-   - sahibinden, Hürriyet Emlak (hepsiemlak), Emlakjet otomatik kazımayı yasaklıyor.
-   - Seçenekler: emlak ofisi ortaklığı (ilanı kendileri yükler), lisanslı veri akışı, kendi portföy.
-   - Hangisi gerçekten var, araştırılmadı.
-2. **Aracılık:** ilan yayınlayıp aracılık yapmak için Taşınmaz Ticareti Hakkında Yönetmelik
-   (2018) kapsamında yetki belgesi gerekebilir (D).
-3. **"Yatırım tavsiyesi" dili:** hukuki çerçevesi araştırılmadı (D). Bugün sayfada "yatırım tavsiyesi değildir" yazıyor.
-4. **Mahalle fiyat geçmişi:** Endeksa ya da REIDIN lisansı. Mahalle sınırı, bina yaşı ve imar
-   değişikliği ABB'de hazır.
-5. **Referanslar:** RE/MAX ve Fine Estate incelenmedi. "Fine Estate"in hangi şirket olduğu da
-   doğrulanmadı. Ne sunuyorlar, premium duruş neye benziyor, ilk iş olarak bakılacak.
+### Blokörler: ne bulundu? (25 Eyl 2026 gece)
+
+(D) = doğrulanmadı. TTY = Taşınmaz Ticareti Hakkında Yönetmelik, güncel metin 29 Nis 2026 değişikliğine kadar.
+Kaynak linkleri README'de, "Sonraki ürün araştırması" bölümünde.
+
+**1. Referanslar: RE/MAX ve "Fine Estate" ne sunuyor?**
+- **"Fine Estate" adlı bir Türk şirketi bulunamadı.**
+  - Alan adları çözülmüyor, LinkedIn sayfaları 404 veriyor.
+  - Ada en yakın aday Fine & Country; Türkiye'de ofisi yok.
+  - Türkiye Sotheby's Realty İstanbul, Bodrum ve Antalya'da; Ankara'da yok.
+  - Hangisinin kastedildiği belirsiz.
+- **RE/MAX Türkiye:**
+  - Master franchise (Enrichers A.Ş.), 311 ofis. Ankara'da 47 ofis, 1.025 kişi.
+  - Hedef mahallelerde ofisi var: Çayyolu, Ümit, Konutkent, Alacaatlı, Beytepe, Yaşamkent, İncek. Oran ve Dikmen'de yok.
+  - remax.com.tr'de olanlar: harita araması, EİDS rozeti, Hepsiemlak'tan alınan endeks, EvSkor mahalle yorumu.
+  - Olmayanlar: fiyat geçmişi, yatırım skoru. Değerleme ve yatırım tavsiyesini açıkça reddediyor.
+- **İlanın üstüne yatırım skoru koyan zaten var: Emlakjet + Endeksa.**
+  - İlanlar yatırım skoruna, geri dönüş süresine ve kira gelirine göre sıralanabiliyor.
+  - Çayyolu örneği: 106.950 TL/m², yıllık +%41,2 nominal, geri dönüş 20 yıl.
+  - Skorun girdileri: fiyat, bölge, konum, yapı, risk (sel, heyelan, enerji hattı).
+  - Plan değişikliği, meclis kararı ve dava girdi değil.
+- **Çayyolu'ndaki butik TRUEMAX** kaynaksız "yıllık +%50" rakamı ve "garanti" dili kullanıyor (bkz. madde 4).
+
+**2. İlanlar nereden gelir?**
+- **Başkasının ilanını gösteren site hukuken "ilan platformu"** (TTY m.12/2).
+  - EİDS entegrasyonu zorunlu: kimlik doğrulaması ve malik/yetki doğrulaması.
+  - Platformdan yetki belgesi istenmiyor.
+- **EİDS'e entegre 257 firma var** (Bakanlık listesi, 17 Eyl 2026).
+  - Listede Emlakjet, Hepsiemlak ve sahibinden'in yanında Remax, Century21, Turyap, Endeksa var.
+  - Tokur Emlak gibi küçük bir Ankara ofisi de var. Yani küçük oyuncu da entegre olabiliyor.
+- **sahibinden API'si:** Rekabet Kurulu kararıyla açıldı (2023; uyum tespiti 26 Haz 2025).
+  - Yalnızca EİDS'e entegre ilan platformlarına açık.
+  - Her ofisin kendi anahtarını vermesi gerekiyor; toplu ya da bölge bazlı veri yok.
+  - İlan yalnızca o platformda ilan olarak yayınlanabilir.
+- **RE/MAX'in "API Erişim Talebi" formu var** (site kodunda doğrulandı).
+  - Kapsam: yalnızca yayındaki ilanlar ve sitede herkese açık görünen bilgiler.
+  - Koşulları görülmedi (D).
+- **Diğer portallar:**
+  - Hepsiemlak'ın geliştirici portalı ilan yüklemek için (akış ofis → portal); dışarıya veri vermiyor (D).
+  - Emlakjet'in dışarıya API'si bulunamadı.
+  - Zingat kapandı. Hürriyet Emlak artık Hepsiemlak (301 yönlendirme).
+- **Türkiye'de açık bir MLS yok.** Yalnızca kapalı havuzlar var: RE-OS MLS, Emlakjet Portföy Paylaşımı.
+- **EİDS ilanında il, ilçe, ada ve parsel değiştirilemez şekilde yazılı.** İlan parsel düzeyinde haritaya ve ABB imar adasına bağlanabilir.
+
+**3. Aracılık ve yetki belgesi**
+
+| Ürün şekli | Ne gerekiyor | Ceza (2026) |
+|---|---|---|
+| Sadece analiz | Yetki belgesi isteyen hüküm bulunamadı. Reklam ve tüketici kuralları, KVKK, İYS geçerli. | internet reklamı 1,08–10,8 mn TL |
+| Analiz + başka sitedeki ilana link | "Platform" sayılıp sayılmadığı belirsiz (D). Bakanlık EİDS'siz ilanlar yüzünden Meta'ya 5 mn TL ceza kesti (13 Haz 2026). | 28.620–286.206 TL/aykırılık |
+| İlan platformu | EİDS; üye ofisin yetki belgesini kontrol; müşteri hizmeti; kayıtları 10 yıl saklama. Platformun kendisine yetki belgesi gerekmiyor. | aynı |
+| Aracı (emlak ofisi) | Yetki belgesi (aşağıda) | 28.620–858.620 TL/aykırılık, belge iptali |
+
+- **Yetki belgesi şartları:**
+  - oda ve vergi kaydı
+  - MYK Seviye 5 belgeli sorumlu danışman, 100 saat eğitim
+  - ayrı işyeri: ev olamaz, aynı yerde başka ticari iş yapılamaz
+  - yıllık harç: Ankara'nın merkez ilçelerinde 40.000 TL
+  - komisyon üst sınırı: toplam %4 + KDV
+- **Lead ya da referans ücreti:**
+  - Mevzuatta bu ifadeler geçmiyor.
+  - TBK m.520 simsarlığı "sözleşme fırsatını göstermek" diye geniş tanımlıyor (Yargıtay 3. HD, 2026).
+  - Satışa bağlı ücret aracılık sayılabilir (D). Doğrudan karar bulunamadı.
+
+**4. "Yatırım tavsiyesi" dili**
+- **Konut sermaye piyasası aracı değil.** Konut için SPK yatırım danışmanlığı lisansı gerekmiyor.
+  - GYO, GYF ya da gayrimenkul sertifikası önerilirse gerekir. İzinsiz faaliyetin cezası 2–5 yıl hapis.
+- **Asıl risk reklam hukuku.** İddiayı ispat yükü iddia edende (6502 m.61/6).
+  - Reklam Kurulu "Metafor Ankara ile Güvenli Gelir, Karlı Yatırım" reklamına 863.580 TL ceza kesti (13 Oca 2026).
+  - Rakamlar gerçek bir fonun verisiydi. Ceza, açıklama ana mesajda yer almadığı ve reklam "kesin kazanç" algısı yarattığı için verildi.
+  - Arsavev'in "%40 getiri" iddiası ispatsız bulundu; 1,08 mn TL ceza.
+- **"Yatırım tavsiyesi değildir" dipnotu ana mesajdaki vaadi ortadan kaldırmaz** (Reklam Yönetmeliği m.18/6).
+- **1 Ağu 2026'dan beri:** yapay zekâ tüketicinin ekonomik kararını önemli ölçüde etkiliyorsa bu açıkça belirtilmeli (m.18/8).
+- **Kaynaklı sayı bu rejimde savunma, süs değil.**
+
+**5. Mahalle fiyat geçmişi**
+- **Açık, işlem tabanlı bir mahalle serisi yok.**
+- **Endeksa:**
+  - Mahalle düzeyinde, 2020'den beri; sitede 4 yıl geriye gösteriliyor. Model tabanlı.
+  - Lisans fiyatı yayımlanmamış. Kazıma ve ticari kullanım yazılı izne bağlı.
+- **REIDIN:**
+  - Kapsam 1.255 mahalleye çıkmış (81 il, Ağu 2026 raporu). Haz 2007'den beri, ilan tabanlı.
+  - Ücretli; fiyat ancak demo talebiyle öğrenilebiliyor. Ankara'daki mahalle listesi bulunamadı.
+- **İşlem ve değerleme tabanlı mahalle verisi** iki yerde duruyor: TCMB (konut kredisi değerlemeleri) ve MKK GABİM (değerleme raporları; mahalle, ada, koordinat). İkisi de fiyatı dışarıya vermiyor.
+- **TKGM Değer Bilgi Merkezi:** parsel düzeyinde resmî değer. Takvime göre Ankara'ya 2027 ortasında gelecek.
+  - Gölbaşı'nda toplu değerleme pilotu yapılmış, sonucu yayımlanmamış.
+- **Akademik kaynak:** Çankaya'da mahalle m² fiyatları 2020–2024, Endeksa'dan elle toplanmış (Hacı Bayram Veli Ü., Eyl 2025).
+  - Tablo yayımlanmamış.
+  - Bulgu: 2024'te Yaşamkent ve Konutkent yüksek fiyat kümesinden çıkmış.
+
+**Tarih uyarısı:** 1 Ekim 2026'dan itibaren nakit, havale ya da EFT ile ödenen her taşınmaz satışı Güvenli Ödeme Sistemi'nden geçiyor (TTY Ek m.1; Bakanlık duyurusu 26 Haz 2026).
+
+### Premium aks: ABB'de mahalle düzeyinde ne var?
+
+25 Eyl 2026'da 18 mahalle için hedefli sorgu yapıldı; toplu çekim yapılmadı. Kaynaklar:
+- bina yaşı: `planaski…/deprem/ilceMahalleRapor/MapServer/2`
+- plan değişikliği: `baskentcbs…/plan/PlanRaporu/MapServer/3` (UİP) ve `/4` (NİP). Sayıma, orta noktası mahallenin içinde kalan değişiklikler alındı.
+- dönüşüm alanı: `/2`
+
+| Mahalle | Bina | 1998 öncesi | 2018 sonrası | UİP değişikliği (2025+) | Dönüşüm alanı (içinde) |
+|---|---|---|---|---|---|
+| Alacaatlı | 4.480 | %9 | %7 | 256 (14) | 4 (biri iptal) |
+| Beytepe | 2.465 | %23 | %13 | 147 (12) | 3 (biri iptal) |
+| İncek | 1.706 | %11 | **%27** | 91 (11) | Taşpınar–Kızılcaşar–İncek (2005) |
+| Yaşamkent | 1.468 | %5 | %18 | 119 (4) | — |
+| Çayyolu | 1.495 | %21 | %0 | 81 (5) | — |
+| Ümit (Ümitköy) | 891 | %24 | %2 | 127 (0) | — |
+| Yukarı Dikmen | 673 | %23 | %3 | 54 (5); 9'u mahkemece iptal | — |
+| Oran | 471 | %47 | %1 | 33 (4) | — |
+| Bahçelievler | 659 | %66 | %4 | 7 (0) | — |
+
+**Somut olaylar (ABB plan katmanı):**
+- **Koru–Yaşamkent/Bağlıca uzatması:** UİP ve NİP onayı 11 Haz 2025, meclis kararı 831.
+- **Çayyolu'nda rezerv yapı alanı planı (16 Şub 2026):** meclis karar numarası yok, yani bakanlık planı.
+  - Haberlere göre alan eski askerî bölge, proje Emlak Konut'un 25 lüks konutu.
+  - Mahkeme planı iptal etmiş; bakanlık 18 Ara 2025'te alanı yeniden rezerv yapı alanı ilan etmiş (D: tek haber kaynağı).
+- **Çayyolu'nda itfaiye alanı ticarete çevrildi:** 43376 ada, meclis kararı 226, 10 Şub 2026.
+
+**Veriyle test (9 mahalle, Endeksa Ağu 2026, yalnızca bugünkü fiyat):**
+- 1998 öncesi bina payı ile m² fiyatı arasında r = +0,86. Kızılay'a uzaklık sabit tutulunca da +0,84 kalıyor.
+- 2018 sonrası bina payı ile fiyat arasında r = −0,51. En çok yeni arz ve en düşük fiyat İncek'te.
+- Bu, fiyat seviyesi; değişim değil. Değişimi ölçmek için mahalle fiyat geçmişi lazım (madde 5).
+- Nokta sayısı 9, korelasyon neden göstermez.
 
 Kararı Damla verir.
 
@@ -203,7 +314,7 @@ Panel bunu açıkça yazar: etki durak çevresindeki mahallelerde aranmalı.
   yazılı izin olmadan yasaklıyor.
 - Etkinlik demosunda yayımlanmış rakamlar atıfla kullanılır.
 - Ürün olacaksa ya Endeksa/REIDIN lisansı ya da kendi veri kaynağı şart.
-- Mahalle düzeyinde 2007'den geriye giden tek seri REIDIN'de (ücretli, 481 mahalle).
+- Mahalle düzeyinde 2007'den geriye giden tek seri REIDIN'de (ücretli, ilan tabanlı; Ağu 2026 raporunda 1.255 mahalle).
 
 **Ürünün asıl varlığı** fiyat değil, **kaynaklı olay veritabanı**: hangi proje, ne
 zaman, nerede, hangi durumda. Bunu kimse tutmuyor.

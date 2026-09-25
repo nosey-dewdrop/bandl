@@ -69,7 +69,7 @@ Araştırma 25 Eyl 2026'da yapıldı. **(D)** = doğrulanmadı ya da kaynak zay�
 | [Baret Dergisi, Endeksa tablosu](https://www.baretdergisi.com/ankarada-konut-fiyatlari-2020-yilinin-ilk-6-ayinda-yuzde-799-artti/20007/) | ilçe | Haz 2019, Haz 2020 | ücretsiz | Evet: 2019 ve 2020 ilçe fiyatları. Metin 1.993, tablo 1.933 diyor. |
 | sahibinden Emlak Endeksi ([yardım](https://yardim.sahibinden.com/hc/tr/articles/115004672233-Emlak-Endeksi-nden-Kimler-Faydalanabilir)) | il, ilçe, mahalle | son 3–4 yıl | giriş şart, Cloudflare 403 | Hayır |
 | [BETAM sahibindex](https://betam.bahcesehir.edu.tr/2026/09/sahibindex-satilik-konut-piyasasi-gorunumu-eylul-2026/) | il (İst, Ank, İzm) | aylık | ücretsiz | Reel değişim karşılaştırması için |
-| [REIDIN](http://content.reidin.com/PublicReports/REIDINTRKonutFiyatEndeksleri.pdf) | 7 il, 71 ilçe, 481 mahalle | Haz 2007'den beri | ücretli | Hayır. Mahalle düzeyinde en uzun seri bu. |
+| REIDIN: [Ağu 2026 raporu](https://reidin.com/wp-content/uploads/2026/09/REIDIN-RESIDENTIAL-PROPERTY-PRICE-INDICES_202608.pdf), [eski broşür](http://content.reidin.com/PublicReports/REIDINTRKonutFiyatEndeksleri.pdf) | 81 il, 258 ilçe, 1.255 mahalle (eski broşür: 481) | Haz 2007'den beri | ücretli, ilan tabanlı | Hayır. Mahalle düzeyinde en uzun seri bu. |
 | TCMB KFE: [Ağu 2026 PDF](https://www.tcmb.gov.tr/wps/wcm/connect/8bbac42a-c854-4c58-8b0c-e7e55c35ec2d/KFE.pdf?MOD=AJPERES), [EVDS](https://evds3.tcmb.gov.tr/tumSeriler/2003/bie_kfe), [revizyon notu](https://tcmb.gov.tr/wps/wcm/connect/blog/tr/main+menu/analizler/konut+fiyat+endeksi+hesaplamalarinda+yapilan+revizyona+iliskin+bir+degerlendirme) | Ankara yalnız il düzeyi | 2010'dan beri (2023=100) | ücretsiz | Reel değişim için |
 | TCMB il medyan TL/m²: [2022 PDF](https://www.bmd.com.tr/application/files/9816/5943/7087/Konut_Fiyat_Endeksi-_Nisan_2022.pdf), [2025 PDF](https://www.bmd.com.tr/application/files/9617/5274/4280/Konut_Fiyat_Endeksi_-_Haziran_2025.pdf) | il | çeyreklik | ücretsiz | Karşılaştırma için |
 | TÜİK ilçe satış adedi: [Ağu 2026](https://www.ekonomiankara.com/ankaranin-agustos-ayi-ilce-duzeyinde-konut-satis-verileri/14558), [Kas 2024](https://www.yeniankara.com.tr/ankara/ankarada-ilce-ilce-satilan-konut-sayisi-belli-oldu-91312) | ilçe | aylık | yerel basın üzerinden | Henüz değil. Likidite sinyali olur. |
@@ -335,6 +335,101 @@ var. Önce/sonra karşılaştırması kendi fiyat serimizden kurulacak.
 - [Lovable topluluk takvimi](https://community.lovable.app/events)
 - Organizatörler: [Shipin](https://www.shipin.city/), [Garaj X TEKMER](https://garajx.com.tr/)
 - Önceki Garaj X etkinlikleri: [Mart](https://luma.com/w8pheoab), [Nisan](https://luma.com/rai7mi3d)
+
+### Sonraki ürün araştırması (25 Eyl 2026 gece)
+
+Bulguların özeti PROJECT.md "Blokörler: ne bulundu?" bölümünde. Buradakiler kaynaklar.
+
+**Referanslar ve rakipler**
+- **RE/MAX:**
+  - [hakkımızda](https://remax.com.tr/en/hakkimizda), [ofis dizini](https://www.remax.com.tr/offices)
+  - [haritada arama](https://www.remax.com.tr/tr/haritada-arama)
+  - [ChatGPT uygulaması koşulları](https://www.remax.com.tr/tr/chatgpt-app-kullanim-kosullari): "yatırım tavsiyesi … niteliğinde değildir"
+  - "API Erişim Talebi" formu: remax.com.tr/tr altbilgisinde
+- **Fine Estate adayları** (hiçbiri Ankara'da değil):
+  - [Fine & Country](https://www.fineandcountry.com/about/why-fine-country)
+  - [Türkiye Sotheby's](https://www.prnewswire.com/news-releases/sothebys-international-realty-opens-office-in-turkey-301895337.html)
+  - [EV Bodrum](https://evbodrum.com/en/about-us/): eski Engel & Völkers lisansı, 2021'de bitmiş
+- **Ankara premium:**
+  - [TRUEMAX bölge raporları](https://www.truemaxgayrimenkul.com/bolge-raporlari/): kaynaksız rakamlar, "garanti" dili
+  - [Coldwell Banker Ankara ofisleri](https://www.cb.com.tr/en/offices/ankara)
+- **Emlakjet + Endeksa:**
+  - [yöntem](https://www.emlakjet.com/verilerimiz)
+  - [Çayyolu sayfası](https://www.emlakjet.com/satilik-konut/ankara-cankaya-cayyolu-mahallesi)
+  - [EmlakZeka feragatnamesi](https://www.emlakjet.com/emlakzeka)
+  - [birleşme (AA)](https://www.aa.com.tr/tr/isdunyasi/gayrimenkul/emlakjet-ve-endeksa-guclerini-birlestiriyor/700687)
+- [EvSkor](https://evskor.net/): RE/MAX'in kullandığı mahalle yorum verisi
+
+**İlan kaynağı**
+- **sahibinden API'si:**
+  - [Rekabet Kurulu kararı 25-23/574-365](https://www.rekabet.gov.tr/Karar?kararId=f5a4294d-b953-4a07-96c8-189f8c1c505e)
+  - [yardım 1](https://yardim.sahibinden.com/hc/tr/articles/19749005158172), [yardım 2](https://yardim.sahibinden.com/hc/tr/articles/19780244786460)
+  - [başvuru formu](https://www.sahibinden.com/veri-transferi-formu)
+- [Emlakjet'in sahibinden API'sini kullanması](https://www.emlakjet.com/blog/api-ile-ilan-transfer-sistemi-nedir-ve-nasil-kullanilir)
+- [Hepsiemlak geliştirici portalı](https://developers.hemlak.com): Cloudflare nedeniyle okunamadı (D)
+- **EİDS:**
+  - [entegre firma listesi, 17 Eyl 2026 (257 firma)](https://icticaret.ticaret.gov.tr/duyurular/tasinmaz-ilanlarinda-eidsye-entegre-olan-firmalara-iliskin-duyuru-eylul-2026)
+  - [Bakanlık yetki doğrulama duyurusu](https://ticaret.gov.tr/kurumsal-haberler/elektronik-ilan-dogrulama-sistemi-eids-yetki-dogrulama-uygulamasi-hayata-gecirildi)
+  - [entegrasyon dokümanı v2.2](https://www.kayserito.tr/dokuman/eids-yetki-dogrulama-uygulama-esaslari-ve-faz1-faz2-dokumanlar.pdf)
+  - [uygulama esasları (TOBB yazısı)](https://www.naztic.org.tr/eids-yetki-dogrulama-sistemi-uygulama-esaslari/)
+- [RG 31 Ağu 2023, 32295](https://www.resmigazete.gov.tr/eskiler/2023/08/20230831-6.htm): platform yükümlülükleri
+- **CRM ve portföy yazılımları** (akış ofis → portal):
+  - [RE-OS](https://re-os.com/entegrasyonlar)
+  - [Emlaksis](https://suaresoft.com/emlak-ilan-sistemi/)
+  - [PortföyCRM](https://www.portfoycrm.com/)
+- Tek emlakçı yetkisi ve sözleşmenin e-Devlet'e yüklenmesi: yalnızca haber, taslak metin yok (D). [Karar](https://www.karar.com/ekonomi-haberleri/gayrimenkul-ilanlarinda-yeni-donem-birden-fazla-emlakciya-yetki-devri-2074152)
+
+**Hukuk**
+- **Taşınmaz Ticareti Hakkında Yönetmelik:**
+  - [güncel metin](https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=24645&MevzuatTur=7&MevzuatTertip=5)
+  - [TTBS belge sorgu](https://ttbs.gtb.gov.tr/Home/BelgeSorgula), [TTBS SSS](https://ttbs.gtb.gov.tr/Home/SikcaSorulanSorularDok)
+- [Ticari Reklam ve Haksız Ticari Uygulamalar Yönetmeliği](https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=20435&MevzuatTur=7&MevzuatTertip=5): son değişiklik RG 1 Tem 2026
+- **Reklam Kurulu bültenleri:**
+  - Adres kalıbı: `ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/_nnn_Reklam_Kurulu_Basin_Bulteni.pdf`
+  - Metafor Ankara: 365. bülten
+  - Arsavev: 369. bülten
+- [Meta'ya EİDS cezası](https://ticaret.gov.tr/haberler/ticaret-bakanligi-sosyal-medyadaki-sahte-ilanlara-gecit-vermiyor-eids-kurallarina-aykiri-paylasimlara-karsi-yaptirimlar-kararlilikla-uygulaniyor)
+- [Güvenli ödeme sistemi 1 Ekim 2026](https://ticaret.gov.tr/haberler/tasinmaz-satislarinda-guvenli-odeme-sisteminin-devreye-alinma-tarihi-1-ekim-2026ya-ertelendi)
+- [Emlak sektörüne kesilen cezalar](https://ticaret.gov.tr/haberler/emlak-sektorune-yonelik-faaliyetler-ve-uygulanan-idari-para-cezalarina-iliskin-basin-aciklamasi): 782 firma, 88,9 mn TL
+- [SPK izinsiz faaliyetler](https://spk.gov.tr/yatirimcilar/izinsiz-sermaye-piyasasi-faaliyetleri): taşınmazdan söz etmiyor
+
+**Mahalle fiyat geçmişi**
+- [REIDIN Ağu 2026 sonuçları](https://reidin.com/reidin-residential-property-price-indices-august-2026-results/), [R-INSIGHT](https://reidin.com/r-insight/)
+- **Emlakjet sözleşmeleri:**
+  - [kullanım koşulları](https://www.emlakjet.com/kullanim-kosullari): md. 6.2 kazıma ve ticari kullanım yasağı
+  - [üyelik sözleşmesi](https://www.emlakjet.com/uyelik-sozlesmesi): md. 9.3
+- [TCMB KFE metaverisi](https://www.tcmb.gov.tr/wps/wcm/connect/b4628fa9-11a7-4426-aee6-dae67fc56200/KFE-Metaveri.pdf): kaynak kredi değerlemeleri, mikro veri gizli
+- **MKK GABİM:**
+  - [hakkında](https://www.mkkgabim.com.tr/kurumsal/hakkimizda)
+  - [TADEVES değişken seti](https://cdn.mkkgabim.com.tr/uploads/20260203_TasinmazDegerlemeDegiskenSeti_doldurulacakAlanlar_v2.xlsx): mahalle, ada, koordinat, m² değeri
+  - [TDUB 2025 rapor sayıları](https://tdub.org.tr/uploads/documents/1775112360_8eb9577411988bbbaef9.pdf): Ankara 77.941 rapor
+- **TKGM:**
+  - [Değer Bilgi Merkezi duyurusu](https://www.csb.gov.tr/bakan-kurum-deger-bilgi-merkezi-ile-turkiye-adil-ve-erisilebilir-tasinmaz-degerleme-sistemine-kavusacak-bakanlik-faaliyetleri-41653)
+  - [Gölbaşı toplu değerleme pilotu](https://www.tkgm.gov.tr/tasinmaz-degerleme-dairesi-baskanligi/projeler/tasinmaz-degerleme-dairesi-baskanligi-ankara-ili-golbasi-ilcesi-toplu-degerleme-pilot-projesi)
+- [Gülnerman Gengeç ve Memişoğlu Baykal 2025](https://dergipark.org.tr/tr/pub/rsgis/article/1731127): Çankaya mahalle m² 2020–2024, Endeksa'dan; CC BY-NC-ND; tablo yok
+- [BETAM sahibindex Eyl 2026](https://betam.bahcesehir.edu.tr/2026/09/sahibindex-satilik-konut-piyasasi-gorunumu-eylul-2026/): Ankara ilan m² 39.636 TL, reel −%2,9
+- [Gölbaşı arsa rayiç değerleri](https://ebelediye.golbasi.bel.tr/ebelediye/bilgilendirme/arsaRayic.xhtml): 1986–2026, idari değer
+- **Yayımlanmış eski premium mahalle noktaları:**
+  - [2013, Hürriyet Emlak endeksi](https://www.memurlar.net/album/2343/iste-turkiye-nin-en-degerli-semtleri.html)
+  - [2014](https://www.fortuneturkey.com/iste-turkiyenin-en-degerli-semtleri-2568)
+  - [Ağu 2026, Emlakjet](https://www.yeniankara.com.tr/cankaya/cankayanin-en-pahali-mahallesi-hangisi-iste-ankaranin-prestij-haritasi-180054)
+  - 2015–2024 arasında kaynaklı mahalle noktası bulunamadı.
+
+**ABB, premium aks** (PROJECT.md tablosu)
+- `deprem/ilceMahalleRapor/MapServer/2`, `plan/PlanRaporu/MapServer/2,3,4`; sunucular ABB bölümünde.
+- Rezerv yapı alanı: [ÇŞB plan dosyası (2023)](https://webdosya.csb.gov.tr/db/ankara/duyurular/plan-dosyasi-20231215143640.pdf), [Yeni Ankara (1 Şub 2026)](https://www.yeniankara.com.tr/ankara/ankarada-milyarlik-arazi-bilmecesi-yarginin-iptal-ettigi-proje-deprem-kilifiyla-geri-mi-donuyor-153536). ÇŞB dosyası sertifika hatası verdi, okunamadı.
+- İtfaiye alanı: [soL](https://haber.sol.org.tr/haber/cayyolunda-itfaiye-alanina-ticaret-plani-belediye-meclisinin-ilahlastigi-anlara-taniklik)
+
+**Bu turda erişilemeyenler ve iz**
+- Araştırma ajanlarının web arama kotası (200) doldu.
+  - MLS ve oda girişimleri, SPK III-37.1 tebliği ve 2015–2024 mahalle fiyatları yarım kaldı.
+  - Bu konularda "bulunamadı", "yok" demek değil.
+- **Okunamayanlar:**
+  - endeksa.com: JavaScript ve bot kontrolü
+  - hepsiemlak.com: 403
+  - sahibinden.com ana sitesi: 403
+  - EİDS taşınmaz yetki API dokümanı (Faz 2)
+- **robots.txt ihlali:** Ajanlardan biri, remax.com.tr'nin robots.txt'de kapattığı `?page=` yoluna 11 istek attı. Fark edince durdu ve izinli sitemap'e geçti.
 
 ### Erişilemeyenler
 
