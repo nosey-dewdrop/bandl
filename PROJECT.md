@@ -116,6 +116,7 @@ Neden var ama kaynak yok: Çubuk ve Akyurt 7 yılda en çok göreli değer kazan
 | Satış adedi | TÜİK, ilçe düzeyi (yerel basın) | ilçe | ücretsiz, likidite sinyali |
 | İlçe sınırları | OpenStreetMap | ilçe | ODbL, atıf şart |
 | Projeler | EGO, ABB, Wikipedia, haber | nokta, hat | ücretsiz, satır satır kaynaklı |
+| İmar değişiklikleri, emsal/KAKS, dönüşüm alanları, deprem dönemi bina stoku | ABB ArcGIS sunucusu (README'de ABB bölümü) | imar adası, mahalle | anonim erişim, kullanım koşulu yok. Toplu çekimden önce ABB'den yazılı izin. | MVP'de yok; etkinlikten sonraki ilk katman |
 
 **Lisans gerçeği:**
 - Emlakjet'in kullanım koşulları robot, kazıma ve veritabanının ticari kullanımını
@@ -126,6 +127,11 @@ Neden var ama kaynak yok: Çubuk ve Akyurt 7 yılda en çok göreli değer kazan
 
 **Ürünün asıl varlığı** fiyat değil, **kaynaklı olay veritabanı**: hangi proje, ne
 zaman, nerede, hangi durumda. Bunu kimse tutmuyor.
+
+**Sonraki katman ABB'nin kendi imar verisi.** 15.371 plan değişikliği karar numarasıyla,
+187 bin imar adasının emsal değeri, 118 dönüşüm alanı. Bununla "neden" elle derlenmiş bir
+listeden ölçülen bir sinyale dönüşür: "bu ilçede 2025'ten beri şu kadar alanın emsali
+arttı". Mahalle başına 1998 öncesi bina payı da "değeri düşer" sınıfının kanıtı olur.
 
 ## Seed: ilçe → olaylar
 
@@ -223,7 +229,7 @@ Referans: ir-globe'un onaylı editoryal dili.
 | Damla | Mapbox hesabı + public token (`pk.`). Lovable'ın resmî Mapbox connector'ı var. |
 | Damla | (isteğe bağlı) ElevenLabs hesabı + API key, aylık kredi limitiyle. Lovable'ın resmî connector'ı var. |
 | Ben | tamam: `data/ilceler.geojson`, 11 ilçe, OSM |
-| Ben | tamam: `data/ilceler.json` ve `data/projeler.json`, 45 kaynaklı proje. `python3 data/build.py` ile yeniden üretilir. |
+| Ben | tamam: `data/ilceler.json` ve `data/projeler.json`, 49 kaynaklı proje. `python3 data/build.py` ile yeniden üretilir. |
 
 Lovable mevcut repoyu içeri alamaz, bağlanınca kendi reposunu açar. Bu repo spec ve
 veriyi tutar. Yarın Lovable reposu açılınca `data/` oraya basılır: Damla repo adını
@@ -271,11 +277,11 @@ Schema:
   kural, neden, goreli: {"2019","2020","2026": ratio to Ankara median},
   goreli_degisim, fiyat: [{ yil, ay, tl_m2, kaynak, kaynak_url }],
   olaylar: [{ id, tarih, baslik, tur, durum, not, kaynak_url }] }]
-- src/data/projeler.json: [{ id, ad, tur: "rayli"|"hastane"|"kurum"|"avm"|"donusum"|
-  "imar"|"yol"|"havalimani"|"risk", durum: "acik"|"sozlesmeli"|"yapimda"|"planli"|
-  "iptal"|"kapandi"|"belirsiz", tarih, hedef?, ilceler: [id], yaklasik: bool, not?,
+- src/data/projeler.json: [{ id, ad, tur: "rayli"|"ulasim"|"hastane"|"kurum"|"avm"|
+  "donusum"|"imar"|"yol"|"havalimani"|"risk", durum: "acik"|"onaylandi"|"sozlesmeli"|
+  "yapimda"|"planli"|"iptal"|"kapandi"|"belirsiz", tarih, hedef?, ilceler: [id], yaklasik: bool, not?,
   geometri: GeoJSON Point|LineString|MultiLineString|null, kaynak_url }]
-Status labels in UI: acik "açık", sozlesmeli "sözleşmeli", yapimda "yapımda",
+Status labels in UI: acik "açık", onaylandi "onaylandı", sozlesmeli "sözleşmeli", yapimda "yapımda",
 planli "planlı", iptal "iptal", kapandi "kapandı", belirsiz "durumu belirsiz".
 ```
 

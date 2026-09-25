@@ -43,7 +43,7 @@ bulunamayan yerde "kaynak bulunamadı" yazar.
 
 | Tarih | Ne |
 |---|---|
-| 25 Eyl 2026 | İsim, spec, kaynak araştırması, veri: 11 ilçe, 45 proje, 7 raylı hat. ABB derin araştırması sürüyor. |
+| 25 Eyl 2026 | İsim, spec, kaynak araştırması, ABB araştırması, veri: 11 ilçe, 49 proje, 7 raylı hat. |
 | 26 Eyl 2026 | GarajX "Ship in Ankara": Lovable ile ilk sürüm. |
 
 ---
@@ -140,7 +140,8 @@ Herkes ulusal TÜFE ile reelleştiriyor; Ankara'ya özel enflasyon kullanan yok.
 
 **İmar ve plan:**
 - [Başkent 2023 nazım imar planı (ABB)](https://www.ankara.bel.tr/ankara-buyuksehir-belediyesi-nazim-plan/1-25-000-baskent-ankara-nazim-mar-plani).
-  2038 planı 30 Ara 2020'de mahkemece iptal edildi; Ankara'nın geçerli üst planı yok.
+  2038 planını mahkeme 30 Ara 2020'de iptal etti; ABB stratejik planı iptal yılını 2021 veriyor.
+  Ankara'nın geçerli üst planı yok.
 - [İncek imar değişikliği iptali](https://www.gazeteduvar.com.tr/yargi-gokcekin-incekteki-imar-plani-degisikligini-iptal-etti-haber-1552615)
 
 **Diğer tetikleyiciler:**
@@ -150,6 +151,125 @@ Herkes ulusal TÜFE ile reelleştiriyor; Ankara'ya özel enflasyon kullanan yok.
 - [Cumhurbaşkanlığı Külliyesi](https://en.wikipedia.org/wiki/Presidential_Complex_(Turkey))
 - [Ankapark](https://www.sozcu.com.tr/750-milyon-dolar-harcanan-ankapark-kapatildi-wp5618555)
 - [Merkezin batıya kayması (D)](https://www.yeniankara.com.tr/ankara/ankarada-sehrin-merkezi-neden-batiya-dogru-kayiyor-183801)
+
+### ABB (Ankara Büyükşehir Belediyesi)
+
+25 Eyl 2026'da tek tek curl ile denendi.
+
+**1. Harita veri sunucusu (ArcGIS REST, anonim erişim). emsal için en değerli kaynak bu.**
+- Sunucular: `https://baskentcbs.ankara.bel.tr/server/rest/services` ve `https://planaski.ankara.bel.tr/webgis/rest/services`.
+- Sorgu JSON, GeoJSON ya da PBF döndürüyor. Bir sorgu en fazla 2000 kayıt veriyor, fazlası için sayfalamak gerekiyor.
+- WMS açık, WFS kapalı. `icdp_yeni` klasörü token istiyor.
+
+| Katman | İçerik |
+|---|---|
+| `plan/PlanRaporu/MapServer/3` ve `/4` | **11.778 uygulama imar planı (UİP) ve 3.593 nazım imar planı (NİP) değişikliği**: onay tarihi, meclis karar no ve tarihi, askı tarihleri, mahkeme durumu (sayılar tarafımızca doğrulandı). 1 Oca 2025'ten beri 583 UİP değişikliği. Alanların çoğu boş. |
+| `plan/UIP_Goruntuleme/MapServer/19` (plan adası) | **186.703 imar adası**: kullanım, **emsal, TAKS, KAKS**, kat, azami yükseklik, başlangıç tarihi. İlçe alanı çoğunlukla boş, mekânsal eşleştirme gerek. |
+| `Hosted/plan/FeatureServer/0` | 214.116 poligon: taks, kaks, emsal, hmax, ilçe kodu |
+| `plan/PlanRaporu/MapServer/2` | **118 kentsel dönüşüm alanı**: ad, ilçe, meclis kararı, İPTAL / yürütmeyi durdurma notu (sayı doğrulandı) |
+| `aktifAski/SinirNipAski`, `SinirUipAski` | şu an askıdaki planlar |
+| `plan/mahkemeKarari`, `plan/mahkemeDurumu` | plan davaları (523 NİP poligonu) |
+| `plan/NIP5000Etkin_Goruntuleme/54` ve 57–83 | 27.718 kentsel kullanım poligonu; sel alanları, dere yatakları, afete maruz alanlar, havalimanı koridoru |
+| `deprem/ilceMahalleRapor/2` | **1.434 mahallede bina sayısı, deprem yönetmeliği dönemine göre** (1998 öncesi, 1998, 2007, 2018) |
+| `deprem/depremYonetmeligineGoreBinalar`, `deprem/diriFay`, `jeolojikEtut`, `hidroloji_analizi` | 520.761 bina, diri faylar, yapılaşmaya uygunluk, sel noktaları |
+| `kentrehberi/ego_kent_Rehberi` | metro, Ankaray, Başkentray ve teleferik istasyonları (yalnızca nokta) |
+| `Hosted/ABB_Mahalleler`, `ortak/adres` | 1.437 mahalle poligonu, adres, yol, bina |
+
+Kentsel dönüşüm alanlarının ilçelere dağılımı (sorgu, 25 Eyl 2026):
+
+| İlçe | Alan sayısı |
+|---|---|
+| Çankaya | 36 |
+| Yenimahalle | 17 |
+| Mamak | 14 |
+| Beypazarı | 14 |
+| Gölbaşı | 11 |
+| Etimesgut | 6 |
+| Altındağ | 5 |
+| Keçiören | 4 |
+| Akyurt, Sincan, Kızılcahamam | 1'er |
+| İlçesiz | 8 |
+
+**2. Meclis kararları**
+- [Karar tablosu](https://www.ankara.bel.tr/meclis/kararlar): 1.202 sayfa, yaklaşık 24 bin karar, 12 Haz 2012'den beri.
+- Tam metinler `s.ankara.bel.tr` üzerinde; 2019'a kadar .doc, sonra .docx.
+- Arama formu CSRF token'lı bir POST.
+- Gündem kararlardan önce yayımlanıyor: `/meclis/gundem`. UKOME kararları: `/ukome`.
+- Tam metin eski ve yeni kullanım ile yoğunluğu veriyor. Örnek: [karar 1165](https://s.ankara.bel.tr/s3/abb/2026/09/18/3fd58fda-4fd3-4453-922b-76737ba77c10.docx),
+  Çayyolu, spor alanı → ticaret, E=0,50.
+- Diğer örnekler:
+  - [Çubuk merkez ~165 ha plan, 1023](https://s.ankara.bel.tr/s3/abb/2026/08/24/0277fdc9-cbc8-4a2c-8a06-961a245b4234.docx)
+  - [Yeni Mamak 11 etap UİP revizyonu, 1150](https://s.ankara.bel.tr/s3/abb/2026/09/18/3037342d-1c12-4144-8fb2-f8b9c0647239.docx)
+  - [M5, M4, M2–M3'ü 2026 yatırım programına alma talebi, 496](https://s.ankara.bel.tr/s3/abb/2026/04/27/04459dee-ed34-4cca-8bcb-3ffecc0644c7.docx)
+
+**3. Proje kataloğu** (`ankara.bel.tr/proje/x-{id}`)
+- **Boyut:** 19 kategori sayfasında 271 proje, kategoriye bağlı olmayan 35 sayfa daha. Toplam yaklaşık 306.
+- **Alanlar:** yalnızca başlık, metin ve "Proje Durumu". İlçe, tarih ya da konum alanı yok.
+- **Durum alanı güvenilmez.** M5'in sayfası [179](https://www.ankara.bel.tr/proje/x-179) "Tamamlandı" diyor, metni "oluşacak" diyor.
+- **Değere dokunanlar:**
+  - [Dikimevi–Natoyolu (87)](https://www.ankara.bel.tr/proje/x-87)
+  - [Koru uzatması (177)](https://www.ankara.bel.tr/proje/x-177)
+  - [M4 Şehitler–Forum (178)](https://www.ankara.bel.tr/proje/x-178)
+  - [M6 Çayyolu–Sincan (258)](https://www.ankara.bel.tr/proje/x-258)
+  - [Mamak dönüşümü (182)](https://www.ankara.bel.tr/proje/x-182)
+  - [Hıdırlıktepe (305)](https://www.ankara.bel.tr/proje/x-305)
+  - [Ulus yayalaştırma (240)](https://www.ankara.bel.tr/proje/x-240)
+  - Yaklaşık 20 kavşak ve bağlantı yolu, parklar ve rekreasyon alanları
+- **Hastane, AVM, fuar yok:** bunlar merkezî hükümet ya da özel sektör işi.
+
+**4. Planlar ve bütçe**
+- [2025–2029 Stratejik Plan](https://s.ankara.bel.tr/s3/abb/2025/11/27/5af9c32a-489b-4ffe-9ddb-937be66a0ccc.pdf):
+  - 2038 Çevre Düzeni Planı'nın 2021'de iptal edildiğini yazıyor.
+  - Ulaşım ana planı ve üst ölçek plan olmadığını yazıyor.
+- [2026 Performans Programı](https://s.ankara.bel.tr/s3/abb/2026/01/30/91a36f2f-cac5-4b36-9f97-630237507179.pdf):
+  - Raylı sistem bütçesi 5,335 mlr TL, yalnızca Dikimevi–Natoyolu için.
+  - Kentsel dönüşüm bütçesi 1,375 mlr TL: Hıdırlıktepe, Şirindere Vadisi planı, Yeni Mamak parselasyonu, Demetevler hazırlığı.
+  - Hacıbayram–Kale–Hıdırlıktepe teleferiği.
+  - Yeni Ankara Çevre Düzeni Planı.
+  - Yapracık–Bağlıca bulvarı.
+- [2025 Faaliyet Raporu](https://s.ankara.bel.tr/s3/abb/2026/04/30/ba1b84c3-8294-4b5a-8cf5-85195a1200fa.pdf): 336 sayfa, yalnızca görüntü; kullanmak için OCR gerek.
+
+**5. EGO**
+- [Raylı sistem dizini](https://www.ego.gov.tr/sayfa/1075/rayli-sistem); proje sayfaları 2281–2284 ve 2291.
+- Güzergâhlar yalnızca resim olarak var; indirilebilir geometri yok.
+
+**6. Açık veri (Şeffaf Ankara)**
+- Harita katmanları:
+  - `teo_abb_onemli_projeler`: ad, tarih, mahalle, ilçe, koordinatlı
+  - `teo_abb_demografi`: mahalle nüfusu
+  - `teo_abb_sel_oncelikli_yapilacaklar`: sel öncelikli işler
+- API istek gövdesi şifreli ve token'lı; yalnızca arayüzden indirilebiliyor.
+- `teo_ruhsat` yapı ruhsatı değil, kazı izni olabilir (D).
+
+**7. İlçe belediyelerinin imar portalları**
+
+| İlçe | Adres |
+|---|---|
+| Çankaya | imardurumu.cankaya.bel.tr |
+| Yenimahalle | kentrehberi.yenimahalle.bel.tr |
+| Keçiören | keos.kecioren.bel.tr/imardurumu |
+| Mamak | ims.mamak.bel.tr |
+| Etimesgut | keos.etimesgut.bel.tr |
+| Sincan | cbs.sincan.bel.tr |
+| Altındağ | cbs.altindag.bel.tr |
+| Pursaklar | açık ArcGIS: cbs.pursaklar.bel.tr/webgis/rest/services |
+| Gölbaşı | cbs.ankaragolbasi.bel.tr, uygulama yolu bulunamadı (D) |
+
+**8. Ulusal kaynaklar**
+- **e-Plan (eplan.csb.gov.tr):** askıdaki ve yürürlükteki planlar açık. Değer Artış Payı modülünün açık olup olmadığı (D).
+- **[ÇŞB Ankara duyuruları](https://ankara.csb.gov.tr/duyurular):** ABB meclisinden geçmeyen, bakanlığın 6306 sayılı kanunla (riskli alan) yaptığı planlar. Örnekler:
+  - Altındağ Beşikkaya riskli alan, 16 Eyl 2026
+  - Çankaya Fakülteler UİP, 25 Eyl 2026
+  - Etimesgut askerî havaalanı–Ayyıldız bağlantı yolu, 18 Eyl 2026
+- **TKGM:** parselsorgu.tkgm.gov.tr açık. Belgelenmemiş bir GeoJSON API'si var, koşulları belli değil.
+
+**emsal için sıralama:**
+1. **UİP/NİP değişiklik katmanları ve imar adaları.** Tarihli, karar numaralı emsal değişikliği; "bu ilçe neden değer kazanıyor" sorusunun en doğrudan cevabı.
+2. **Meclis kararlarının tam metni.** Değişikliğin öncesi, sonrası ve gerekçesi; 2012'ye kadar geri gidiyor.
+3. **Kentsel dönüşüm sınırları ve 2026 performans programı.** Nerede dönüşüm var, nerede iptal edilmiş, sıradaki hangisi.
+4. **EGO, 2026 programı ve 496 ile 933 sayılı kararlar.** Parası ayrılmış raylı hattı çizimde kalandan ayırıyor.
+5. **Mahalle başına deprem dönemi bina sayısı ve risk katmanları.** "Değeri düşer" sınıfının kanıtı olur.
+6. **ÇŞB duyuruları.** ABB kaynaklarının kaçırdığı 6306 planları.
 
 ### Fiyat etkisi kanıtı
 
@@ -215,6 +335,11 @@ var. Önce/sonra karşılaştırması kendi fiyat serimizden kurulacak.
   - Emlakjet geçmiş API'si: captcha
 - **Sayfası JavaScript uygulaması, okunamadı:** TÜİK ve EVDS3 portalları
 - `acikveri.ankara.bel.tr` çözülmüyor.
+- **ABB tarafı:**
+  - Şeffaf Ankara API'si istek gövdesini şifreliyor, token istiyor.
+  - ArcGIS'in `icdp_yeni` klasörü token istiyor.
+  - 2025 faaliyet raporu yalnızca görüntü.
+  - e-imar'ın TKGM vekili resmî bir API değil, kullanılmaz.
 - **Etkinlik tarafı:** Shipin'in Instagram/LinkedIn'i, etkinlik adresi
 
 ### Güvenilmez bulunanlar
@@ -234,7 +359,7 @@ var. Önce/sonra karşılaştırması kendi fiyat serimizden kurulacak.
 | `PROJECT.md` | spec: ürün, sınıflama kuralı, veri, akış, Lovable promptları | elle |
 | `data/ilceler.geojson` | 11 ilçe poligonu, `properties.id` ile | OSM Nominatim, relation ID'leriyle |
 | `data/ilceler.json` | 11 ilçe: fiyat (2019, 2020, 2026), Ankara medyanına göre oran, sınıf, kural, neden, olaylar | `build.py` |
-| `data/projeler.json` | 45 proje: raylı, hastane, kurum, AVM, dönüşüm, imar, yol, havalimanı, risk. Durum, tarih, ilçe, geometri, kaynak. | `build.py` |
+| `data/projeler.json` | 49 proje: raylı, hastane, kurum, AVM, dönüşüm, imar, yol, havalimanı, risk. Durum, tarih, ilçe, geometri, kaynak. | `build.py` |
 | `data/build.py` | Seed verisi (fiyatlar, projeler, koordinatlar) ve sınıflama kuralı | `python3 data/build.py`; hatları her çalıştırmada OSM API'sinden çeker |
 
 ## Lisans ve atıf nasıl?
@@ -248,3 +373,7 @@ var. Önce/sonra karşılaştırması kendi fiyat serimizden kurulacak.
   - Etkinlik sonrası ürün olacaksa lisans gerekir.
 - **Wikipedia:** metin CC BY-SA. Tarih ve koordinat gibi olgular kullanılıyor, metin kopyalanmıyor.
 - **ABB açık verisi (Şeffaf Ankara):** [lisans](https://seffaf.ankara.bel.tr/resources/images/hakkimizda/lisans.pdf) atıfla ticari kullanıma izin veriyor.
+- **ABB ArcGIS sunucusu:**
+  - Kullanım koşulu bulunamadı; Şeffaf Ankara lisansının kapsayıp kapsamadığı belli değil.
+  - Toplu çekim ya da ticari kullanımdan önce ABB CBS biriminden yazılı izin alınmalı.
+  - Yalnızca plan katmanları yaklaşık 400 bin poligon.
