@@ -69,6 +69,56 @@ Etkinlik MVP'si bunun ilk parçası (yatırım katmanı).
 - v1'in ilçe düzeyinde "değerlenebilir" dediği yerler (Çubuk, Akyurt, Sincan) bu alıcının baktığı yer değil.
 - **Bu ürün mahalle düzeyinde, premium aksta analiz ister.** Sıradaki asıl iş bu.
 
+### Model: neye göre artar, neye göre azalır?
+
+**Damla, 26 Eyl 2026:** "progresif ve geçmişle birleşik"; "neye göre artar azalır diyeceksin".
+Örnekleri: "Beytepe hep arttı ama bence artmayacak", "Yaşamkent artacak, metro onayı geldi",
+"Çukurambar elit diye bin tane bina yapılınca bunaltıcı oldu".
+Kuralı Damla ya da ben yazmıyoruz; sistem veriden buluyor.
+
+**Güçler.** Her biri 1.437 mahallenin hepsi için, her yıl, ücretsiz veriden ölçülür:
+
+| Güç | Nasıl ölçülür | Veri | Durum |
+|---|---|---|---|
+| Merkezden çevreye kayış | Kızılay'a uzaklık | OSM | ilçe düzeyinde ölçüldü, r = +0,85 |
+| Yapılaşma baskısı (Çukurambar) | plana göre izinli inşaat alanı/km², yıllık plan değişikliği, yeni bina payı | ABB plan adası (emsal, kat), PlanRaporu, bina dönemi | 18 mahallede çekildi |
+| Erişim | raylı durağa uzaklık ve aşama (plan / ihale / yapım / açık) | ABB istasyonlar, EGO, OSM | hatlar var, durak mesafesi hesaplanmadı |
+| Kurum girişi ve çıkışı | hastane, üniversite, bakanlık açılışı ve kapanışı | `projeler.json` | ilçe düzeyinde örtüşme var (Altındağ −8, Çankaya +12) |
+| Stok yaşı ve dönüşüm | 1998 öncesi bina payı, dönüşüm alanı | ABB | 18 mahallede çekildi |
+| Hukuki risk | plan iptali, yürütmeyi durdurma | ABB PlanRaporu | 18 mahallede çekildi |
+| Doğal risk | diri fay, sel, zemin | ABB deprem ve jeoloji katmanları | çekilmedi |
+| Donatı | okula, parka, AVM'ye uzaklık | OSM | çekilmedi |
+
+**Ağırlıkları kim veriyor?**
+- Ankara'nın kendi geçmişi. Her mahallenin yıllara göre göreli fiyat değişimi bu güçlerle karşılaştırılır. Sistem, hangi gücün Ankara'da ne kadar etki ettiğini böyle öğrenir.
+- Sonra "şu anda" her mahalleye bir yön verir ve her gücün o yöne katkısını gösterir.
+- Engel: bunun için yıllara yayılmış mahalle fiyat serisi gerekiyor.
+  - 2014 metro açılışlarını kapsayan tek seri REIDIN (2007'den beri).
+  - Endeksa 2020'de başlıyor.
+  - Güçler ücretsiz; ağırlıklar lisansa bağlı.
+
+**İlk ölçüm: yapılaşma baskısı.**
+- Ölçü: plan adası başına alan × emsal, toplamı mahalle km²'sine bölünerek. 25–26 Eyl 2026'da 18 mahalle ölçüldü.
+- Sonuçlar (plana göre izinli inşaat alanı, m²/km²):
+
+  | Mahalle | m²/km² |
+  |---|---|
+  | Kızılırmak | 1.124.776 |
+  | Beytepe | 919.055 |
+  | Çukurambar | 710.794 |
+  | Söğütözü | 697.097 |
+  | Yukarı Dikmen | 486.492 |
+  | Yaşamkent | 468.198 |
+  | Çayyolu | 290.970 |
+  | Ümit | 223.637 |
+  | Oran | 54.537 |
+
+- **Bu ölçüde Beytepe, Çukurambar'dan yüksek.**
+- Zayıf yanlar:
+  - Adaların yalnızca yaklaşık yarısında emsal girilmiş. Bahçelievler ve Gaziosmanpaşa'da neredeyse hiç yok; o ikisi ölçülemedi.
+  - Kullanım (konut / kampüs / ticaret) ayrılmadı.
+  - Tek örnek kanıt değil.
+
 ### Blokörler: ne bulundu? (25 Eyl 2026 gece)
 
 (D) = doğrulanmadı. TTY = Taşınmaz Ticareti Hakkında Yönetmelik, güncel metin 29 Nis 2026 değişikliğine kadar.
