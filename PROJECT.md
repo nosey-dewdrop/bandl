@@ -8,6 +8,57 @@ Yapım: Lovable. İlk sahne: 26 Eyl 2026, GarajX "Ship in Ankara".
 
 ---
 
+## Sonraki ürün: ne olacak?
+
+**Damla, 25 Eyl 2026 gece:** "maps + sahibinden + hürriyet emlak karışımı ama üstüne yatırım
+tavsiyeli, remax / fine estate gibi, ama 10-20m'a ev alabilecek insanlar için".
+
+Yani:
+- haritada ilan (sahibinden / Hürriyet Emlak gibi)
+- üstünde bandl'ın yatırım katmanı: sınıf, neden, emsal
+- premium aracı duruşu (RE/MAX, Fine Estate)
+- hedef: 10–20 milyon TL bütçeli alıcı
+
+Etkinlik MVP'si bunun ilk parçası (yatırım katmanı).
+
+**10–20 milyon TL ne alır?** Endeksa, Ağu 2026 m² fiyatlarıyla:
+
+| Yer | TL/m² | 10–20 mn TL ile |
+|---|---|---|
+| Bahçelievler | 119.654 | 84–167 m² |
+| Oran | 116.714 | 86–171 m² |
+| Beytepe | 108.311 | 92–185 m² |
+| Çayyolu | 106.950 | 94–187 m² |
+| Ümitköy | 96.246 | 104–208 m² |
+| Yukarı Dikmen | 95.846 | 104–209 m² |
+| Çukurambar | 83.292 | 120–240 m² |
+| Yaşamkent | 82.932 | 121–241 m² |
+| İncek | 80.177 | 125–249 m² |
+| Gölbaşı (ilçe) | 73.190 | 137–273 m² |
+| Çankaya (ilçe) | 66.165 | 151–302 m² |
+| Ankara ortalaması | 39.478 | 253–507 m² |
+
+**Sonuç:**
+- Bu bütçe premium mahallelerde 3+1 / 4+1 alan aile alıcısı. Batı ve güney aksı: Çankaya
+  batısı, Çayyolu–Ümitköy–Yaşamkent, Oran–Dikmen, Gölbaşı–İncek.
+- v1'in ilçe düzeyinde "değerlenebilir" dediği yerler (Çubuk, Akyurt, Sincan) bu alıcının baktığı yer değil.
+- **Bu ürün mahalle düzeyinde, premium aksta analiz ister.** Sıradaki asıl iş bu.
+
+**Açık sorular ve blokörler** (araştırılacak; (D) = doğrulanmadı):
+1. **İlan kaynağı:**
+   - sahibinden, Hürriyet Emlak (hepsiemlak), Emlakjet otomatik kazımayı yasaklıyor.
+   - Seçenekler: emlak ofisi ortaklığı (ilanı kendileri yükler), lisanslı veri akışı, kendi portföy.
+   - Hangisi gerçekten var, araştırılmadı.
+2. **Aracılık:** ilan yayınlayıp aracılık yapmak için Taşınmaz Ticareti Hakkında Yönetmelik
+   (2018) kapsamında yetki belgesi gerekebilir (D).
+3. **"Yatırım tavsiyesi" dili:** hukuki çerçevesi araştırılmadı (D). Bugün sayfada "yatırım tavsiyesi değildir" yazıyor.
+4. **Mahalle fiyat geçmişi:** Endeksa ya da REIDIN lisansı. Mahalle sınırı, bina yaşı ve imar
+   değişikliği ABB'de hazır.
+5. **Referanslar:** RE/MAX ve Fine Estate incelenmedi. "Fine Estate"in hangi şirket olduğu da
+   doğrulanmadı. Ne sunuyorlar, premium duruş neye benziyor, ilk iş olarak bakılacak.
+
+Kararı Damla verir.
+
 ## Neden var?
 
 Ankara'da ev alan biri "bu semt değer kazanır mı?" sorusunu bugün emlakçının sözü ve

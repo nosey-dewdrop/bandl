@@ -52,6 +52,7 @@ bulunamayan yerde "kaynak bulunamadı" yazar.
 | Tarih | Ne |
 |---|---|
 | 25 Eyl 2026 | İsim, spec, kaynak araştırması, ABB araştırması, veri: 11 ilçe, 49 proje, 7 raylı hat. |
+| 25 Eyl 2026 gece | Sınıflama v1 (yapı + emsal). Yeni yön: 10–20 mn TL alıcı için ilan + harita + yatırım katmanı. |
 | 26 Eyl 2026 | GarajX "Ship in Ankara": Lovable ile ilk sürüm. |
 
 ---
