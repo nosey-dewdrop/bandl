@@ -4,9 +4,9 @@ python3 data/build.py
 
 Kaynaklar README.md'de. Koordinatlar 25 Eyl 2026'da OSM Nominatim'den alındı;
 raylı hat güzergâhları her çalıştırmada OSM API'sinden çekilir.
-Sınıflama kuralı PROJECT.md "Nasıl sınıflıyor?" bölümündeki v0 kuralıdır.
+Sınıflama kuralı PROJECT.md "Nasıl sınıflıyor?" bölümündeki v1 kuralıdır.
 """
-import json, statistics, time, urllib.request, xml.etree.ElementTree as ET
+import json, math, statistics, time, urllib.request, xml.etree.ElementTree as ET
 from pathlib import Path
 
 D = Path(__file__).parent
@@ -128,10 +128,26 @@ PROJELER = [
     dict(id="kizilay_cekim", ad="Kızılay'ın çekim kaybı", tur="risk", durum="belirsiz", tarih="", geometri=pt("kizilay"), kaynak_url="https://www.yeniankara.com.tr/ankara/ankarada-eski-populerligini-kaypeden-7-semt-183561", not_="nitel; sayı yok"),
 ]
 
-NEDEN_EK = {  # kaynak aradık, bulamadık: uydurmak yerine bunu söyle
-    "cubuk": "Göreli yükselişi açıklayan bir kaynak bulunamadı. Esenboğa Havalimanı ilçe sınırında.",
-    "akyurt": "Göreli yükselişi açıklayan bir kaynak bulunamadı.",
-    "altindag": "İlçeden iki büyük hastane taşındı (Numune 2019, Dışkapı 2022); fiyata etkisini ölçen bir kaynak bulunamadı.",
+# ABB, deprem yönetmeliğine göre toplam bina sayısı (ilçe), 25 Eyl 2026 sorgusu
+ABB_BINA_URL = "https://planaski.ankara.bel.tr/webgis/rest/services/deprem/ilceMahalleRapor/MapServer/3"
+BINA = {"cankaya": 64446, "golbasi": 37503, "yenimahalle": 59915, "etimesgut": 24564, "pursaklar": 8752,
+        "cubuk": 21591, "kecioren": 33839, "altindag": 31411, "sincan": 33483, "mamak": 32116, "akyurt": 7622}
+KIZILAY = (32.8540, 39.9208)
+CEVRE_KM, YOGUN_BINA_KM2 = 30, 150  # 11 ilçede doğal kırılımlar: 16->21->33 km, 93->143->197 bina/km2
+
+# ilçeye özel, kaynaklı notlar. Kaynak yoksa bunu söyler, uydurmaz.
+YEREL = {
+    "cankaya": "Bilkent Şehir Hastanesi 2019'da açıldı; beklenenin üstündeki farkla bağı kanıtlanmadı.",
+    "golbasi": "Çevreye kayışla uyumlu yükseldi, ama Gölbaşı–İncek için 2026'da arz fazlası uyarısı var.",
+    "yenimahalle": "Etlik Şehir Hastanesi 2022'de açıldı; ilçe fiyatı uzaklığa göre beklenen düzeyde kaldı.",
+    "pursaklar": "Esenboğa metrosu sözleşmeli. Ankara emsali: Keçiören metrosu 2023'te Kızılay'a bağlandı, ilçenin göreli fiyatı yerinde saydı. Metronun etkisi durak çevresindeki mahallelerde aranmalı; onların fiyat geçmişi elimizde yok.",
+    "cubuk": "Esenboğa Havalimanı ve metronun havalimanı ucu burada; 11 Ağu 2026'da merkezde ~165 ha yeni imar planı onaylandı.",
+    "kecioren": "M4 2017'de açıldı, 2023'te Kızılay'a bağlandı; göreli fiyat yine de yerinde saydı.",
+    "altindag": "Numune (2019) ve Dışkapı hastaneleri (2022) ilçeden taşındı. Esenboğa metrosu ve Hıdırlıktepe dönüşümü geliyor; Keçiören emsali metronun ilçe düzeyinde tek başına yetmediğini gösteriyor.",
+    "sincan": "Çevre ilçesi, ama uzaklığa göre beklenenin altında kaldı; nedeni için kaynak bulunamadı.",
+    "mamak": "Dikimevi–Natoyolu hattı yapımda (hedef 2029), Yeni Mamak dönüşümü sürüyor. Keçiören emsali metronun ilçe düzeyinde tek başına yetmediğini gösteriyor; durak çevresi mahalleler ayrıca izlenmeli.",
+    "akyurt": "Yükselişi açıklayan tek bir proje bulunamadı; çevreye kayışla uyumlu.",
+    "etimesgut": "",
 }
 
 def osm_hat(rid):
@@ -156,6 +172,14 @@ def in_poly(x, y, g):
     polys = g["coordinates"] if g["type"] == "MultiPolygon" else [g["coordinates"]]
     return any(in_ring(x, y, p[0]) and not any(in_ring(x, y, h) for h in p[1:]) for p in polys)
 
+def alan_merkez(g):
+    A = cx = cy = 0
+    for ring in [p[0] for p in (g["coordinates"] if g["type"] == "MultiPolygon" else [g["coordinates"]])]:
+        for (x1, y1), (x2, y2) in zip(ring, ring[1:] + ring[:1]):
+            c = x1 * y2 - x2 * y1; A += c; cx += (x1 + x2) * c; cy += (y1 + y2) * c
+    cx, cy = cx / (3 * A), cy / (3 * A)
+    return abs(A) / 2 * 111.32 * 111.32 * math.cos(math.radians(cy)), cx, cy
+
 def vertices(g):
     t, c = g["type"], g["coordinates"]
     return [c] if t == "Point" else c if t == "LineString" else [v for s in c for v in s]
@@ -175,33 +199,38 @@ def main():
         projeler.append(p)
 
     medyan = {y: statistics.median(v[k] for v in ILCE.values()) for k, y in ((1, 2019), (2, 2020), (3, 2026))}
+    yapi = {}
+    for iid, (ad, f19, f20, f26) in ILCE.items():
+        km2, cx, cy = alan_merkez(sinirlar[iid])
+        km = math.hypot((cx - KIZILAY[0]) * 111.32 * math.cos(math.radians(KIZILAY[1])), (cy - KIZILAY[1]) * 111.32)
+        yapi[iid] = dict(kizilay_km=round(km, 1), bina_km2=round(BINA[iid] / km2), degisim=(f26 / medyan[2026]) / (f19 / medyan[2019]) - 1)
+    xs = [v["kizilay_km"] for v in yapi.values()]; ys = [v["degisim"] for v in yapi.values()]
+    r = statistics.correlation(xs, ys)
+    egim = statistics.covariance(xs, ys) / statistics.variance(xs); kes = statistics.mean(ys) - egim * statistics.mean(xs)
+    fmt = lambda x: ("+" if x >= 0 else "−") + f"%{abs(x) * 100:.0f}"
+    YAPI = f"Ankara'da 2019'dan beri fiyat merkezden çevreye kaydı: ilçenin Kızılay'a uzaklığı ile göreli fiyat değişimi arasında r = {r:.2f} (11 ilçe)."
     ilceler = []
     for iid, (ad, f19, f20, f26) in ILCE.items():
         goreli = {2019: f19 / medyan[2019], 2020: f20 / medyan[2020], 2026: f26 / medyan[2026]}
-        degisim = goreli[2026] / goreli[2019] - 1
+        y = yapi[iid]; degisim = y["degisim"]; beklenen = kes + egim * y["kizilay_km"]
         olaylar = sorted([p for p in projeler if iid in p["ilceler"]], key=lambda p: p["tarih"] or "0", reverse=True)
-        tetik = [p for p in olaylar if p["durum"] in ("yapimda", "sozlesmeli")
-                 and (p["tur"] in ("rayli", "hastane") or p.get("buyuk"))]
-        pct = ("+" if degisim >= 0 else "−") + f"%{abs(degisim) * 100:.0f}"
-        adlar = ", ".join(p["ad"] for p in tetik)
-        if tetik and degisim <= 0.05:
-            sinif = "degerlenebilir"
-            kural = "yapımda ya da sözleşmeli, ilçe ölçeğinde tetikleyici var ve göreli fiyat 2019'dan beri %5'ten fazla artmamış"
-            neden = f"{adlar} ilçede yapımda ya da sözleşmeli. Ankara medyanına göre fiyat 2019'dan bu yana {pct}: tetikleyici henüz fiyata yansımamış görünüyor."
-        elif degisim < -0.05:
+        arz = any(p["tur"] == "risk" and "arz" in p["ad"] for p in olaylar)
+        if y["bina_km2"] >= YOGUN_BINA_KM2 and degisim <= 0:
             sinif = "duser"
-            kural = "göreli fiyat 2019'dan beri %5'ten fazla düşmüş ve bekleyen tetikleyici yok"
-            neden = f"Ankara medyanına göre fiyat 2019'dan bu yana {pct}. İlçe ölçeğinde bekleyen bir tetikleyici bulunamadı."
+            kural = f"yoğun merkez ilçesi (≥{YOGUN_BINA_KM2} bina/km²) ve göreli fiyatı 2019'dan beri artmamış"
+        elif y["kizilay_km"] >= CEVRE_KM and degisim > 0 and not arz:
+            sinif = "degerlenebilir"
+            kural = f"çevre ilçesi (Kızılay'a ≥{CEVRE_KM} km), göreli fiyatı 2019'dan beri artmış, arz fazlası uyarısı yok"
         else:
             sinif = "korur"
             kural = "ilk iki kural geçerli değil"
-            neden = (f"Ankara medyanına göre fiyat 2019'dan bu yana {pct}. "
-                     + (f"{adlar} ilçede yapımda ya da sözleşmeli, ama göreli fiyat zaten artmış." if tetik
-                        else "İlçe ölçeğinde yapımda ya da sözleşmeli bir tetikleyici yok."))
-        if iid in NEDEN_EK: neden += " " + NEDEN_EK[iid]
+        neden = (f"{YAPI} {ad} Kızılay'a {y['kizilay_km']:.0f} km, {y['bina_km2']} bina/km². "
+                 f"Ankara medyanına göre fiyatı {fmt(degisim)}; uzaklığa göre beklenen {fmt(beklenen)}. {YEREL[iid]}").strip()
         ilceler.append(dict(
             id=iid, ad=ad, sinif=sinif, kural=kural, neden=neden,
-            goreli={str(y): round(r, 3) for y, r in goreli.items()}, goreli_degisim=round(degisim, 3),
+            goreli={str(k): round(v, 3) for k, v in goreli.items()}, goreli_degisim=round(degisim, 3),
+            yapi=dict(kizilay_km=y["kizilay_km"], bina_km2=y["bina_km2"], beklenen=round(beklenen, 3),
+                      fark=round(degisim - beklenen, 3), bina_kaynak_url=ABB_BINA_URL),
             fiyat=[dict(yil=2019, ay="Haziran", tl_m2=f19, kaynak="Endeksa (Baret Dergisi)", kaynak_url=BARET),
                    dict(yil=2020, ay="Haziran", tl_m2=f20, kaynak="Endeksa (Baret Dergisi)", kaynak_url=BARET),
                    dict(yil=2026, ay="Ağustos", tl_m2=f26, kaynak="Endeksa (Emlakjet)", kaynak_url=EJ + iid)],
@@ -213,7 +242,8 @@ def main():
     json.dump(ilceler, open(D / "ilceler.json", "w"), ensure_ascii=False, indent=1)
     json.dump(projeler, open(D / "projeler.json", "w"), ensure_ascii=False, separators=(",", ":"))
     for i in ilceler:
-        print(f"{i['ad']:12s} {i['goreli']['2019']:.2f} -> {i['goreli']['2026']:.2f} {i['goreli_degisim']*100:+5.0f}%  {i['sinif']:15s} olay={len(i['olaylar'])}")
+        print(f"{i['ad']:12s} {i['yapi']['kizilay_km']:5.1f}km {i['yapi']['bina_km2']:4d}b/km2  gerçek {i['goreli_degisim']*100:+4.0f}  beklenen {i['yapi']['beklenen']*100:+4.0f}  {i['sinif']}")
+    print(f"r = {r:.2f}")
     print(len(projeler), "proje;", sum(1 for p in projeler if not p["ilceler"]), "ilçesiz")
 
 if __name__ == "__main__":

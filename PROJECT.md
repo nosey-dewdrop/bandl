@@ -47,53 +47,93 @@ Türkiye geneli.
 ## Nasıl sınıflıyor?
 
 **Nominal TL kullanılmaz.** Ankara'da fiyatlar bir yılda %28 arttı, reel olarak ise
-yaklaşık %3 düştü. Nominal fiyatla her proje fiyatı artırmış görünür.
+yaklaşık %3 düştü. Ölçü: ilçenin m² fiyatının, veri olan 11 ilçenin medyanına oranı
+(göreli fiyat).
 
-**Ölçü:** ilçenin m² fiyatının, veri olan 11 ilçenin medyanına oranı.
+Sınıf üç adımda verilir: önce şehri ne sürüklüyor (yapı), sonra projeler bunun üstüne
+ne eklemiş (emsal), en son kural.
 
-Neden Ankara ortalaması değil, medyan: Endeksa'nın Ankara geneli 2020→2026 çarpanı
-(×20,4) neredeyse her ilçenin çarpanından düşük. Bu, karışım ya da yöntem değişikliği
-izi; medyan bundan etkilenmez.
+### 1. Yapı: Ankara'yı ne sürüklüyor?
 
-**Kurallar (v0, sırayla uygulanır):**
-1. **değerlenebilir:** ilçede yapımda ya da sözleşmesi imzalanmış, ilçe ölçeğinde bir
-   tetikleyici var **ve** göreli fiyat 2019'dan beri +%5'ten fazla artmamış (henüz
-   fiyatlanmamış).
-   - İlçe ölçeğinde tetikleyici: raylı sistem hattı ya da istasyonu, şehir hastanesi,
-     5000+ konutluk dönüşüm.
-2. **değeri düşer:** göreli fiyat %5'ten fazla düşmüş ve 1. kural geçerli değil.
+Test edildi (11 ilçe, göreli değişim 2019 → 2026):
+
+| Açıklama | r | Sonuç |
+|---|---|---|
+| Kızılay'a uzaklık (ilçenin orta noktası) | **+0,85** | güçlü |
+| Bina yoğunluğu (bina/km², log; ABB deprem verisi) | **−0,85** | güçlü, uzaklığın aynası |
+| Yeni bina payı (2007 ve 2018 yönetmeliği) | −0,27 | tutmadı |
+| 2019'daki başlangıç fiyatı | −0,08 | tutmadı |
+
+- **Sağlamlık:**
+  - Hangi ilçe çıkarılırsa çıkarılsın r +0,78 ile +0,91 arasında kalıyor.
+  - İki dönemde de var: 2019→2020 +0,63, 2020→2026 +0,79.
+  - Ham gidişin kendisi daha zayıf sürüyor: 2019–20 gidişi ile 2020–26 gidişi arasında r = 0,44.
+- **Eğim:** Kızılay'dan her 10 km uzaklık, göreli fiyata yaklaşık +10 puan.
+- **Sonuç:** son 7 yılda Ankara'da değeri belirleyen ana güç tek tek projeler değil,
+  **merkezden seyrek çevreye kayış**.
+
+### 2. Emsal: projeler bunun üstüne ne eklemiş?
+
+Uzaklığın beklediği değişim çıkarılınca kalan fark:
+
+| İlçe | Gerçek | Beklenen | Fark | O dönemde ne oldu? |
+|---|---|---|---|---|
+| Çankaya | +12 | −1 | **+12** | Bilkent Şehir Hastanesi açıldı (2019) |
+| Akyurt | +28 | +20 | +8 | kaynaklı olay yok |
+| Etimesgut | +14 | +9 | +5 | — |
+| Yenimahalle | +4 | +2 | +2 | Etlik Şehir Hastanesi açıldı (2022) |
+| Çubuk | +36 | +34 | +2 | — |
+| Gölbaşı | +30 | +27 | +3 | İncek imarı iptal (2017) |
+| Mamak | 0 | +3 | −3 | Yeni Mamak dönüşümü sürüyor |
+| Keçiören | −1 | +3 | **−4** | **M4 Kızılay'a bağlandı (2023)** |
+| Pursaklar | +3 | +8 | −5 | — |
+| Altındağ | −7 | +1 | **−8** | **Numune (2019) ve Dışkapı (2022) hastaneleri taşındı** |
+| Sincan | +10 | +23 | **−13** | kaynak bulunamadı |
+
+**Ankara'nın kendi emsalleri:**
+- **Metro yoğun merkez ilçeyi tek başına çevirmedi.** Keçiören'in hattı 2023'te Kızılay'a
+  bağlandı, ilçe beklenenin altında kaldı.
+  - Bu, v0 kuralının ("metro geliyorsa değerlenebilir") tersini söylüyor. v0 bu yüzden bırakıldı.
+- **Büyük kurum çıkışı eksi yazıyor.** Altındağ, iki hastanesini kaybettiği dönemde en çok geride kalan merkez ilçe.
+- **Şehir hastanesi açılışı** bir yerde büyük (Çankaya +12), bir yerde küçük (Yenimahalle +2) farkla örtüşüyor.
+- **Bunlar örtüşme, kanıtlanmış neden değil.** 11 ilçe ve 3 fiyat noktası nedensellik kurmaya yetmez.
+- **Metro ve istasyonun asıl etkisi mahalle düzeyinde olmalı** (durağa ~1 km). Mahalle fiyat geçmişi elimizde yok.
+
+### 3. Kural (v1, sırayla)
+
+1. **değeri düşer:** yoğun merkez ilçesi (≥150 bina/km²) **ve** göreli fiyatı 2019'dan beri artmamış.
+2. **değerlenebilir:** çevre ilçesi (Kızılay'a ≥30 km) **ve** göreli fiyatı artmış **ve** arz fazlası uyarısı yok.
 3. **değer korur:** geri kalan her şey.
 
-Panelde kuralın kendisi de görünür: "neden bu sınıf?" sorusunun cevabı kural + veri + kaynak.
+Eşikler 11 ilçenin doğal kırılımlarından seçildi:
+- uzaklık: 16 → 21 → 33 km
+- yoğunluk: 93 → 143 → 197 bina/km²
 
-**v0 sonucu** (fiyat: Endeksa, Haz 2019 ve Ağu 2026; hesap benim):
+**v1 sonucu:**
 
-| İlçe | 2019 | 2026 | Göreli değişim | Tetikleyici | Sınıf |
-|---|---|---|---|---|---|
-| Çubuk | 0,74 | 1,00 | +%36 | Esenboğa Havalimanı Çubuk sınırında; metrosu sözleşmeli ama göreli fiyat zaten +%36 | korur |
-| Gölbaşı | 1,55 | 2,02 | +%30 | yok (İncek imarı iptal). Risk: arz fazlası uyarısı | korur |
-| Akyurt | 0,62 | 0,80 | +%28 | bulunamadı | korur |
-| Etimesgut | 1,19 | 1,35 | +%14 | M6 ve Koru–Bağlıca uzatması planlı, sözleşme yok | korur |
-| Çankaya | 1,64 | 1,83 | +%12 | M5 planlı, yatırım programında değil | korur |
-| Sincan | 0,84 | 0,93 | +%10 | M6 planlı | korur |
-| Yenimahalle | 1,37 | 1,42 | +%4 | Etlik Şehir Hastanesi (2022) zaten açık; Yamaçevler (~4000 konut, eşik altı) | korur |
-| Pursaklar | 1,05 | 1,08 | +%3 | **Esenboğa metrosu, sözleşmeler Ağu–Eyl 2026** | **değerlenebilir** |
-| Mamak | 0,88 | 0,88 | %0 | **Dikimevi–Natoyolu yapımda (hedef Oca 2029), Yeni Mamak 8006 konut, Esenboğa hattı Demirlibahçe durağı** | **değerlenebilir** |
-| Keçiören | 1,00 | 0,99 | −%1 | M4 (2017/2023) zaten açık; Esenboğa hattının Keçiören'e durak verip vermediği (D) | korur |
-| Altındağ | 1,00 | 0,93 | −%7 | **Esenboğa hattı Siteler ve Solfasol durakları**, Hıdırlıktepe dönüşümü (Oca 2026–) | **değerlenebilir** |
+| Sınıf | İlçeler |
+|---|---|
+| değerlenebilir | Çubuk, Akyurt, Sincan |
+| değer korur | Çankaya, Gölbaşı (arz fazlası uyarısı), Etimesgut, Yenimahalle, Pursaklar, Mamak |
+| değeri düşer | Keçiören, Altındağ |
 
-**Bu veriyle hiçbir ilçe "değeri düşer" çıkmıyor.**
-- Düşüş sinyali var: Altındağ'dan Numune 2019'da, Dışkapı hastaneleri 2022'de taşındı;
-  Kızılay çekim kaybetti.
-- Altındağ −%7 ile tek düşen ilçe, ama Esenboğa hattı onu 1. kurala sokuyor.
-- Mahalle düzeyindeki düşüşün fiyat geçmişi elimizde yok.
-- Mahalle serisi gelince (REIDIN ya da Endeksa lisansı) "düşer" sınıfı dolacak.
-- Harita şimdilik bunu dürüstçe söyler.
+Pursaklar ve Mamak'ta metro geliyor, ama Keçiören emsali yüzünden "değer korur" kalıyorlar.
+Panel bunu açıkça yazar: etki durak çevresindeki mahallelerde aranmalı.
 
-Neden var ama kaynak yok: Çubuk ve Akyurt 7 yılda en çok göreli değer kazanan iki ilçe.
-- Çubuk'ta havalimanı var; ama yükselişi ona bağlayan bir kaynak bulamadım.
-- Akyurt için hiçbir şey bulamadım.
-- Panelde "neden: kaynak bulunamadı" yazar, uydurulmaz.
+**Bu sınıflamanın zayıf yerleri:**
+- 11 ilçe ve 3 fiyat noktası var. Korelasyon neden değil.
+- **Endeksa ilan tabanlı.** Çevrede yeni ve lüks site ilanları çoğaldıkça ortalama m² fiyatı
+  karışım yüzünden de yükselebilir. Bunu ayırmak için karışımdan arındırılmış bir seri gerek;
+  TCMB'ninki var ama yalnızca il düzeyinde.
+- **Gidişin süreceği varsayılıyor.** Pandemi (2020–21) ve deprem (Şubat 2023) sonrası çevre
+  talebi kalıcı olmayabilir. Ankara'da Mayıs 2026'da satışlar %33 düştü.
+- **Sincan** çevre ilçesi ama beklenenin 13 puan altında, nedeni bulunamadı. "Değerlenebilir"
+  sınıfının en zayıf üyesi.
+
+**Sıradaki adım (etkinlikten sonra):**
+- Durak ve proje etkisini görmek için mahalle düzeyine inmek gerekiyor.
+- ABB verisi hazır: mahalle sınırları, mahalle başına bina yaşı, imar değişiklikleri.
+- Eksik olan mahalle fiyat geçmişi: Endeksa ya da REIDIN lisansı.
 
 ## Veri nereden?
 
@@ -236,10 +276,15 @@ Luma: 11:00–16:00, Yenimahalle. Bina süresi yaklaşık 2 saat 15 dakika.
 | 15:45–16:00 | Showcase. Mart etkinliğinde kişi başı 30 sn'ydi; bu etkinlik için (D). |
 
 Demo tıklama yolu:
-1. Harita açılır.
-2. Mamak'a tıkla.
-3. Panelde görünen: değerlenebilir, Dikimevi–Natoyolu yapımda ve 2029, göreli fiyat 7 yılda
-   yerinde, kaynak linki.
+1. Harita açılır: merkez turuncu, çevre mavi.
+2. Keçiören'e tıkla. Panelde görünen:
+   - değeri düşer
+   - "M4 2023'te Kızılay'a bağlandı, göreli fiyat yerinde saydı"
+   - kaynak linki
+3. Çubuk'a tıkla. Panelde görünen:
+   - değerlenebilir
+   - merkezden 46 km, fiyat Ankara medyanına göre +%36
+   - havalimanı ve yeni imar planı
 
 Cümleler Damla'nın.
 
@@ -264,7 +309,8 @@ Schema:
 - src/data/ilceler.geojson: FeatureCollection, each feature has properties.id.
 - src/data/ilceler.json: [{ id, ad, sinif: "degerlenebilir"|"korur"|"duser",
   kural, neden, goreli: {"2019","2020","2026": ratio to Ankara median},
-  goreli_degisim, fiyat: [{ yil, ay, tl_m2, kaynak, kaynak_url }],
+  goreli_degisim, yapi: { kizilay_km, bina_km2, beklenen, fark, bina_kaynak_url },
+  fiyat: [{ yil, ay, tl_m2, kaynak, kaynak_url }],
   olaylar: [{ id, tarih, baslik, tur, durum, not, kaynak_url }] }]
 - src/data/projeler.json: [{ id, ad, tur: "rayli"|"ulasim"|"hastane"|"kurum"|"avm"|
   "donusum"|"imar"|"yol"|"havalimani"|"risk", durum: "acik"|"onaylandi"|"sozlesmeli"|
@@ -293,11 +339,14 @@ the knowledge and one example district.
 Fill the district panel from ilceler.json:
 1) class name in its color, large; below it the rule that produced it (field "kural").
 2) "neden" paragraph (field "neden").
-3) Price relative to the Ankara median (field "goreli": 2019, 2020, 2026). Show the
+3) One line from "yapi": "kızılay'a {kizilay_km} km · {bina_km2} bina/km² ·
+   beklenen {beklenen} · gerçek {goreli_degisim}" (format ratios as signed percent),
+   with the building-count source link (bina_kaynak_url).
+4) Price relative to the Ankara median (field "goreli": 2019, 2020, 2026). Show the
    three ratios as a small line with labeled points (1.00 = median, draw that as a
    faint reference), then the TL/m² values from "fiyat" with month, year and source
    link. Label it "ankara medyanına göre".
-4) Timeline (field "olaylar"): sorted by date, newest first: date, title, type,
+5) Timeline (field "olaylar"): sorted by date, newest first: date, title, type,
    status label, "not" in smaller text, source link. Items with status "sozlesmeli",
    "yapimda" or "planli" appear first under a "gelecek" heading. If "olaylar" is
    empty: "bu ilçe için kaynaklı olay bulunamadı".
