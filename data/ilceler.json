@@ -222,6 +222,307 @@
     "kaynak_url": "https://www.yeniankara.com.tr/ankara/ankarada-eski-populerligini-kaypeden-7-semt-183561",
     "not": "nitel; sayı yok"
    }
+  ],
+  "gucler": [
+   {
+    "id": "kizilay_km",
+    "ad": "Kızılay'a uzaklık",
+    "deger": 12.2,
+    "birim": "km",
+    "sira": 11,
+    "n": 11,
+    "hukum": "ana",
+    "hukum_metin": "2019–2026'da Ankara'da fiyatı en çok bu sürükledi",
+    "r": 0.85,
+    "kismi": null,
+    "aralik": [
+     0.78,
+     0.91
+    ],
+    "yon": "dusurur",
+    "kaynak_url": "https://www.openstreetmap.org/",
+    "not": ""
+   },
+   {
+    "id": "bina_km2",
+    "ad": "bina yoğunluğu",
+    "deger": 143,
+    "birim": "bina/km²",
+    "sira": 4,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.72,
+    "kismi": -0.14,
+    "aralik": [
+     -0.78,
+     -0.67
+    ],
+    "yon": null,
+    "kaynak_url": "https://planaski.ankara.bel.tr/webgis/rest/services/deprem/ilceMahalleRapor/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "yeni_arz",
+    "ad": "2018 sonrası bina payı",
+    "deger": 3.0,
+    "birim": "%",
+    "sira": 7,
+    "n": 11,
+    "hukum": "bagimsiz",
+    "hukum_metin": "uzaklık sabit tutulunca da fiyatla birlikte hareket etti",
+    "r": 0.87,
+    "kismi": 0.66,
+    "aralik": [
+     0.83,
+     0.92
+    ],
+    "yon": "dusurur",
+    "kaynak_url": "https://planaski.ankara.bel.tr/webgis/rest/services/deprem/ilceMahalleRapor/MapServer/3",
+    "not": "Endeksa ilan tabanlı: yeni binalar çoğaldıkça ortalama m² karışım yüzünden de yükselir. Neden değil, birlikte hareket."
+   },
+   {
+    "id": "eski_stok",
+    "ad": "1998 öncesi bina payı",
+    "deger": 36.1,
+    "birim": "%",
+    "sira": 2,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.74,
+    "kismi": -0.29,
+    "aralik": [
+     -0.84,
+     -0.66
+    ],
+    "yon": null,
+    "kaynak_url": "https://planaski.ankara.bel.tr/webgis/rest/services/deprem/ilceMahalleRapor/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "plan_2020",
+    "ad": "2020'den beri plan değişikliği",
+    "deger": 11.9,
+    "birim": "/1000 bina",
+    "sira": 1,
+    "n": 11,
+    "hukum": "kararsiz",
+    "hukum_metin": "tek bir ilçe çıkarılınca yönü değişiyor; kararsız",
+    "r": -0.25,
+    "kismi": 0.23,
+    "aralik": [
+     -0.39,
+     0.08
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/plan/PlanRaporu/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "dava",
+    "ad": "davalı plan değişikliği payı",
+    "deger": 7.4,
+    "birim": "%",
+    "sira": 2,
+    "n": 11,
+    "hukum": "kararsiz",
+    "hukum_metin": "tek bir ilçe çıkarılınca yönü değişiyor; kararsız",
+    "r": 0.25,
+    "kismi": 0.58,
+    "aralik": [
+     -0.04,
+     0.75
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/plan/PlanRaporu/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "donusum",
+    "ad": "kentsel dönüşüm alanı",
+    "deger": 6.2,
+    "birim": "/10.000 bina",
+    "sira": 2,
+    "n": 11,
+    "hukum": "zayif",
+    "hukum_metin": "fiyatla ilişkisi zayıf",
+    "r": -0.47,
+    "kismi": 0.39,
+    "aralik": [
+     -0.56,
+     -0.2
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/plan/PlanRaporu/MapServer/2",
+    "not": ""
+   },
+   {
+    "id": "istasyon",
+    "ad": "raylı istasyon",
+    "deger": 4.2,
+    "birim": "/10.000 bina",
+    "sira": 2,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.6,
+    "kismi": 0.1,
+    "aralik": [
+     -0.75,
+     -0.51
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/kentrehberi/ego_kent_Rehberi/MapServer/4",
+    "not": ""
+   },
+   {
+    "id": "kurum",
+    "ad": "kurum girişi − çıkışı (2019–2026)",
+    "deger": 1,
+    "birim": "adet",
+    "sira": 1,
+    "n": 11,
+    "hukum": "kararsiz",
+    "hukum_metin": "tek bir ilçe çıkarılınca yönü değişiyor; kararsız",
+    "r": 0.38,
+    "kismi": 0.55,
+    "aralik": [
+     -0.05,
+     0.44
+    ],
+    "yon": null,
+    "kaynak_url": "",
+    "not": "hastane açılışı +1, kurum kapanışı −1; kaynaklar olay listesinde."
+   },
+   {
+    "id": "sel",
+    "ad": "su baskını kaydı (2017–2025)",
+    "deger": 52.3,
+    "birim": "/1000 bina",
+    "sira": 6,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.58,
+    "kismi": -0.21,
+    "aralik": [
+     -0.74,
+     -0.43
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/hidroloji_analizi/Ankara_Hidroloji_Analizi/MapServer/0",
+    "not": ""
+   },
+   {
+    "id": "okul",
+    "ad": "okul",
+    "deger": 3.8,
+    "birim": "/1000 bina",
+    "sira": 5,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.72,
+    "kismi": -0.33,
+    "aralik": [
+     -0.85,
+     -0.65
+    ],
+    "yon": null,
+    "kaynak_url": "https://overpass-api.de/api/interpreter",
+    "not": ""
+   },
+   {
+    "id": "park",
+    "ad": "park",
+    "deger": 8.5,
+    "birim": "/1000 bina",
+    "sira": 5,
+    "n": 11,
+    "hukum": "zayif",
+    "hukum_metin": "fiyatla ilişkisi zayıf",
+    "r": -0.37,
+    "kismi": -0.3,
+    "aralik": [
+     -0.49,
+     -0.29
+    ],
+    "yon": null,
+    "kaynak_url": "https://overpass-api.de/api/interpreter",
+    "not": ""
+   },
+   {
+    "id": "saglik",
+    "ad": "hastane ve klinik",
+    "deger": 1.5,
+    "birim": "/1000 bina",
+    "sira": 1,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.62,
+    "kismi": 0.2,
+    "aralik": [
+     -0.74,
+     -0.51
+    ],
+    "yon": null,
+    "kaynak_url": "https://overpass-api.de/api/interpreter",
+    "not": ""
+   }
+  ],
+  "gelecek": [
+   {
+    "id": "m7",
+    "baslik": "M7 Gar–Esenboğa metrosu",
+    "tur": "rayli",
+    "durum": "sozlesmeli",
+    "tarih": "2026-09",
+    "hedef": "",
+    "emsal": "Ankara emsali: Keçiören'in metrosu 2023'te Kızılay'a bağlandı, ilçenin göreli fiyatı yerinde saydı. Etki durak çevresinde aranmalı.",
+    "kaynak_url": "https://www.haberankara.com/ankara/pursaklar-esenboga-metro-ihalesi-tamamlandi-319433"
+   },
+   {
+    "id": "koru_ext",
+    "baslik": "M2 Koru–Yaşamkent ve Koru–Bağlıca uzatması",
+    "tur": "rayli",
+    "durum": "planli",
+    "tarih": "2026-07",
+    "hedef": "",
+    "emsal": "Ankara emsali: Keçiören'in metrosu 2023'te Kızılay'a bağlandı, ilçenin göreli fiyatı yerinde saydı. Etki durak çevresinde aranmalı.",
+    "kaynak_url": "https://www.ankara.bel.tr/proje/x-177"
+   },
+   {
+    "id": "a2",
+    "baslik": "Dikimevi–Natoyolu hafif raylı",
+    "tur": "rayli",
+    "durum": "yapimda",
+    "tarih": "2025-06-13",
+    "hedef": "2029-01-14",
+    "emsal": "Ankara emsali: Keçiören'in metrosu 2023'te Kızılay'a bağlandı, ilçenin göreli fiyatı yerinde saydı. Etki durak çevresinde aranmalı.",
+    "kaynak_url": "https://www.ego.gov.tr/sayfa/2281/dikimevinatoyolu-ankaray-hafif-rayli-sistem-hatti"
+   },
+   {
+    "id": "m5",
+    "baslik": "M5 Kızılay–Dikmen",
+    "tur": "rayli",
+    "durum": "planli",
+    "tarih": "2025-04-30",
+    "hedef": "",
+    "emsal": "Ankara emsali: Keçiören'in metrosu 2023'te Kızılay'a bağlandı, ilçenin göreli fiyatı yerinde saydı. Etki durak çevresinde aranmalı.",
+    "kaynak_url": "https://www.ego.gov.tr/sayfa/2284/m5-kizilaydikmen-hatti"
+   },
+   {
+    "id": "dikmen_vadisi",
+    "baslik": "Dikmen Vadisi dönüşümü",
+    "tur": "donusum",
+    "durum": "yapimda",
+    "tarih": "1996",
+    "hedef": "",
+    "emsal": "Ankara emsali: dönüşüm alanı yoğunluğu 2019–2026 değişimiyle zayıf ve uzaklığın gölgesinde.",
+    "kaynak_url": "https://www.ankara.bel.tr/proje/dikmen-vadisi-son-etap-kentsel-donusum-projesi-84"
+   }
   ]
  },
  {
@@ -294,7 +595,257 @@
     "kaynak_url": "https://www.gazeteduvar.com.tr/yargi-gokcekin-incekteki-imar-plani-degisikligini-iptal-etti-haber-1552615",
     "not": "emsal 0,33'ten 2'ye, konut 25'ten 390'a; mahkeme iptal etti"
    }
-  ]
+  ],
+  "gucler": [
+   {
+    "id": "kizilay_km",
+    "ad": "Kızılay'a uzaklık",
+    "deger": 39.1,
+    "birim": "km",
+    "sira": 2,
+    "n": 11,
+    "hukum": "ana",
+    "hukum_metin": "2019–2026'da Ankara'da fiyatı en çok bu sürükledi",
+    "r": 0.85,
+    "kismi": null,
+    "aralik": [
+     0.78,
+     0.91
+    ],
+    "yon": "yukseltir",
+    "kaynak_url": "https://www.openstreetmap.org/",
+    "not": ""
+   },
+   {
+    "id": "bina_km2",
+    "ad": "bina yoğunluğu",
+    "deger": 25,
+    "birim": "bina/km²",
+    "sira": 9,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.72,
+    "kismi": -0.14,
+    "aralik": [
+     -0.78,
+     -0.67
+    ],
+    "yon": null,
+    "kaynak_url": "https://planaski.ankara.bel.tr/webgis/rest/services/deprem/ilceMahalleRapor/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "yeni_arz",
+    "ad": "2018 sonrası bina payı",
+    "deger": 10.8,
+    "birim": "%",
+    "sira": 3,
+    "n": 11,
+    "hukum": "bagimsiz",
+    "hukum_metin": "uzaklık sabit tutulunca da fiyatla birlikte hareket etti",
+    "r": 0.87,
+    "kismi": 0.66,
+    "aralik": [
+     0.83,
+     0.92
+    ],
+    "yon": "yukseltir",
+    "kaynak_url": "https://planaski.ankara.bel.tr/webgis/rest/services/deprem/ilceMahalleRapor/MapServer/3",
+    "not": "Endeksa ilan tabanlı: yeni binalar çoğaldıkça ortalama m² karışım yüzünden de yükselir. Neden değil, birlikte hareket."
+   },
+   {
+    "id": "eski_stok",
+    "ad": "1998 öncesi bina payı",
+    "deger": 11.6,
+    "birim": "%",
+    "sira": 11,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.74,
+    "kismi": -0.29,
+    "aralik": [
+     -0.84,
+     -0.66
+    ],
+    "yon": null,
+    "kaynak_url": "https://planaski.ankara.bel.tr/webgis/rest/services/deprem/ilceMahalleRapor/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "plan_2020",
+    "ad": "2020'den beri plan değişikliği",
+    "deger": 8.4,
+    "birim": "/1000 bina",
+    "sira": 6,
+    "n": 11,
+    "hukum": "kararsiz",
+    "hukum_metin": "tek bir ilçe çıkarılınca yönü değişiyor; kararsız",
+    "r": -0.25,
+    "kismi": 0.23,
+    "aralik": [
+     -0.39,
+     0.08
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/plan/PlanRaporu/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "dava",
+    "ad": "davalı plan değişikliği payı",
+    "deger": 8.7,
+    "birim": "%",
+    "sira": 1,
+    "n": 11,
+    "hukum": "kararsiz",
+    "hukum_metin": "tek bir ilçe çıkarılınca yönü değişiyor; kararsız",
+    "r": 0.25,
+    "kismi": 0.58,
+    "aralik": [
+     -0.04,
+     0.75
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/plan/PlanRaporu/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "donusum",
+    "ad": "kentsel dönüşüm alanı",
+    "deger": 4.0,
+    "birim": "/10.000 bina",
+    "sira": 5,
+    "n": 11,
+    "hukum": "zayif",
+    "hukum_metin": "fiyatla ilişkisi zayıf",
+    "r": -0.47,
+    "kismi": 0.39,
+    "aralik": [
+     -0.56,
+     -0.2
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/plan/PlanRaporu/MapServer/2",
+    "not": ""
+   },
+   {
+    "id": "istasyon",
+    "ad": "raylı istasyon",
+    "deger": 0.0,
+    "birim": "/10.000 bina",
+    "sira": 8,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.6,
+    "kismi": 0.1,
+    "aralik": [
+     -0.75,
+     -0.51
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/kentrehberi/ego_kent_Rehberi/MapServer/4",
+    "not": ""
+   },
+   {
+    "id": "kurum",
+    "ad": "kurum girişi − çıkışı (2019–2026)",
+    "deger": 0,
+    "birim": "adet",
+    "sira": 2,
+    "n": 11,
+    "hukum": "kararsiz",
+    "hukum_metin": "tek bir ilçe çıkarılınca yönü değişiyor; kararsız",
+    "r": 0.38,
+    "kismi": 0.55,
+    "aralik": [
+     -0.05,
+     0.44
+    ],
+    "yon": null,
+    "kaynak_url": "",
+    "not": "hastane açılışı +1, kurum kapanışı −1; kaynaklar olay listesinde."
+   },
+   {
+    "id": "sel",
+    "ad": "su baskını kaydı (2017–2025)",
+    "deger": 10.4,
+    "birim": "/1000 bina",
+    "sira": 10,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.58,
+    "kismi": -0.21,
+    "aralik": [
+     -0.74,
+     -0.43
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/hidroloji_analizi/Ankara_Hidroloji_Analizi/MapServer/0",
+    "not": ""
+   },
+   {
+    "id": "okul",
+    "ad": "okul",
+    "deger": 1.4,
+    "birim": "/1000 bina",
+    "sira": 10,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.72,
+    "kismi": -0.33,
+    "aralik": [
+     -0.85,
+     -0.65
+    ],
+    "yon": null,
+    "kaynak_url": "https://overpass-api.de/api/interpreter",
+    "not": ""
+   },
+   {
+    "id": "park",
+    "ad": "park",
+    "deger": 3.0,
+    "birim": "/1000 bina",
+    "sira": 10,
+    "n": 11,
+    "hukum": "zayif",
+    "hukum_metin": "fiyatla ilişkisi zayıf",
+    "r": -0.37,
+    "kismi": -0.3,
+    "aralik": [
+     -0.49,
+     -0.29
+    ],
+    "yon": null,
+    "kaynak_url": "https://overpass-api.de/api/interpreter",
+    "not": ""
+   },
+   {
+    "id": "saglik",
+    "ad": "hastane ve klinik",
+    "deger": 0.2,
+    "birim": "/1000 bina",
+    "sira": 11,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.62,
+    "kismi": 0.2,
+    "aralik": [
+     -0.74,
+     -0.51
+    ],
+    "yon": null,
+    "kaynak_url": "https://overpass-api.de/api/interpreter",
+    "not": ""
+   }
+  ],
+  "gelecek": []
  },
  {
   "id": "yenimahalle",
@@ -465,6 +1016,277 @@
     "kaynak_url": "https://www.haberturk.com/ankara-haberleri/30530321-yenimahalle-belediyesinden-demetevlerde-kentsel-donusum-cagrisi",
     "not": "öncelikli alan, başlamadı; ABB 2026 performans programında hazırlık işi var"
    }
+  ],
+  "gucler": [
+   {
+    "id": "kizilay_km",
+    "ad": "Kızılay'a uzaklık",
+    "deger": 14.9,
+    "birim": "km",
+    "sira": 9,
+    "n": 11,
+    "hukum": "ana",
+    "hukum_metin": "2019–2026'da Ankara'da fiyatı en çok bu sürükledi",
+    "r": 0.85,
+    "kismi": null,
+    "aralik": [
+     0.78,
+     0.91
+    ],
+    "yon": "dusurur",
+    "kaynak_url": "https://www.openstreetmap.org/",
+    "not": ""
+   },
+   {
+    "id": "bina_km2",
+    "ad": "bina yoğunluğu",
+    "deger": 257,
+    "birim": "bina/km²",
+    "sira": 1,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.72,
+    "kismi": -0.14,
+    "aralik": [
+     -0.78,
+     -0.67
+    ],
+    "yon": null,
+    "kaynak_url": "https://planaski.ankara.bel.tr/webgis/rest/services/deprem/ilceMahalleRapor/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "yeni_arz",
+    "ad": "2018 sonrası bina payı",
+    "deger": 1.9,
+    "birim": "%",
+    "sira": 9,
+    "n": 11,
+    "hukum": "bagimsiz",
+    "hukum_metin": "uzaklık sabit tutulunca da fiyatla birlikte hareket etti",
+    "r": 0.87,
+    "kismi": 0.66,
+    "aralik": [
+     0.83,
+     0.92
+    ],
+    "yon": "dusurur",
+    "kaynak_url": "https://planaski.ankara.bel.tr/webgis/rest/services/deprem/ilceMahalleRapor/MapServer/3",
+    "not": "Endeksa ilan tabanlı: yeni binalar çoğaldıkça ortalama m² karışım yüzünden de yükselir. Neden değil, birlikte hareket."
+   },
+   {
+    "id": "eski_stok",
+    "ad": "1998 öncesi bina payı",
+    "deger": 28.4,
+    "birim": "%",
+    "sira": 4,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.74,
+    "kismi": -0.29,
+    "aralik": [
+     -0.84,
+     -0.66
+    ],
+    "yon": null,
+    "kaynak_url": "https://planaski.ankara.bel.tr/webgis/rest/services/deprem/ilceMahalleRapor/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "plan_2020",
+    "ad": "2020'den beri plan değişikliği",
+    "deger": 6.4,
+    "birim": "/1000 bina",
+    "sira": 9,
+    "n": 11,
+    "hukum": "kararsiz",
+    "hukum_metin": "tek bir ilçe çıkarılınca yönü değişiyor; kararsız",
+    "r": -0.25,
+    "kismi": 0.23,
+    "aralik": [
+     -0.39,
+     0.08
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/plan/PlanRaporu/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "dava",
+    "ad": "davalı plan değişikliği payı",
+    "deger": 3.9,
+    "birim": "%",
+    "sira": 8,
+    "n": 11,
+    "hukum": "kararsiz",
+    "hukum_metin": "tek bir ilçe çıkarılınca yönü değişiyor; kararsız",
+    "r": 0.25,
+    "kismi": 0.58,
+    "aralik": [
+     -0.04,
+     0.75
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/plan/PlanRaporu/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "donusum",
+    "ad": "kentsel dönüşüm alanı",
+    "deger": 4.0,
+    "birim": "/10.000 bina",
+    "sira": 4,
+    "n": 11,
+    "hukum": "zayif",
+    "hukum_metin": "fiyatla ilişkisi zayıf",
+    "r": -0.47,
+    "kismi": 0.39,
+    "aralik": [
+     -0.56,
+     -0.2
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/plan/PlanRaporu/MapServer/2",
+    "not": ""
+   },
+   {
+    "id": "istasyon",
+    "ad": "raylı istasyon",
+    "deger": 3.0,
+    "birim": "/10.000 bina",
+    "sira": 5,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.6,
+    "kismi": 0.1,
+    "aralik": [
+     -0.75,
+     -0.51
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/kentrehberi/ego_kent_Rehberi/MapServer/4",
+    "not": ""
+   },
+   {
+    "id": "kurum",
+    "ad": "kurum girişi − çıkışı (2019–2026)",
+    "deger": 0,
+    "birim": "adet",
+    "sira": 2,
+    "n": 11,
+    "hukum": "kararsiz",
+    "hukum_metin": "tek bir ilçe çıkarılınca yönü değişiyor; kararsız",
+    "r": 0.38,
+    "kismi": 0.55,
+    "aralik": [
+     -0.05,
+     0.44
+    ],
+    "yon": null,
+    "kaynak_url": "",
+    "not": "hastane açılışı +1, kurum kapanışı −1; kaynaklar olay listesinde."
+   },
+   {
+    "id": "sel",
+    "ad": "su baskını kaydı (2017–2025)",
+    "deger": 69.2,
+    "birim": "/1000 bina",
+    "sira": 4,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.58,
+    "kismi": -0.21,
+    "aralik": [
+     -0.74,
+     -0.43
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/hidroloji_analizi/Ankara_Hidroloji_Analizi/MapServer/0",
+    "not": ""
+   },
+   {
+    "id": "okul",
+    "ad": "okul",
+    "deger": 2.5,
+    "birim": "/1000 bina",
+    "sira": 8,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.72,
+    "kismi": -0.33,
+    "aralik": [
+     -0.85,
+     -0.65
+    ],
+    "yon": null,
+    "kaynak_url": "https://overpass-api.de/api/interpreter",
+    "not": ""
+   },
+   {
+    "id": "park",
+    "ad": "park",
+    "deger": 6.5,
+    "birim": "/1000 bina",
+    "sira": 6,
+    "n": 11,
+    "hukum": "zayif",
+    "hukum_metin": "fiyatla ilişkisi zayıf",
+    "r": -0.37,
+    "kismi": -0.3,
+    "aralik": [
+     -0.49,
+     -0.29
+    ],
+    "yon": null,
+    "kaynak_url": "https://overpass-api.de/api/interpreter",
+    "not": ""
+   },
+   {
+    "id": "saglik",
+    "ad": "hastane ve klinik",
+    "deger": 0.9,
+    "birim": "/1000 bina",
+    "sira": 5,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.62,
+    "kismi": 0.2,
+    "aralik": [
+     -0.74,
+     -0.51
+    ],
+    "yon": null,
+    "kaynak_url": "https://overpass-api.de/api/interpreter",
+    "not": ""
+   }
+  ],
+  "gelecek": [
+   {
+    "id": "yamacevler",
+    "baslik": "Yamaçevler dönüşümü",
+    "tur": "donusum",
+    "durum": "yapimda",
+    "tarih": "",
+    "hedef": "",
+    "emsal": "Ankara emsali: dönüşüm alanı yoğunluğu 2019–2026 değişimiyle zayıf ve uzaklığın gölgesinde.",
+    "kaynak_url": "https://www.yenimahalle.bel.tr/ProjeDetay/yamacevler-kentsel-donusum-projesi/15"
+   },
+   {
+    "id": "demetevler",
+    "baslik": "Demetevler dönüşümü",
+    "tur": "donusum",
+    "durum": "planli",
+    "tarih": "",
+    "hedef": "",
+    "emsal": "Ankara emsali: dönüşüm alanı yoğunluğu 2019–2026 değişimiyle zayıf ve uzaklığın gölgesinde.",
+    "kaynak_url": "https://www.haberturk.com/ankara-haberleri/30530321-yenimahalle-belediyesinden-demetevlerde-kentsel-donusum-cagrisi"
+   }
   ]
  },
  {
@@ -564,6 +1386,277 @@
     "kaynak_url": "https://optimumankara.com/tr/hakkimizda",
     "not": ""
    }
+  ],
+  "gucler": [
+   {
+    "id": "kizilay_km",
+    "ad": "Kızılay'a uzaklık",
+    "deger": 21.6,
+    "birim": "km",
+    "sira": 5,
+    "n": 11,
+    "hukum": "ana",
+    "hukum_metin": "2019–2026'da Ankara'da fiyatı en çok bu sürükledi",
+    "r": 0.85,
+    "kismi": null,
+    "aralik": [
+     0.78,
+     0.91
+    ],
+    "yon": "yukseltir",
+    "kaynak_url": "https://www.openstreetmap.org/",
+    "not": ""
+   },
+   {
+    "id": "bina_km2",
+    "ad": "bina yoğunluğu",
+    "deger": 85,
+    "birim": "bina/km²",
+    "sira": 6,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.72,
+    "kismi": -0.14,
+    "aralik": [
+     -0.78,
+     -0.67
+    ],
+    "yon": null,
+    "kaynak_url": "https://planaski.ankara.bel.tr/webgis/rest/services/deprem/ilceMahalleRapor/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "yeni_arz",
+    "ad": "2018 sonrası bina payı",
+    "deger": 8.2,
+    "birim": "%",
+    "sira": 4,
+    "n": 11,
+    "hukum": "bagimsiz",
+    "hukum_metin": "uzaklık sabit tutulunca da fiyatla birlikte hareket etti",
+    "r": 0.87,
+    "kismi": 0.66,
+    "aralik": [
+     0.83,
+     0.92
+    ],
+    "yon": "yukseltir",
+    "kaynak_url": "https://planaski.ankara.bel.tr/webgis/rest/services/deprem/ilceMahalleRapor/MapServer/3",
+    "not": "Endeksa ilan tabanlı: yeni binalar çoğaldıkça ortalama m² karışım yüzünden de yükselir. Neden değil, birlikte hareket."
+   },
+   {
+    "id": "eski_stok",
+    "ad": "1998 öncesi bina payı",
+    "deger": 16.6,
+    "birim": "%",
+    "sira": 7,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.74,
+    "kismi": -0.29,
+    "aralik": [
+     -0.84,
+     -0.66
+    ],
+    "yon": null,
+    "kaynak_url": "https://planaski.ankara.bel.tr/webgis/rest/services/deprem/ilceMahalleRapor/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "plan_2020",
+    "ad": "2020'den beri plan değişikliği",
+    "deger": 11.6,
+    "birim": "/1000 bina",
+    "sira": 2,
+    "n": 11,
+    "hukum": "kararsiz",
+    "hukum_metin": "tek bir ilçe çıkarılınca yönü değişiyor; kararsız",
+    "r": -0.25,
+    "kismi": 0.23,
+    "aralik": [
+     -0.39,
+     0.08
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/plan/PlanRaporu/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "dava",
+    "ad": "davalı plan değişikliği payı",
+    "deger": 5.4,
+    "birim": "%",
+    "sira": 4,
+    "n": 11,
+    "hukum": "kararsiz",
+    "hukum_metin": "tek bir ilçe çıkarılınca yönü değişiyor; kararsız",
+    "r": 0.25,
+    "kismi": 0.58,
+    "aralik": [
+     -0.04,
+     0.75
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/plan/PlanRaporu/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "donusum",
+    "ad": "kentsel dönüşüm alanı",
+    "deger": 6.5,
+    "birim": "/10.000 bina",
+    "sira": 1,
+    "n": 11,
+    "hukum": "zayif",
+    "hukum_metin": "fiyatla ilişkisi zayıf",
+    "r": -0.47,
+    "kismi": 0.39,
+    "aralik": [
+     -0.56,
+     -0.2
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/plan/PlanRaporu/MapServer/2",
+    "not": ""
+   },
+   {
+    "id": "istasyon",
+    "ad": "raylı istasyon",
+    "deger": 4.5,
+    "birim": "/10.000 bina",
+    "sira": 1,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.6,
+    "kismi": 0.1,
+    "aralik": [
+     -0.75,
+     -0.51
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/kentrehberi/ego_kent_Rehberi/MapServer/4",
+    "not": ""
+   },
+   {
+    "id": "kurum",
+    "ad": "kurum girişi − çıkışı (2019–2026)",
+    "deger": 0,
+    "birim": "adet",
+    "sira": 2,
+    "n": 11,
+    "hukum": "kararsiz",
+    "hukum_metin": "tek bir ilçe çıkarılınca yönü değişiyor; kararsız",
+    "r": 0.38,
+    "kismi": 0.55,
+    "aralik": [
+     -0.05,
+     0.44
+    ],
+    "yon": null,
+    "kaynak_url": "",
+    "not": "hastane açılışı +1, kurum kapanışı −1; kaynaklar olay listesinde."
+   },
+   {
+    "id": "sel",
+    "ad": "su baskını kaydı (2017–2025)",
+    "deger": 71.4,
+    "birim": "/1000 bina",
+    "sira": 2,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.58,
+    "kismi": -0.21,
+    "aralik": [
+     -0.74,
+     -0.43
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/hidroloji_analizi/Ankara_Hidroloji_Analizi/MapServer/0",
+    "not": ""
+   },
+   {
+    "id": "okul",
+    "ad": "okul",
+    "deger": 5.3,
+    "birim": "/1000 bina",
+    "sira": 1,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.72,
+    "kismi": -0.33,
+    "aralik": [
+     -0.85,
+     -0.65
+    ],
+    "yon": null,
+    "kaynak_url": "https://overpass-api.de/api/interpreter",
+    "not": ""
+   },
+   {
+    "id": "park",
+    "ad": "park",
+    "deger": 14.0,
+    "birim": "/1000 bina",
+    "sira": 2,
+    "n": 11,
+    "hukum": "zayif",
+    "hukum_metin": "fiyatla ilişkisi zayıf",
+    "r": -0.37,
+    "kismi": -0.3,
+    "aralik": [
+     -0.49,
+     -0.29
+    ],
+    "yon": null,
+    "kaynak_url": "https://overpass-api.de/api/interpreter",
+    "not": ""
+   },
+   {
+    "id": "saglik",
+    "ad": "hastane ve klinik",
+    "deger": 1.3,
+    "birim": "/1000 bina",
+    "sira": 3,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.62,
+    "kismi": 0.2,
+    "aralik": [
+     -0.74,
+     -0.51
+    ],
+    "yon": null,
+    "kaynak_url": "https://overpass-api.de/api/interpreter",
+    "not": ""
+   }
+  ],
+  "gelecek": [
+   {
+    "id": "koru_ext",
+    "baslik": "M2 Koru–Yaşamkent ve Koru–Bağlıca uzatması",
+    "tur": "rayli",
+    "durum": "planli",
+    "tarih": "2026-07",
+    "hedef": "",
+    "emsal": "Ankara emsali: Keçiören'in metrosu 2023'te Kızılay'a bağlandı, ilçenin göreli fiyatı yerinde saydı. Etki durak çevresinde aranmalı.",
+    "kaynak_url": "https://www.ankara.bel.tr/proje/x-177"
+   },
+   {
+    "id": "m6",
+    "baslik": "M6 Çayyolu–Sincan",
+    "tur": "rayli",
+    "durum": "planli",
+    "tarih": "2025-12-08",
+    "hedef": "",
+    "emsal": "Ankara emsali: Keçiören'in metrosu 2023'te Kızılay'a bağlandı, ilçenin göreli fiyatı yerinde saydı. Etki durak çevresinde aranmalı.",
+    "kaynak_url": "https://yatirimlar.com/haber/ankara-ya-4-yeni-metro-hatti-toplam-44-kilometrelik-dev-ulasim-hamlesi_249147"
+   }
   ]
  },
  {
@@ -617,6 +1710,267 @@
     "durum": "sozlesmeli",
     "kaynak_url": "https://www.haberankara.com/ankara/pursaklar-esenboga-metro-ihalesi-tamamlandi-319433",
     "not": "36 km, 12 durak; üç paket sözleşmesi Ağu–Eyl 2026 (34,0 + 42,4 + 54,4 mlr TL). Güzergâh durak adlarının mahalle merkezlerinden; Keçiören'deki duraklar bulunamadı"
+   }
+  ],
+  "gucler": [
+   {
+    "id": "kizilay_km",
+    "ad": "Kızılay'a uzaklık",
+    "deger": 21.0,
+    "birim": "km",
+    "sira": 6,
+    "n": 11,
+    "hukum": "ana",
+    "hukum_metin": "2019–2026'da Ankara'da fiyatı en çok bu sürükledi",
+    "r": 0.85,
+    "kismi": null,
+    "aralik": [
+     0.78,
+     0.91
+    ],
+    "yon": null,
+    "kaynak_url": "https://www.openstreetmap.org/",
+    "not": ""
+   },
+   {
+    "id": "bina_km2",
+    "ad": "bina yoğunluğu",
+    "deger": 65,
+    "birim": "bina/km²",
+    "sira": 7,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.72,
+    "kismi": -0.14,
+    "aralik": [
+     -0.78,
+     -0.67
+    ],
+    "yon": null,
+    "kaynak_url": "https://planaski.ankara.bel.tr/webgis/rest/services/deprem/ilceMahalleRapor/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "yeni_arz",
+    "ad": "2018 sonrası bina payı",
+    "deger": 5.7,
+    "birim": "%",
+    "sira": 5,
+    "n": 11,
+    "hukum": "bagimsiz",
+    "hukum_metin": "uzaklık sabit tutulunca da fiyatla birlikte hareket etti",
+    "r": 0.87,
+    "kismi": 0.66,
+    "aralik": [
+     0.83,
+     0.92
+    ],
+    "yon": "yukseltir",
+    "kaynak_url": "https://planaski.ankara.bel.tr/webgis/rest/services/deprem/ilceMahalleRapor/MapServer/3",
+    "not": "Endeksa ilan tabanlı: yeni binalar çoğaldıkça ortalama m² karışım yüzünden de yükselir. Neden değil, birlikte hareket."
+   },
+   {
+    "id": "eski_stok",
+    "ad": "1998 öncesi bina payı",
+    "deger": 15.7,
+    "birim": "%",
+    "sira": 9,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.74,
+    "kismi": -0.29,
+    "aralik": [
+     -0.84,
+     -0.66
+    ],
+    "yon": null,
+    "kaynak_url": "https://planaski.ankara.bel.tr/webgis/rest/services/deprem/ilceMahalleRapor/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "plan_2020",
+    "ad": "2020'den beri plan değişikliği",
+    "deger": 9.5,
+    "birim": "/1000 bina",
+    "sira": 3,
+    "n": 11,
+    "hukum": "kararsiz",
+    "hukum_metin": "tek bir ilçe çıkarılınca yönü değişiyor; kararsız",
+    "r": -0.25,
+    "kismi": 0.23,
+    "aralik": [
+     -0.39,
+     0.08
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/plan/PlanRaporu/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "dava",
+    "ad": "davalı plan değişikliği payı",
+    "deger": 3.6,
+    "birim": "%",
+    "sira": 10,
+    "n": 11,
+    "hukum": "kararsiz",
+    "hukum_metin": "tek bir ilçe çıkarılınca yönü değişiyor; kararsız",
+    "r": 0.25,
+    "kismi": 0.58,
+    "aralik": [
+     -0.04,
+     0.75
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/plan/PlanRaporu/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "donusum",
+    "ad": "kentsel dönüşüm alanı",
+    "deger": 3.4,
+    "birim": "/10.000 bina",
+    "sira": 7,
+    "n": 11,
+    "hukum": "zayif",
+    "hukum_metin": "fiyatla ilişkisi zayıf",
+    "r": -0.47,
+    "kismi": 0.39,
+    "aralik": [
+     -0.56,
+     -0.2
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/plan/PlanRaporu/MapServer/2",
+    "not": ""
+   },
+   {
+    "id": "istasyon",
+    "ad": "raylı istasyon",
+    "deger": 0.0,
+    "birim": "/10.000 bina",
+    "sira": 8,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.6,
+    "kismi": 0.1,
+    "aralik": [
+     -0.75,
+     -0.51
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/kentrehberi/ego_kent_Rehberi/MapServer/4",
+    "not": ""
+   },
+   {
+    "id": "kurum",
+    "ad": "kurum girişi − çıkışı (2019–2026)",
+    "deger": 0,
+    "birim": "adet",
+    "sira": 2,
+    "n": 11,
+    "hukum": "kararsiz",
+    "hukum_metin": "tek bir ilçe çıkarılınca yönü değişiyor; kararsız",
+    "r": 0.38,
+    "kismi": 0.55,
+    "aralik": [
+     -0.05,
+     0.44
+    ],
+    "yon": null,
+    "kaynak_url": "",
+    "not": "hastane açılışı +1, kurum kapanışı −1; kaynaklar olay listesinde."
+   },
+   {
+    "id": "sel",
+    "ad": "su baskını kaydı (2017–2025)",
+    "deger": 16.0,
+    "birim": "/1000 bina",
+    "sira": 9,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.58,
+    "kismi": -0.21,
+    "aralik": [
+     -0.74,
+     -0.43
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/hidroloji_analizi/Ankara_Hidroloji_Analizi/MapServer/0",
+    "not": ""
+   },
+   {
+    "id": "okul",
+    "ad": "okul",
+    "deger": 4.3,
+    "birim": "/1000 bina",
+    "sira": 3,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.72,
+    "kismi": -0.33,
+    "aralik": [
+     -0.85,
+     -0.65
+    ],
+    "yon": null,
+    "kaynak_url": "https://overpass-api.de/api/interpreter",
+    "not": ""
+   },
+   {
+    "id": "park",
+    "ad": "park",
+    "deger": 34.4,
+    "birim": "/1000 bina",
+    "sira": 1,
+    "n": 11,
+    "hukum": "zayif",
+    "hukum_metin": "fiyatla ilişkisi zayıf",
+    "r": -0.37,
+    "kismi": -0.3,
+    "aralik": [
+     -0.49,
+     -0.29
+    ],
+    "yon": null,
+    "kaynak_url": "https://overpass-api.de/api/interpreter",
+    "not": ""
+   },
+   {
+    "id": "saglik",
+    "ad": "hastane ve klinik",
+    "deger": 0.9,
+    "birim": "/1000 bina",
+    "sira": 4,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.62,
+    "kismi": 0.2,
+    "aralik": [
+     -0.74,
+     -0.51
+    ],
+    "yon": null,
+    "kaynak_url": "https://overpass-api.de/api/interpreter",
+    "not": ""
+   }
+  ],
+  "gelecek": [
+   {
+    "id": "m7",
+    "baslik": "M7 Gar–Esenboğa metrosu",
+    "tur": "rayli",
+    "durum": "sozlesmeli",
+    "tarih": "2026-09",
+    "hedef": "",
+    "emsal": "Ankara emsali: Keçiören'in metrosu 2023'te Kızılay'a bağlandı, ilçenin göreli fiyatı yerinde saydı. Etki durak çevresinde aranmalı.",
+    "kaynak_url": "https://www.haberankara.com/ankara/pursaklar-esenboga-metro-ihalesi-tamamlandi-319433"
    }
   ]
  },
@@ -689,6 +2043,277 @@
     "durum": "acik",
     "kaynak_url": "https://en.wikipedia.org/wiki/Esenbo%C4%9Fa_International_Airport",
     "not": ""
+   }
+  ],
+  "gucler": [
+   {
+    "id": "kizilay_km",
+    "ad": "Kızılay'a uzaklık",
+    "deger": 46.0,
+    "birim": "km",
+    "sira": 1,
+    "n": 11,
+    "hukum": "ana",
+    "hukum_metin": "2019–2026'da Ankara'da fiyatı en çok bu sürükledi",
+    "r": 0.85,
+    "kismi": null,
+    "aralik": [
+     0.78,
+     0.91
+    ],
+    "yon": "yukseltir",
+    "kaynak_url": "https://www.openstreetmap.org/",
+    "not": ""
+   },
+   {
+    "id": "bina_km2",
+    "ad": "bina yoğunluğu",
+    "deger": 19,
+    "birim": "bina/km²",
+    "sira": 11,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.72,
+    "kismi": -0.14,
+    "aralik": [
+     -0.78,
+     -0.67
+    ],
+    "yon": null,
+    "kaynak_url": "https://planaski.ankara.bel.tr/webgis/rest/services/deprem/ilceMahalleRapor/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "yeni_arz",
+    "ad": "2018 sonrası bina payı",
+    "deger": 16.8,
+    "birim": "%",
+    "sira": 2,
+    "n": 11,
+    "hukum": "bagimsiz",
+    "hukum_metin": "uzaklık sabit tutulunca da fiyatla birlikte hareket etti",
+    "r": 0.87,
+    "kismi": 0.66,
+    "aralik": [
+     0.83,
+     0.92
+    ],
+    "yon": "yukseltir",
+    "kaynak_url": "https://planaski.ankara.bel.tr/webgis/rest/services/deprem/ilceMahalleRapor/MapServer/3",
+    "not": "Bu ilçede binaların yalnızca %11'inin yapım dönemi girilmiş; pay güvenilir değil. Endeksa ilan tabanlı: yeni binalar çoğaldıkça ortalama m² karışım yüzünden de yükselir. Neden değil, birlikte hareket."
+   },
+   {
+    "id": "eski_stok",
+    "ad": "1998 öncesi bina payı",
+    "deger": 13.0,
+    "birim": "%",
+    "sira": 10,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.74,
+    "kismi": -0.29,
+    "aralik": [
+     -0.84,
+     -0.66
+    ],
+    "yon": null,
+    "kaynak_url": "https://planaski.ankara.bel.tr/webgis/rest/services/deprem/ilceMahalleRapor/MapServer/3",
+    "not": "Bu ilçede binaların yalnızca %11'inin yapım dönemi girilmiş; pay güvenilir değil."
+   },
+   {
+    "id": "plan_2020",
+    "ad": "2020'den beri plan değişikliği",
+    "deger": 4.8,
+    "birim": "/1000 bina",
+    "sira": 11,
+    "n": 11,
+    "hukum": "kararsiz",
+    "hukum_metin": "tek bir ilçe çıkarılınca yönü değişiyor; kararsız",
+    "r": -0.25,
+    "kismi": 0.23,
+    "aralik": [
+     -0.39,
+     0.08
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/plan/PlanRaporu/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "dava",
+    "ad": "davalı plan değişikliği payı",
+    "deger": 2.1,
+    "birim": "%",
+    "sira": 11,
+    "n": 11,
+    "hukum": "kararsiz",
+    "hukum_metin": "tek bir ilçe çıkarılınca yönü değişiyor; kararsız",
+    "r": 0.25,
+    "kismi": 0.58,
+    "aralik": [
+     -0.04,
+     0.75
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/plan/PlanRaporu/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "donusum",
+    "ad": "kentsel dönüşüm alanı",
+    "deger": 0.0,
+    "birim": "/10.000 bina",
+    "sira": 11,
+    "n": 11,
+    "hukum": "zayif",
+    "hukum_metin": "fiyatla ilişkisi zayıf",
+    "r": -0.47,
+    "kismi": 0.39,
+    "aralik": [
+     -0.56,
+     -0.2
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/plan/PlanRaporu/MapServer/2",
+    "not": ""
+   },
+   {
+    "id": "istasyon",
+    "ad": "raylı istasyon",
+    "deger": 0.0,
+    "birim": "/10.000 bina",
+    "sira": 8,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.6,
+    "kismi": 0.1,
+    "aralik": [
+     -0.75,
+     -0.51
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/kentrehberi/ego_kent_Rehberi/MapServer/4",
+    "not": ""
+   },
+   {
+    "id": "kurum",
+    "ad": "kurum girişi − çıkışı (2019–2026)",
+    "deger": 0,
+    "birim": "adet",
+    "sira": 2,
+    "n": 11,
+    "hukum": "kararsiz",
+    "hukum_metin": "tek bir ilçe çıkarılınca yönü değişiyor; kararsız",
+    "r": 0.38,
+    "kismi": 0.55,
+    "aralik": [
+     -0.05,
+     0.44
+    ],
+    "yon": null,
+    "kaynak_url": "",
+    "not": "hastane açılışı +1, kurum kapanışı −1; kaynaklar olay listesinde."
+   },
+   {
+    "id": "sel",
+    "ad": "su baskını kaydı (2017–2025)",
+    "deger": 8.6,
+    "birim": "/1000 bina",
+    "sira": 11,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.58,
+    "kismi": -0.21,
+    "aralik": [
+     -0.74,
+     -0.43
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/hidroloji_analizi/Ankara_Hidroloji_Analizi/MapServer/0",
+    "not": ""
+   },
+   {
+    "id": "okul",
+    "ad": "okul",
+    "deger": 1.9,
+    "birim": "/1000 bina",
+    "sira": 9,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.72,
+    "kismi": -0.33,
+    "aralik": [
+     -0.85,
+     -0.65
+    ],
+    "yon": null,
+    "kaynak_url": "https://overpass-api.de/api/interpreter",
+    "not": ""
+   },
+   {
+    "id": "park",
+    "ad": "park",
+    "deger": 4.3,
+    "birim": "/1000 bina",
+    "sira": 9,
+    "n": 11,
+    "hukum": "zayif",
+    "hukum_metin": "fiyatla ilişkisi zayıf",
+    "r": -0.37,
+    "kismi": -0.3,
+    "aralik": [
+     -0.49,
+     -0.29
+    ],
+    "yon": null,
+    "kaynak_url": "https://overpass-api.de/api/interpreter",
+    "not": ""
+   },
+   {
+    "id": "saglik",
+    "ad": "hastane ve klinik",
+    "deger": 0.3,
+    "birim": "/1000 bina",
+    "sira": 10,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.62,
+    "kismi": 0.2,
+    "aralik": [
+     -0.74,
+     -0.51
+    ],
+    "yon": null,
+    "kaynak_url": "https://overpass-api.de/api/interpreter",
+    "not": ""
+   }
+  ],
+  "gelecek": [
+   {
+    "id": "m7",
+    "baslik": "M7 Gar–Esenboğa metrosu",
+    "tur": "rayli",
+    "durum": "sozlesmeli",
+    "tarih": "2026-09",
+    "hedef": "",
+    "emsal": "Ankara emsali: Keçiören'in metrosu 2023'te Kızılay'a bağlandı, ilçenin göreli fiyatı yerinde saydı. Etki durak çevresinde aranmalı.",
+    "kaynak_url": "https://www.haberankara.com/ankara/pursaklar-esenboga-metro-ihalesi-tamamlandi-319433"
+   },
+   {
+    "id": "cubuk_plan",
+    "baslik": "Çubuk merkez imar planı (~165 ha)",
+    "tur": "imar",
+    "durum": "onaylandi",
+    "tarih": "2026-08-11",
+    "hedef": "",
+    "emsal": "Ankara'da ölçülmüş emsal yok.",
+    "kaynak_url": "https://s.ankara.bel.tr/s3/abb/2026/08/24/0277fdc9-cbc8-4a2c-8a06-961a245b4234.docx"
    }
   ]
  },
@@ -770,6 +2395,267 @@
     "durum": "planli",
     "kaynak_url": "https://www.ankara.bel.tr/proje/x-178",
     "not": "7,69 km (depo bağlantısı dahil); 2026 ulusal yatırım programında değil"
+   }
+  ],
+  "gucler": [
+   {
+    "id": "kizilay_km",
+    "ad": "Kızılay'a uzaklık",
+    "deger": 16.0,
+    "birim": "km",
+    "sira": 7,
+    "n": 11,
+    "hukum": "ana",
+    "hukum_metin": "2019–2026'da Ankara'da fiyatı en çok bu sürükledi",
+    "r": 0.85,
+    "kismi": null,
+    "aralik": [
+     0.78,
+     0.91
+    ],
+    "yon": "dusurur",
+    "kaynak_url": "https://www.openstreetmap.org/",
+    "not": ""
+   },
+   {
+    "id": "bina_km2",
+    "ad": "bina yoğunluğu",
+    "deger": 225,
+    "birim": "bina/km²",
+    "sira": 2,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.72,
+    "kismi": -0.14,
+    "aralik": [
+     -0.78,
+     -0.67
+    ],
+    "yon": null,
+    "kaynak_url": "https://planaski.ankara.bel.tr/webgis/rest/services/deprem/ilceMahalleRapor/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "yeni_arz",
+    "ad": "2018 sonrası bina payı",
+    "deger": 1.4,
+    "birim": "%",
+    "sira": 11,
+    "n": 11,
+    "hukum": "bagimsiz",
+    "hukum_metin": "uzaklık sabit tutulunca da fiyatla birlikte hareket etti",
+    "r": 0.87,
+    "kismi": 0.66,
+    "aralik": [
+     0.83,
+     0.92
+    ],
+    "yon": "dusurur",
+    "kaynak_url": "https://planaski.ankara.bel.tr/webgis/rest/services/deprem/ilceMahalleRapor/MapServer/3",
+    "not": "Endeksa ilan tabanlı: yeni binalar çoğaldıkça ortalama m² karışım yüzünden de yükselir. Neden değil, birlikte hareket."
+   },
+   {
+    "id": "eski_stok",
+    "ad": "1998 öncesi bina payı",
+    "deger": 33.8,
+    "birim": "%",
+    "sira": 3,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.74,
+    "kismi": -0.29,
+    "aralik": [
+     -0.84,
+     -0.66
+    ],
+    "yon": null,
+    "kaynak_url": "https://planaski.ankara.bel.tr/webgis/rest/services/deprem/ilceMahalleRapor/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "plan_2020",
+    "ad": "2020'den beri plan değişikliği",
+    "deger": 6.1,
+    "birim": "/1000 bina",
+    "sira": 10,
+    "n": 11,
+    "hukum": "kararsiz",
+    "hukum_metin": "tek bir ilçe çıkarılınca yönü değişiyor; kararsız",
+    "r": -0.25,
+    "kismi": 0.23,
+    "aralik": [
+     -0.39,
+     0.08
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/plan/PlanRaporu/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "dava",
+    "ad": "davalı plan değişikliği payı",
+    "deger": 5.0,
+    "birim": "%",
+    "sira": 6,
+    "n": 11,
+    "hukum": "kararsiz",
+    "hukum_metin": "tek bir ilçe çıkarılınca yönü değişiyor; kararsız",
+    "r": 0.25,
+    "kismi": 0.58,
+    "aralik": [
+     -0.04,
+     0.75
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/plan/PlanRaporu/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "donusum",
+    "ad": "kentsel dönüşüm alanı",
+    "deger": 3.3,
+    "birim": "/10.000 bina",
+    "sira": 8,
+    "n": 11,
+    "hukum": "zayif",
+    "hukum_metin": "fiyatla ilişkisi zayıf",
+    "r": -0.47,
+    "kismi": 0.39,
+    "aralik": [
+     -0.56,
+     -0.2
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/plan/PlanRaporu/MapServer/2",
+    "not": ""
+   },
+   {
+    "id": "istasyon",
+    "ad": "raylı istasyon",
+    "deger": 3.5,
+    "birim": "/10.000 bina",
+    "sira": 3,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.6,
+    "kismi": 0.1,
+    "aralik": [
+     -0.75,
+     -0.51
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/kentrehberi/ego_kent_Rehberi/MapServer/4",
+    "not": ""
+   },
+   {
+    "id": "kurum",
+    "ad": "kurum girişi − çıkışı (2019–2026)",
+    "deger": 0,
+    "birim": "adet",
+    "sira": 2,
+    "n": 11,
+    "hukum": "kararsiz",
+    "hukum_metin": "tek bir ilçe çıkarılınca yönü değişiyor; kararsız",
+    "r": 0.38,
+    "kismi": 0.55,
+    "aralik": [
+     -0.05,
+     0.44
+    ],
+    "yon": null,
+    "kaynak_url": "",
+    "not": "hastane açılışı +1, kurum kapanışı −1; kaynaklar olay listesinde."
+   },
+   {
+    "id": "sel",
+    "ad": "su baskını kaydı (2017–2025)",
+    "deger": 100.4,
+    "birim": "/1000 bina",
+    "sira": 1,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.58,
+    "kismi": -0.21,
+    "aralik": [
+     -0.74,
+     -0.43
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/hidroloji_analizi/Ankara_Hidroloji_Analizi/MapServer/0",
+    "not": ""
+   },
+   {
+    "id": "okul",
+    "ad": "okul",
+    "deger": 4.7,
+    "birim": "/1000 bina",
+    "sira": 2,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.72,
+    "kismi": -0.33,
+    "aralik": [
+     -0.85,
+     -0.65
+    ],
+    "yon": null,
+    "kaynak_url": "https://overpass-api.de/api/interpreter",
+    "not": ""
+   },
+   {
+    "id": "park",
+    "ad": "park",
+    "deger": 11.7,
+    "birim": "/1000 bina",
+    "sira": 3,
+    "n": 11,
+    "hukum": "zayif",
+    "hukum_metin": "fiyatla ilişkisi zayıf",
+    "r": -0.37,
+    "kismi": -0.3,
+    "aralik": [
+     -0.49,
+     -0.29
+    ],
+    "yon": null,
+    "kaynak_url": "https://overpass-api.de/api/interpreter",
+    "not": ""
+   },
+   {
+    "id": "saglik",
+    "ad": "hastane ve klinik",
+    "deger": 1.3,
+    "birim": "/1000 bina",
+    "sira": 2,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.62,
+    "kismi": 0.2,
+    "aralik": [
+     -0.74,
+     -0.51
+    ],
+    "yon": null,
+    "kaynak_url": "https://overpass-api.de/api/interpreter",
+    "not": ""
+   }
+  ],
+  "gelecek": [
+   {
+    "id": "m4_forum",
+    "baslik": "M4 Şehitler–Forum uzatması",
+    "tur": "rayli",
+    "durum": "planli",
+    "tarih": "",
+    "hedef": "",
+    "emsal": "Ankara emsali: Keçiören'in metrosu 2023'te Kızılay'a bağlandı, ilçenin göreli fiyatı yerinde saydı. Etki durak çevresinde aranmalı.",
+    "kaynak_url": "https://www.ankara.bel.tr/proje/x-178"
    }
   ]
  },
@@ -924,6 +2810,297 @@
     "kaynak_url": "https://www.ankara.bel.tr/proje/x-240",
     "not": "yaklaşık 30.000 m² meydan, trafik yer altına"
    }
+  ],
+  "gucler": [
+   {
+    "id": "kizilay_km",
+    "ad": "Kızılay'a uzaklık",
+    "deger": 13.8,
+    "birim": "km",
+    "sira": 10,
+    "n": 11,
+    "hukum": "ana",
+    "hukum_metin": "2019–2026'da Ankara'da fiyatı en çok bu sürükledi",
+    "r": 0.85,
+    "kismi": null,
+    "aralik": [
+     0.78,
+     0.91
+    ],
+    "yon": "dusurur",
+    "kaynak_url": "https://www.openstreetmap.org/",
+    "not": ""
+   },
+   {
+    "id": "bina_km2",
+    "ad": "bina yoğunluğu",
+    "deger": 197,
+    "birim": "bina/km²",
+    "sira": 3,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.72,
+    "kismi": -0.14,
+    "aralik": [
+     -0.78,
+     -0.67
+    ],
+    "yon": null,
+    "kaynak_url": "https://planaski.ankara.bel.tr/webgis/rest/services/deprem/ilceMahalleRapor/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "yeni_arz",
+    "ad": "2018 sonrası bina payı",
+    "deger": 1.7,
+    "birim": "%",
+    "sira": 10,
+    "n": 11,
+    "hukum": "bagimsiz",
+    "hukum_metin": "uzaklık sabit tutulunca da fiyatla birlikte hareket etti",
+    "r": 0.87,
+    "kismi": 0.66,
+    "aralik": [
+     0.83,
+     0.92
+    ],
+    "yon": "dusurur",
+    "kaynak_url": "https://planaski.ankara.bel.tr/webgis/rest/services/deprem/ilceMahalleRapor/MapServer/3",
+    "not": "Endeksa ilan tabanlı: yeni binalar çoğaldıkça ortalama m² karışım yüzünden de yükselir. Neden değil, birlikte hareket."
+   },
+   {
+    "id": "eski_stok",
+    "ad": "1998 öncesi bina payı",
+    "deger": 42.1,
+    "birim": "%",
+    "sira": 1,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.74,
+    "kismi": -0.29,
+    "aralik": [
+     -0.84,
+     -0.66
+    ],
+    "yon": null,
+    "kaynak_url": "https://planaski.ankara.bel.tr/webgis/rest/services/deprem/ilceMahalleRapor/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "plan_2020",
+    "ad": "2020'den beri plan değişikliği",
+    "deger": 8.2,
+    "birim": "/1000 bina",
+    "sira": 7,
+    "n": 11,
+    "hukum": "kararsiz",
+    "hukum_metin": "tek bir ilçe çıkarılınca yönü değişiyor; kararsız",
+    "r": -0.25,
+    "kismi": 0.23,
+    "aralik": [
+     -0.39,
+     0.08
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/plan/PlanRaporu/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "dava",
+    "ad": "davalı plan değişikliği payı",
+    "deger": 3.9,
+    "birim": "%",
+    "sira": 7,
+    "n": 11,
+    "hukum": "kararsiz",
+    "hukum_metin": "tek bir ilçe çıkarılınca yönü değişiyor; kararsız",
+    "r": 0.25,
+    "kismi": 0.58,
+    "aralik": [
+     -0.04,
+     0.75
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/plan/PlanRaporu/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "donusum",
+    "ad": "kentsel dönüşüm alanı",
+    "deger": 3.8,
+    "birim": "/10.000 bina",
+    "sira": 6,
+    "n": 11,
+    "hukum": "zayif",
+    "hukum_metin": "fiyatla ilişkisi zayıf",
+    "r": -0.47,
+    "kismi": 0.39,
+    "aralik": [
+     -0.56,
+     -0.2
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/plan/PlanRaporu/MapServer/2",
+    "not": ""
+   },
+   {
+    "id": "istasyon",
+    "ad": "raylı istasyon",
+    "deger": 3.5,
+    "birim": "/10.000 bina",
+    "sira": 4,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.6,
+    "kismi": 0.1,
+    "aralik": [
+     -0.75,
+     -0.51
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/kentrehberi/ego_kent_Rehberi/MapServer/4",
+    "not": ""
+   },
+   {
+    "id": "kurum",
+    "ad": "kurum girişi − çıkışı (2019–2026)",
+    "deger": -2,
+    "birim": "adet",
+    "sira": 11,
+    "n": 11,
+    "hukum": "kararsiz",
+    "hukum_metin": "tek bir ilçe çıkarılınca yönü değişiyor; kararsız",
+    "r": 0.38,
+    "kismi": 0.55,
+    "aralik": [
+     -0.05,
+     0.44
+    ],
+    "yon": null,
+    "kaynak_url": "",
+    "not": "hastane açılışı +1, kurum kapanışı −1; kaynaklar olay listesinde."
+   },
+   {
+    "id": "sel",
+    "ad": "su baskını kaydı (2017–2025)",
+    "deger": 49.4,
+    "birim": "/1000 bina",
+    "sira": 7,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.58,
+    "kismi": -0.21,
+    "aralik": [
+     -0.74,
+     -0.43
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/hidroloji_analizi/Ankara_Hidroloji_Analizi/MapServer/0",
+    "not": ""
+   },
+   {
+    "id": "okul",
+    "ad": "okul",
+    "deger": 3.8,
+    "birim": "/1000 bina",
+    "sira": 6,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.72,
+    "kismi": -0.33,
+    "aralik": [
+     -0.85,
+     -0.65
+    ],
+    "yon": null,
+    "kaynak_url": "https://overpass-api.de/api/interpreter",
+    "not": ""
+   },
+   {
+    "id": "park",
+    "ad": "park",
+    "deger": 5.3,
+    "birim": "/1000 bina",
+    "sira": 8,
+    "n": 11,
+    "hukum": "zayif",
+    "hukum_metin": "fiyatla ilişkisi zayıf",
+    "r": -0.37,
+    "kismi": -0.3,
+    "aralik": [
+     -0.49,
+     -0.29
+    ],
+    "yon": null,
+    "kaynak_url": "https://overpass-api.de/api/interpreter",
+    "not": ""
+   },
+   {
+    "id": "saglik",
+    "ad": "hastane ve klinik",
+    "deger": 0.8,
+    "birim": "/1000 bina",
+    "sira": 7,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.62,
+    "kismi": 0.2,
+    "aralik": [
+     -0.74,
+     -0.51
+    ],
+    "yon": null,
+    "kaynak_url": "https://overpass-api.de/api/interpreter",
+    "not": ""
+   }
+  ],
+  "gelecek": [
+   {
+    "id": "m7",
+    "baslik": "M7 Gar–Esenboğa metrosu",
+    "tur": "rayli",
+    "durum": "sozlesmeli",
+    "tarih": "2026-09",
+    "hedef": "",
+    "emsal": "Ankara emsali: Keçiören'in metrosu 2023'te Kızılay'a bağlandı, ilçenin göreli fiyatı yerinde saydı. Etki durak çevresinde aranmalı.",
+    "kaynak_url": "https://www.haberankara.com/ankara/pursaklar-esenboga-metro-ihalesi-tamamlandi-319433"
+   },
+   {
+    "id": "hidirliktepe",
+    "baslik": "Hıdırlıktepe–Atıfbey–İsmetpaşa dönüşümü",
+    "tur": "donusum",
+    "durum": "yapimda",
+    "tarih": "2026-01-30",
+    "hedef": "",
+    "emsal": "Ankara emsali: dönüşüm alanı yoğunluğu 2019–2026 değişimiyle zayıf ve uzaklığın gölgesinde.",
+    "kaynak_url": "https://www.ankara.bel.tr/en/proje/hidirliktepe-atifbey-ismetpasa-kentsel-donusum-ve-gelisim-projesi-305"
+   },
+   {
+    "id": "teleferik_ulus",
+    "baslik": "Hacıbayram–Kale–Hıdırlıktepe teleferiği",
+    "tur": "ulasim",
+    "durum": "planli",
+    "tarih": "2026",
+    "hedef": "",
+    "emsal": "Ankara'da ölçülmüş emsal yok.",
+    "kaynak_url": "https://s.ankara.bel.tr/s3/abb/2026/01/30/91a36f2f-cac5-4b36-9f97-630237507179.pdf"
+   },
+   {
+    "id": "ulus_yaya",
+    "baslik": "Ulus yayalaştırma",
+    "tur": "donusum",
+    "durum": "yapimda",
+    "tarih": "",
+    "hedef": "",
+    "emsal": "Ankara emsali: dönüşüm alanı yoğunluğu 2019–2026 değişimiyle zayıf ve uzaklığın gölgesinde.",
+    "kaynak_url": "https://www.ankara.bel.tr/proje/x-240"
+   }
   ]
  },
  {
@@ -995,6 +3172,267 @@
     "durum": "acik",
     "kaynak_url": "https://en.wikipedia.org/wiki/OSB-Törekent_(Ankara_Metro)",
     "not": "kaynaklar 12 Şubat ve 13 Mart diyor"
+   }
+  ],
+  "gucler": [
+   {
+    "id": "kizilay_km",
+    "ad": "Kızılay'a uzaklık",
+    "deger": 35.2,
+    "birim": "km",
+    "sira": 3,
+    "n": 11,
+    "hukum": "ana",
+    "hukum_metin": "2019–2026'da Ankara'da fiyatı en çok bu sürükledi",
+    "r": 0.85,
+    "kismi": null,
+    "aralik": [
+     0.78,
+     0.91
+    ],
+    "yon": "yukseltir",
+    "kaynak_url": "https://www.openstreetmap.org/",
+    "not": ""
+   },
+   {
+    "id": "bina_km2",
+    "ad": "bina yoğunluğu",
+    "deger": 39,
+    "birim": "bina/km²",
+    "sira": 8,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.72,
+    "kismi": -0.14,
+    "aralik": [
+     -0.78,
+     -0.67
+    ],
+    "yon": null,
+    "kaynak_url": "https://planaski.ankara.bel.tr/webgis/rest/services/deprem/ilceMahalleRapor/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "yeni_arz",
+    "ad": "2018 sonrası bina payı",
+    "deger": 4.5,
+    "birim": "%",
+    "sira": 6,
+    "n": 11,
+    "hukum": "bagimsiz",
+    "hukum_metin": "uzaklık sabit tutulunca da fiyatla birlikte hareket etti",
+    "r": 0.87,
+    "kismi": 0.66,
+    "aralik": [
+     0.83,
+     0.92
+    ],
+    "yon": null,
+    "kaynak_url": "https://planaski.ankara.bel.tr/webgis/rest/services/deprem/ilceMahalleRapor/MapServer/3",
+    "not": "Endeksa ilan tabanlı: yeni binalar çoğaldıkça ortalama m² karışım yüzünden de yükselir. Neden değil, birlikte hareket."
+   },
+   {
+    "id": "eski_stok",
+    "ad": "1998 öncesi bina payı",
+    "deger": 24.1,
+    "birim": "%",
+    "sira": 6,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.74,
+    "kismi": -0.29,
+    "aralik": [
+     -0.84,
+     -0.66
+    ],
+    "yon": null,
+    "kaynak_url": "https://planaski.ankara.bel.tr/webgis/rest/services/deprem/ilceMahalleRapor/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "plan_2020",
+    "ad": "2020'den beri plan değişikliği",
+    "deger": 8.6,
+    "birim": "/1000 bina",
+    "sira": 5,
+    "n": 11,
+    "hukum": "kararsiz",
+    "hukum_metin": "tek bir ilçe çıkarılınca yönü değişiyor; kararsız",
+    "r": -0.25,
+    "kismi": 0.23,
+    "aralik": [
+     -0.39,
+     0.08
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/plan/PlanRaporu/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "dava",
+    "ad": "davalı plan değişikliği payı",
+    "deger": 3.6,
+    "birim": "%",
+    "sira": 9,
+    "n": 11,
+    "hukum": "kararsiz",
+    "hukum_metin": "tek bir ilçe çıkarılınca yönü değişiyor; kararsız",
+    "r": 0.25,
+    "kismi": 0.58,
+    "aralik": [
+     -0.04,
+     0.75
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/plan/PlanRaporu/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "donusum",
+    "ad": "kentsel dönüşüm alanı",
+    "deger": 1.8,
+    "birim": "/10.000 bina",
+    "sira": 9,
+    "n": 11,
+    "hukum": "zayif",
+    "hukum_metin": "fiyatla ilişkisi zayıf",
+    "r": -0.47,
+    "kismi": 0.39,
+    "aralik": [
+     -0.56,
+     -0.2
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/plan/PlanRaporu/MapServer/2",
+    "not": ""
+   },
+   {
+    "id": "istasyon",
+    "ad": "raylı istasyon",
+    "deger": 1.8,
+    "birim": "/10.000 bina",
+    "sira": 7,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.6,
+    "kismi": 0.1,
+    "aralik": [
+     -0.75,
+     -0.51
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/kentrehberi/ego_kent_Rehberi/MapServer/4",
+    "not": ""
+   },
+   {
+    "id": "kurum",
+    "ad": "kurum girişi − çıkışı (2019–2026)",
+    "deger": 0,
+    "birim": "adet",
+    "sira": 2,
+    "n": 11,
+    "hukum": "kararsiz",
+    "hukum_metin": "tek bir ilçe çıkarılınca yönü değişiyor; kararsız",
+    "r": 0.38,
+    "kismi": 0.55,
+    "aralik": [
+     -0.05,
+     0.44
+    ],
+    "yon": null,
+    "kaynak_url": "",
+    "not": "hastane açılışı +1, kurum kapanışı −1; kaynaklar olay listesinde."
+   },
+   {
+    "id": "sel",
+    "ad": "su baskını kaydı (2017–2025)",
+    "deger": 69.3,
+    "birim": "/1000 bina",
+    "sira": 3,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.58,
+    "kismi": -0.21,
+    "aralik": [
+     -0.74,
+     -0.43
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/hidroloji_analizi/Ankara_Hidroloji_Analizi/MapServer/0",
+    "not": ""
+   },
+   {
+    "id": "okul",
+    "ad": "okul",
+    "deger": 2.9,
+    "birim": "/1000 bina",
+    "sira": 7,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.72,
+    "kismi": -0.33,
+    "aralik": [
+     -0.85,
+     -0.65
+    ],
+    "yon": null,
+    "kaynak_url": "https://overpass-api.de/api/interpreter",
+    "not": ""
+   },
+   {
+    "id": "park",
+    "ad": "park",
+    "deger": 9.9,
+    "birim": "/1000 bina",
+    "sira": 4,
+    "n": 11,
+    "hukum": "zayif",
+    "hukum_metin": "fiyatla ilişkisi zayıf",
+    "r": -0.37,
+    "kismi": -0.3,
+    "aralik": [
+     -0.49,
+     -0.29
+    ],
+    "yon": null,
+    "kaynak_url": "https://overpass-api.de/api/interpreter",
+    "not": ""
+   },
+   {
+    "id": "saglik",
+    "ad": "hastane ve klinik",
+    "deger": 0.7,
+    "birim": "/1000 bina",
+    "sira": 8,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.62,
+    "kismi": 0.2,
+    "aralik": [
+     -0.74,
+     -0.51
+    ],
+    "yon": null,
+    "kaynak_url": "https://overpass-api.de/api/interpreter",
+    "not": ""
+   }
+  ],
+  "gelecek": [
+   {
+    "id": "m6",
+    "baslik": "M6 Çayyolu–Sincan",
+    "tur": "rayli",
+    "durum": "planli",
+    "tarih": "2025-12-08",
+    "hedef": "",
+    "emsal": "Ankara emsali: Keçiören'in metrosu 2023'te Kızılay'a bağlandı, ilçenin göreli fiyatı yerinde saydı. Etki durak çevresinde aranmalı.",
+    "kaynak_url": "https://yatirimlar.com/haber/ankara-ya-4-yeni-metro-hatti-toplam-44-kilometrelik-dev-ulasim-hamlesi_249147"
    }
   ]
  },
@@ -1077,6 +3515,287 @@
     "kaynak_url": "https://www.ankara.bel.tr/proje/x-182",
     "not": "8.006 konut; 1.038 teslim, 325'i 2026 1. çeyrekte; Oca 2026'da 56,6 mlr TL ihale; 8 Eyl 2026 meclis kararı 1150 ile 11 etabın uygulama planı revizyonu"
    }
+  ],
+  "gucler": [
+   {
+    "id": "kizilay_km",
+    "ad": "Kızılay'a uzaklık",
+    "deger": 15.5,
+    "birim": "km",
+    "sira": 8,
+    "n": 11,
+    "hukum": "ana",
+    "hukum_metin": "2019–2026'da Ankara'da fiyatı en çok bu sürükledi",
+    "r": 0.85,
+    "kismi": null,
+    "aralik": [
+     0.78,
+     0.91
+    ],
+    "yon": "dusurur",
+    "kaynak_url": "https://www.openstreetmap.org/",
+    "not": ""
+   },
+   {
+    "id": "bina_km2",
+    "ad": "bina yoğunluğu",
+    "deger": 93,
+    "birim": "bina/km²",
+    "sira": 5,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.72,
+    "kismi": -0.14,
+    "aralik": [
+     -0.78,
+     -0.67
+    ],
+    "yon": null,
+    "kaynak_url": "https://planaski.ankara.bel.tr/webgis/rest/services/deprem/ilceMahalleRapor/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "yeni_arz",
+    "ad": "2018 sonrası bina payı",
+    "deger": 2.7,
+    "birim": "%",
+    "sira": 8,
+    "n": 11,
+    "hukum": "bagimsiz",
+    "hukum_metin": "uzaklık sabit tutulunca da fiyatla birlikte hareket etti",
+    "r": 0.87,
+    "kismi": 0.66,
+    "aralik": [
+     0.83,
+     0.92
+    ],
+    "yon": "dusurur",
+    "kaynak_url": "https://planaski.ankara.bel.tr/webgis/rest/services/deprem/ilceMahalleRapor/MapServer/3",
+    "not": "Endeksa ilan tabanlı: yeni binalar çoğaldıkça ortalama m² karışım yüzünden de yükselir. Neden değil, birlikte hareket."
+   },
+   {
+    "id": "eski_stok",
+    "ad": "1998 öncesi bina payı",
+    "deger": 24.9,
+    "birim": "%",
+    "sira": 5,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.74,
+    "kismi": -0.29,
+    "aralik": [
+     -0.84,
+     -0.66
+    ],
+    "yon": null,
+    "kaynak_url": "https://planaski.ankara.bel.tr/webgis/rest/services/deprem/ilceMahalleRapor/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "plan_2020",
+    "ad": "2020'den beri plan değişikliği",
+    "deger": 9.2,
+    "birim": "/1000 bina",
+    "sira": 4,
+    "n": 11,
+    "hukum": "kararsiz",
+    "hukum_metin": "tek bir ilçe çıkarılınca yönü değişiyor; kararsız",
+    "r": -0.25,
+    "kismi": 0.23,
+    "aralik": [
+     -0.39,
+     0.08
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/plan/PlanRaporu/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "dava",
+    "ad": "davalı plan değişikliği payı",
+    "deger": 5.2,
+    "birim": "%",
+    "sira": 5,
+    "n": 11,
+    "hukum": "kararsiz",
+    "hukum_metin": "tek bir ilçe çıkarılınca yönü değişiyor; kararsız",
+    "r": 0.25,
+    "kismi": 0.58,
+    "aralik": [
+     -0.04,
+     0.75
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/plan/PlanRaporu/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "donusum",
+    "ad": "kentsel dönüşüm alanı",
+    "deger": 5.6,
+    "birim": "/10.000 bina",
+    "sira": 3,
+    "n": 11,
+    "hukum": "zayif",
+    "hukum_metin": "fiyatla ilişkisi zayıf",
+    "r": -0.47,
+    "kismi": 0.39,
+    "aralik": [
+     -0.56,
+     -0.2
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/plan/PlanRaporu/MapServer/2",
+    "not": ""
+   },
+   {
+    "id": "istasyon",
+    "ad": "raylı istasyon",
+    "deger": 2.2,
+    "birim": "/10.000 bina",
+    "sira": 6,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.6,
+    "kismi": 0.1,
+    "aralik": [
+     -0.75,
+     -0.51
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/kentrehberi/ego_kent_Rehberi/MapServer/4",
+    "not": ""
+   },
+   {
+    "id": "kurum",
+    "ad": "kurum girişi − çıkışı (2019–2026)",
+    "deger": 0,
+    "birim": "adet",
+    "sira": 2,
+    "n": 11,
+    "hukum": "kararsiz",
+    "hukum_metin": "tek bir ilçe çıkarılınca yönü değişiyor; kararsız",
+    "r": 0.38,
+    "kismi": 0.55,
+    "aralik": [
+     -0.05,
+     0.44
+    ],
+    "yon": null,
+    "kaynak_url": "",
+    "not": "hastane açılışı +1, kurum kapanışı −1; kaynaklar olay listesinde."
+   },
+   {
+    "id": "sel",
+    "ad": "su baskını kaydı (2017–2025)",
+    "deger": 66.1,
+    "birim": "/1000 bina",
+    "sira": 5,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.58,
+    "kismi": -0.21,
+    "aralik": [
+     -0.74,
+     -0.43
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/hidroloji_analizi/Ankara_Hidroloji_Analizi/MapServer/0",
+    "not": ""
+   },
+   {
+    "id": "okul",
+    "ad": "okul",
+    "deger": 4.2,
+    "birim": "/1000 bina",
+    "sira": 4,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.72,
+    "kismi": -0.33,
+    "aralik": [
+     -0.85,
+     -0.65
+    ],
+    "yon": null,
+    "kaynak_url": "https://overpass-api.de/api/interpreter",
+    "not": ""
+   },
+   {
+    "id": "park",
+    "ad": "park",
+    "deger": 5.9,
+    "birim": "/1000 bina",
+    "sira": 7,
+    "n": 11,
+    "hukum": "zayif",
+    "hukum_metin": "fiyatla ilişkisi zayıf",
+    "r": -0.37,
+    "kismi": -0.3,
+    "aralik": [
+     -0.49,
+     -0.29
+    ],
+    "yon": null,
+    "kaynak_url": "https://overpass-api.de/api/interpreter",
+    "not": ""
+   },
+   {
+    "id": "saglik",
+    "ad": "hastane ve klinik",
+    "deger": 0.9,
+    "birim": "/1000 bina",
+    "sira": 6,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.62,
+    "kismi": 0.2,
+    "aralik": [
+     -0.74,
+     -0.51
+    ],
+    "yon": null,
+    "kaynak_url": "https://overpass-api.de/api/interpreter",
+    "not": ""
+   }
+  ],
+  "gelecek": [
+   {
+    "id": "m7",
+    "baslik": "M7 Gar–Esenboğa metrosu",
+    "tur": "rayli",
+    "durum": "sozlesmeli",
+    "tarih": "2026-09",
+    "hedef": "",
+    "emsal": "Ankara emsali: Keçiören'in metrosu 2023'te Kızılay'a bağlandı, ilçenin göreli fiyatı yerinde saydı. Etki durak çevresinde aranmalı.",
+    "kaynak_url": "https://www.haberankara.com/ankara/pursaklar-esenboga-metro-ihalesi-tamamlandi-319433"
+   },
+   {
+    "id": "a2",
+    "baslik": "Dikimevi–Natoyolu hafif raylı",
+    "tur": "rayli",
+    "durum": "yapimda",
+    "tarih": "2025-06-13",
+    "hedef": "2029-01-14",
+    "emsal": "Ankara emsali: Keçiören'in metrosu 2023'te Kızılay'a bağlandı, ilçenin göreli fiyatı yerinde saydı. Etki durak çevresinde aranmalı.",
+    "kaynak_url": "https://www.ego.gov.tr/sayfa/2281/dikimevinatoyolu-ankaray-hafif-rayli-sistem-hatti"
+   },
+   {
+    "id": "yeni_mamak",
+    "baslik": "Yeni Mamak dönüşümü",
+    "tur": "donusum",
+    "durum": "yapimda",
+    "tarih": "2008",
+    "hedef": "",
+    "emsal": "Ankara emsali: dönüşüm alanı yoğunluğu 2019–2026 değişimiyle zayıf ve uzaklığın gölgesinde.",
+    "kaynak_url": "https://www.ankara.bel.tr/proje/x-182"
+   }
   ]
  },
  {
@@ -1121,6 +3840,256 @@
     "kaynak_url": "https://www.emlakjet.com/emlak-piyasasi/satilik-konut/ankara-akyurt"
    }
   ],
-  "olaylar": []
+  "olaylar": [],
+  "gucler": [
+   {
+    "id": "kizilay_km",
+    "ad": "Kızılay'a uzaklık",
+    "deger": 32.9,
+    "birim": "km",
+    "sira": 4,
+    "n": 11,
+    "hukum": "ana",
+    "hukum_metin": "2019–2026'da Ankara'da fiyatı en çok bu sürükledi",
+    "r": 0.85,
+    "kismi": null,
+    "aralik": [
+     0.78,
+     0.91
+    ],
+    "yon": "yukseltir",
+    "kaynak_url": "https://www.openstreetmap.org/",
+    "not": ""
+   },
+   {
+    "id": "bina_km2",
+    "ad": "bina yoğunluğu",
+    "deger": 21,
+    "birim": "bina/km²",
+    "sira": 10,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.72,
+    "kismi": -0.14,
+    "aralik": [
+     -0.78,
+     -0.67
+    ],
+    "yon": null,
+    "kaynak_url": "https://planaski.ankara.bel.tr/webgis/rest/services/deprem/ilceMahalleRapor/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "yeni_arz",
+    "ad": "2018 sonrası bina payı",
+    "deger": 21.6,
+    "birim": "%",
+    "sira": 1,
+    "n": 11,
+    "hukum": "bagimsiz",
+    "hukum_metin": "uzaklık sabit tutulunca da fiyatla birlikte hareket etti",
+    "r": 0.87,
+    "kismi": 0.66,
+    "aralik": [
+     0.83,
+     0.92
+    ],
+    "yon": "yukseltir",
+    "kaynak_url": "https://planaski.ankara.bel.tr/webgis/rest/services/deprem/ilceMahalleRapor/MapServer/3",
+    "not": "Bu ilçede binaların yalnızca %25'inin yapım dönemi girilmiş; pay güvenilir değil. Endeksa ilan tabanlı: yeni binalar çoğaldıkça ortalama m² karışım yüzünden de yükselir. Neden değil, birlikte hareket."
+   },
+   {
+    "id": "eski_stok",
+    "ad": "1998 öncesi bina payı",
+    "deger": 16.5,
+    "birim": "%",
+    "sira": 8,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.74,
+    "kismi": -0.29,
+    "aralik": [
+     -0.84,
+     -0.66
+    ],
+    "yon": null,
+    "kaynak_url": "https://planaski.ankara.bel.tr/webgis/rest/services/deprem/ilceMahalleRapor/MapServer/3",
+    "not": "Bu ilçede binaların yalnızca %25'inin yapım dönemi girilmiş; pay güvenilir değil."
+   },
+   {
+    "id": "plan_2020",
+    "ad": "2020'den beri plan değişikliği",
+    "deger": 7.0,
+    "birim": "/1000 bina",
+    "sira": 8,
+    "n": 11,
+    "hukum": "kararsiz",
+    "hukum_metin": "tek bir ilçe çıkarılınca yönü değişiyor; kararsız",
+    "r": -0.25,
+    "kismi": 0.23,
+    "aralik": [
+     -0.39,
+     0.08
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/plan/PlanRaporu/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "dava",
+    "ad": "davalı plan değişikliği payı",
+    "deger": 6.5,
+    "birim": "%",
+    "sira": 3,
+    "n": 11,
+    "hukum": "kararsiz",
+    "hukum_metin": "tek bir ilçe çıkarılınca yönü değişiyor; kararsız",
+    "r": 0.25,
+    "kismi": 0.58,
+    "aralik": [
+     -0.04,
+     0.75
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/plan/PlanRaporu/MapServer/3",
+    "not": ""
+   },
+   {
+    "id": "donusum",
+    "ad": "kentsel dönüşüm alanı",
+    "deger": 1.3,
+    "birim": "/10.000 bina",
+    "sira": 10,
+    "n": 11,
+    "hukum": "zayif",
+    "hukum_metin": "fiyatla ilişkisi zayıf",
+    "r": -0.47,
+    "kismi": 0.39,
+    "aralik": [
+     -0.56,
+     -0.2
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/plan/PlanRaporu/MapServer/2",
+    "not": ""
+   },
+   {
+    "id": "istasyon",
+    "ad": "raylı istasyon",
+    "deger": 0.0,
+    "birim": "/10.000 bina",
+    "sira": 8,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.6,
+    "kismi": 0.1,
+    "aralik": [
+     -0.75,
+     -0.51
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/kentrehberi/ego_kent_Rehberi/MapServer/4",
+    "not": ""
+   },
+   {
+    "id": "kurum",
+    "ad": "kurum girişi − çıkışı (2019–2026)",
+    "deger": 0,
+    "birim": "adet",
+    "sira": 2,
+    "n": 11,
+    "hukum": "kararsiz",
+    "hukum_metin": "tek bir ilçe çıkarılınca yönü değişiyor; kararsız",
+    "r": 0.38,
+    "kismi": 0.55,
+    "aralik": [
+     -0.05,
+     0.44
+    ],
+    "yon": null,
+    "kaynak_url": "",
+    "not": "hastane açılışı +1, kurum kapanışı −1; kaynaklar olay listesinde."
+   },
+   {
+    "id": "sel",
+    "ad": "su baskını kaydı (2017–2025)",
+    "deger": 48.7,
+    "birim": "/1000 bina",
+    "sira": 8,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.58,
+    "kismi": -0.21,
+    "aralik": [
+     -0.74,
+     -0.43
+    ],
+    "yon": null,
+    "kaynak_url": "https://baskentcbs.ankara.bel.tr/server/rest/services/hidroloji_analizi/Ankara_Hidroloji_Analizi/MapServer/0",
+    "not": ""
+   },
+   {
+    "id": "okul",
+    "ad": "okul",
+    "deger": 1.3,
+    "birim": "/1000 bina",
+    "sira": 11,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.72,
+    "kismi": -0.33,
+    "aralik": [
+     -0.85,
+     -0.65
+    ],
+    "yon": null,
+    "kaynak_url": "https://overpass-api.de/api/interpreter",
+    "not": ""
+   },
+   {
+    "id": "park",
+    "ad": "park",
+    "deger": 1.8,
+    "birim": "/1000 bina",
+    "sira": 11,
+    "n": 11,
+    "hukum": "zayif",
+    "hukum_metin": "fiyatla ilişkisi zayıf",
+    "r": -0.37,
+    "kismi": -0.3,
+    "aralik": [
+     -0.49,
+     -0.29
+    ],
+    "yon": null,
+    "kaynak_url": "https://overpass-api.de/api/interpreter",
+    "not": ""
+   },
+   {
+    "id": "saglik",
+    "ad": "hastane ve klinik",
+    "deger": 0.4,
+    "birim": "/1000 bina",
+    "sira": 9,
+    "n": 11,
+    "hukum": "golge",
+    "hukum_metin": "fiyatla birlikte hareket etti ama merkezden uzaklığın yansıması",
+    "r": -0.62,
+    "kismi": 0.2,
+    "aralik": [
+     -0.74,
+     -0.51
+    ],
+    "yon": null,
+    "kaynak_url": "https://overpass-api.de/api/interpreter",
+    "not": ""
+   }
+  ],
+  "gelecek": []
  }
 ]

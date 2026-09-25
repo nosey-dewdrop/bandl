@@ -82,12 +82,12 @@ Kuralı Damla ya da ben yazmıyoruz; sistem veriden buluyor.
 |---|---|---|---|
 | Merkezden çevreye kayış | Kızılay'a uzaklık | OSM | ilçe düzeyinde ölçüldü, r = +0,85 |
 | Yapılaşma baskısı (Çukurambar) | plana göre izinli inşaat alanı/km², yıllık plan değişikliği, yeni bina payı | ABB plan adası (emsal, kat), PlanRaporu, bina dönemi | 18 mahallede çekildi |
-| Erişim | raylı durağa uzaklık ve aşama (plan / ihale / yapım / açık) | ABB istasyonlar, EGO, OSM | hatlar var, durak mesafesi hesaplanmadı |
+| Erişim | raylı durağa uzaklık ve aşama (plan / ihale / yapım / açık) | ABB istasyonlar, EGO, OSM | ilçede istasyon yoğunluğu ölçüldü; durağa mesafe hesaplanmadı |
 | Kurum girişi ve çıkışı | hastane, üniversite, bakanlık açılışı ve kapanışı | `projeler.json` | ilçe düzeyinde örtüşme var (Altındağ −8, Çankaya +12) |
 | Stok yaşı ve dönüşüm | 1998 öncesi bina payı, dönüşüm alanı | ABB | 18 mahallede çekildi |
 | Hukuki risk | plan iptali, yürütmeyi durdurma | ABB PlanRaporu | 18 mahallede çekildi |
-| Doğal risk | diri fay, sel, zemin | ABB deprem ve jeoloji katmanları | çekilmedi |
-| Donatı | okula, parka, AVM'ye uzaklık | OSM | çekilmedi |
+| Doğal risk | diri fay, sel, zemin | ABB deprem ve jeoloji katmanları | ilçe düzeyinde ölçüldü (aşağıda) |
+| Donatı | okul, park, sağlık tesisi sayısı | OSM | ilçe düzeyinde ölçüldü (aşağıda) |
 
 **Ağırlıkları kim veriyor?**
 - Ankara'nın kendi geçmişi. Her mahallenin yıllara göre göreli fiyat değişimi bu güçlerle karşılaştırılır. Sistem, hangi gücün Ankara'da ne kadar etki ettiğini böyle öğrenir.
@@ -97,7 +97,45 @@ Kuralı Damla ya da ben yazmıyoruz; sistem veriden buluyor.
   - Endeksa 2020'de başlıyor.
   - Güçler ücretsiz; ağırlıklar lisansa bağlı.
 
-**İlk ölçüm: yapılaşma baskısı.**
+**İlçe düzeyinde ölçüldü (26 Eyl 2026 gecesi, 11 ilçe, 2019–2026 göreli değişim). MVP'ye giren budur.**
+- Hüküm sayıdan çıkıyor, elle yazılmıyor (`build.py`, `guc_hukum`).
+- Hüküm kuralı:
+  - Tek bir ilçe çıkarılınca r'nin işareti değişiyorsa: **kararsız**
+  - |r| < 0,3 ise: **tutmadı**; |r| < 0,5 ise: **zayıf**
+  - Uzaklık sabit tutulunca |r| ≥ 0,5 kalıyorsa: **uzaklıktan bağımsız**; kalmıyorsa: **uzaklığın yansıması**
+
+| Güç | r | Bir ilçe çıkarılınca | Uzaklık sabitken | Hüküm |
+|---|---|---|---|---|
+| Kızılay'a uzaklık | +0,85 | +0,78 … +0,91 | — | ana güç |
+| 2018 sonrası bina payı | +0,87 | +0,83 … +0,92 | +0,66 | uzaklıktan bağımsız |
+| bina yoğunluğu | −0,72 | −0,78 … −0,67 | −0,14 | uzaklığın yansıması |
+| 1998 öncesi bina payı | −0,74 | −0,84 … −0,66 | −0,29 | uzaklığın yansıması |
+| raylı istasyon (/10.000 bina) | −0,60 | −0,75 … −0,51 | +0,10 | uzaklığın yansıması |
+| su baskını kaydı 2017–2025 | −0,58 | −0,74 … −0,43 | −0,21 | uzaklığın yansıması |
+| okul (/1000 bina) | −0,72 | −0,85 … −0,65 | −0,33 | uzaklığın yansıması |
+| hastane ve klinik (/1000 bina) | −0,62 | −0,74 … −0,51 | +0,20 | uzaklığın yansıması |
+| kentsel dönüşüm alanı | −0,47 | −0,56 … −0,20 | +0,39 | zayıf |
+| park | −0,37 | −0,49 … −0,29 | −0,30 | zayıf |
+| 2020'den beri plan değişikliği | −0,25 | −0,39 … +0,08 | +0,23 | kararsız |
+| davalı plan payı | +0,25 | −0,04 … +0,75 | +0,58 | kararsız |
+| kurum girişi − çıkışı | +0,38 | −0,05 … +0,44 | +0,55 | kararsız |
+| diri fay | — | — | — | ayırt etmiyor: 11 ilçenin hiçbirinde yok, en yakını Kızılay'a 39,5 km |
+| yerleşime uygunluk | — | — | — | ölçülemedi: ABB jeolojik etüt katmanı çoğu ilçede boş ya da hata veriyor |
+
+**Okuma:**
+- 2019–2026'da Ankara'yı iki güç sürükledi: merkezden uzaklık ve yeni yapı.
+- Metro, okul, sel, eski stok fiyatla birlikte hareket ediyor, ama bu merkez–çevre farkının yansıması.
+- Yeni yapı payının sonucu Damla'nın Çukurambar sezgisinin (çok bina → düşüş) tersi. Ama iki uyarıyla:
+  - Endeksa ilan tabanlı; yeni binalar arttıkça ortalama karışım yüzünden de yükselir.
+  - Çubuk ve Akyurt'ta binaların yalnızca %11 ve %25'inin dönemi girilmiş. Bu iki ilçe çıkarılınca r +0,86, uzaklık sabitken +0,68.
+- Mahalle düzeyinde, bugünkü fiyat seviyesinde tersi görüldü (yeni bina payı ~ fiyat r = −0,51, 9 mahalle). Değişim ölçülmedi.
+
+**Sınıf kuralı değişmedi (v1).** Güçler panelde "neye göre" olarak görünüyor.
+- Her ilçede her gücün değeri ve 11 ilçe içindeki sırası var.
+- Hüküm "ana" ya da "bağımsız" ise bir yön de var: bu ilçenin değeri medyanın hangi tarafında ve Ankara'da o taraf ne yaptı.
+- "Gelecek" listesi: bekleyen her proje, türüne göre Ankara emsaliyle.
+
+**İlk ölçüm (mahalle): yapılaşma baskısı.**
 - Ölçü: plan adası başına alan × emsal, toplamı mahalle km²'sine bölünerek. 25–26 Eyl 2026'da 18 mahalle ölçüldü.
 - Sonuçlar (plana göre izinli inşaat alanı, m²/km²):
 
@@ -517,6 +555,8 @@ Demo tıklama yolu:
 2. Keçiören'e tıkla. Panelde görünen:
    - değeri düşer
    - "M4 2023'te Kızılay'a bağlandı, göreli fiyat yerinde saydı"
+   - neye göre: Kızılay'a uzaklık düşürür (7/11), 2018 sonrası bina payı düşürür (11/11)
+   - gelecek: M4 Şehitler–Forum uzatması, altında Keçiören emsali
    - kaynak linki
 3. Çubuk'a tıkla. Panelde görünen:
    - değerlenebilir
@@ -548,7 +588,11 @@ Schema:
   kural, neden, goreli: {"2019","2020","2026": ratio to Ankara median},
   goreli_degisim, yapi: { kizilay_km, bina_km2, beklenen, fark, bina_kaynak_url },
   fiyat: [{ yil, ay, tl_m2, kaynak, kaynak_url }],
-  olaylar: [{ id, tarih, baslik, tur, durum, not, kaynak_url }] }]
+  olaylar: [{ id, tarih, baslik, tur, durum, not, kaynak_url }],
+  gucler: [{ id, ad, deger, birim, sira, n, hukum: "ana"|"bagimsiz"|"golge"|"zayif"|
+    "kararsiz"|"tutmadi", hukum_metin, r, kismi, aralik, yon: "yukseltir"|"dusurur"|null,
+    not, kaynak_url }],
+  gelecek: [{ id, baslik, tur, durum, tarih, hedef, emsal, kaynak_url }] }]
 - src/data/projeler.json: [{ id, ad, tur: "rayli"|"ulasim"|"hastane"|"kurum"|"avm"|
   "donusum"|"imar"|"yol"|"havalimani"|"risk", durum: "acik"|"onaylandi"|"sozlesmeli"|
   "yapimda"|"planli"|"iptal"|"kapandi"|"belirsiz", tarih, hedef?, ilceler: [id], yaklasik: bool, not?,
@@ -583,10 +627,19 @@ Fill the district panel from ilceler.json:
    three ratios as a small line with labeled points (1.00 = median, draw that as a
    faint reference), then the TL/m² values from "fiyat" with month, year and source
    link. Label it "ankara medyanına göre".
-5) Timeline (field "olaylar"): sorted by date, newest first: date, title, type,
-   status label, "not" in smaller text, source link. Items with status "sozlesmeli",
-   "yapimda" or "planli" appear first under a "gelecek" heading. If "olaylar" is
-   empty: "bu ilçe için kaynaklı olay bulunamadı".
+5) "neye göre" (field "gucler"). First the items whose hukum is "ana" or
+   "bagimsiz", one row each: ad; deger + birim; "{sira}/{n}"; and yon as a word:
+   "yükseltir" in #2b5cad or "düşürür" in #c8602a (nothing if null). Under the row,
+   hukum_metin in secondary color, "not" in smaller text if not empty, source link.
+   Then a plain text toggle "diğer güçler" that expands the rest in two groups:
+   hukum "golge" under "uzaklığın yansıması"; "zayif", "kararsiz", "tutmadi" under
+   "kanıtı tutmayanlar". Same row without yon. Last line, small: "11 ilçe,
+   2019–2026. birlikte hareket etmek neden olmak değildir."
+6) "gelecek" (field "gelecek"): baslik, status label, tarih and hedef if present,
+   "emsal" in smaller text, source link. If empty: "bekleyen kaynaklı proje yok".
+7) "geçmiş" (field "olaylar", skipping items whose id is in "gelecek"): sorted
+   by date, newest first: date, title, type, status label, "not" in smaller text,
+   source link. If empty: "bu ilçe için kaynaklı olay bulunamadı".
 ```
 
 **Prompt 3: proje katmanı**

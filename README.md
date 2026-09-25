@@ -420,6 +420,17 @@ Bulguların özeti PROJECT.md "Blokörler: ne bulundu?" bölümünde. Buradakile
 - Rezerv yapı alanı: [ÇŞB plan dosyası (2023)](https://webdosya.csb.gov.tr/db/ankara/duyurular/plan-dosyasi-20231215143640.pdf), [Yeni Ankara (1 Şub 2026)](https://www.yeniankara.com.tr/ankara/ankarada-milyarlik-arazi-bilmecesi-yarginin-iptal-ettigi-proje-deprem-kilifiyla-geri-mi-donuyor-153536). ÇŞB dosyası sertifika hatası verdi, okunamadı.
 - İtfaiye alanı: [soL](https://haber.sol.org.tr/haber/cayyolunda-itfaiye-alanina-ticaret-plani-belediye-meclisinin-ilahlastigi-anlara-taniklik)
 
+**Güç ölçümleri (26 Eyl 2026 gecesi, 11 ilçe; değerler `build.py` içinde `GUC_HAM`)**
+- ABB, ilçe katmanı: bina yapım dönemi. `planaski…/deprem/ilceMahalleRapor/MapServer/3`
+- ABB, UİP ve NİP değişiklik sınırları: toplam sayı, 2020 sonrası, davalı (iptal, YD, kısmi iptal). İlçe poligonuyla kesişen sayıldı. `baskentcbs…/plan/PlanRaporu/MapServer/3`, `/4`
+- ABB, kentsel dönüşüm alanları: `…/PlanRaporu/MapServer/2`
+- ABB, raylı istasyonlar: `…/kentrehberi/ego_kent_Rehberi/MapServer/4` (metro), `/5` (Ankaray), `/6` (Başkentray)
+- ABB, su baskını kayıtları 2017–2025: 20.990 nokta, ilçe alanına göre sayıldı. `…/hidroloji_analizi/Ankara_Hidroloji_Analizi/MapServer/0`
+- ABB, diri fay: `planaski…/deprem/diriFay/MapServer/0`. Türkiye geneli katman; 11 ilçenin içinde fay yok, en yakın nokta Kızılay'a 39,5 km.
+- ABB, yerleşime uygunluk: `…/jeolojikEtut/jeolojikEtut/MapServer/1`. Çoğu ilçede boş ya da hata veriyor, kullanılmadı.
+- OSM, Overpass: `amenity=school`, `leisure=park`, `amenity=hospital|clinic` sayısı, ilçe relation alanında. © OpenStreetMap katkıcıları, ODbL.
+- ABB, plan adası (emsal, kat): `…/plan/UIP_Goruntuleme/MapServer/19`. Yalnızca 18 premium mahallede, mahalle ölçümü için.
+
 **Bu turda erişilemeyenler ve iz**
 - Araştırma ajanlarının web arama kotası (200) doldu.
   - MLS ve oda girişimleri, SPK III-37.1 tebliği ve 2015–2024 mahalle fiyatları yarım kaldı.

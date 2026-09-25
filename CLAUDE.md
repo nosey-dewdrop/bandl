@@ -32,6 +32,8 @@
 1. 26 Eyl GarajX MVP. Damla: Lovable Pro, Mapbox `pk.` token. Ben: Lovable repo adı gelince `data/` → `src/data/`.
 2. "Sonraki ürün": blokörler 25 Eyl gece araştırıldı (PROJECT.md "Blokörler: ne bulundu?", kaynaklar README'de).
    Damla karar verdi: komisyon yok, aracılık yok, "sadece ürün". Yetki belgesi ve ofis yok; ilan gelince EİDS. Plan: PROJECT.md "Plan: ürün ne, veri nereden?". Türkiye'de "Fine Estate" adlı şirket bulunamadı; tahminle bir şirkete bağlama.
+2b. MVP'ye "neye göre" eklendi (26 Eyl gece): 13 güç, 11 ilçe, hüküm sayıdan (`build.py` GUC_HAM + guc_hukum);
+   `ilceler.json`'da `gucler` ve `gelecek`. Lovable Prompt 2 buna göre güncel. Sınıf kuralı v1, değişmedi.
 3. Premium aks: 18 mahalle için ABB bina yaşı, plan değişikliği, dönüşüm tablosu PROJECT.md'de. Mahalle fiyat serisi hâlâ yok
    (açık seri yok; Endeksa ya da REIDIN lisansı; TKGM Değer Bilgi Merkezi Ankara'ya 2027 ortası).
 
