@@ -1,4 +1,4 @@
-# emsal — şu an ne doğru?
+# bandl — şu an ne doğru?
 
 - Ankara ilçe değer haritası. Spec ve Lovable promptları: PROJECT.md. Kaynaklar ve varlıklar: README.md.
 - Uydurma veri yok. Her sayı ve olay kaynak URL'li. Kaynak yoksa "kaynak bulunamadı" yazılır.

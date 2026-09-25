@@ -1,4 +1,4 @@
-"""emsal seed -> data/ilceler.json + data/projeler.json
+"""bandl seed -> data/ilceler.json + data/projeler.json
 
 python3 data/build.py
 
@@ -10,7 +10,7 @@ import json, statistics, time, urllib.request, xml.etree.ElementTree as ET
 from pathlib import Path
 
 D = Path(__file__).parent
-UA = {"User-Agent": "emsal-seed/0.1 (damummyphus@gmail.com)"}
+UA = {"User-Agent": "bandl-seed/0.1 (damummyphus@gmail.com)"}
 
 # --- fiyat: Endeksa TL/m2. 2019 ve 2020 Haziran (Baret tablosu), 2026 Ağustos (Emlakjet ilçe sayfası)
 BARET = "https://www.baretdergisi.com/ankarada-konut-fiyatlari-2020-yilinin-ilk-6-ayinda-yuzde-799-artti/20007/"

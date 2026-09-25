@@ -1,4 +1,4 @@
-# emsal
+# bandl
 
 Ankara'nın ilçelerini **değerlenebilir / değer korur / değeri düşer** diye sınıflayan ve
 bu sınıfın nedenini haritadaki projelere ve tarihte olanlara kaynaklı olarak bağlayan harita.
@@ -34,7 +34,7 @@ Fiyatın neden oynadığını (metro, şehir hastanesi, kentsel dönüşüm, ima
 taşınması) göstermiyor.
 
 **O bilgi dağınık:** EGO sayfaları, ABB proje sayfaları, meclis kararları, haberler,
-akademik makaleler. emsal bunları tek haritada, tarih ve kaynakla, fiyat serisinin yanına koyuyor.
+akademik makaleler. bandl bunları tek haritada, tarih ve kaynakla, fiyat serisinin yanına koyuyor.
 
 **Kural:** uydurma veri yok. Her sayı ve her olayın yanında kaynak linki var. Kaynağı
 bulunamayan yerde "kaynak bulunamadı" yazar.
@@ -156,7 +156,7 @@ Herkes ulusal TÜFE ile reelleştiriyor; Ankara'ya özel enflasyon kullanan yok.
 
 25 Eyl 2026'da tek tek curl ile denendi.
 
-**1. Harita veri sunucusu (ArcGIS REST, anonim erişim). emsal için en değerli kaynak bu.**
+**1. Harita veri sunucusu (ArcGIS REST, anonim erişim). bandl için en değerli kaynak bu.**
 - Sunucular: `https://baskentcbs.ankara.bel.tr/server/rest/services` ve `https://planaski.ankara.bel.tr/webgis/rest/services`.
 - Sorgu JSON, GeoJSON ya da PBF döndürüyor. Bir sorgu en fazla 2000 kayıt veriyor, fazlası için sayfalamak gerekiyor.
 - WMS açık, WFS kapalı. `icdp_yeni` klasörü token istiyor.
@@ -263,7 +263,7 @@ Kentsel dönüşüm alanlarının ilçelere dağılımı (sorgu, 25 Eyl 2026):
   - Etimesgut askerî havaalanı–Ayyıldız bağlantı yolu, 18 Eyl 2026
 - **TKGM:** parselsorgu.tkgm.gov.tr açık. Belgelenmemiş bir GeoJSON API'si var, koşulları belli değil.
 
-**emsal için sıralama:**
+**bandl için sıralama:**
 1. **UİP/NİP değişiklik katmanları ve imar adaları.** Tarihli, karar numaralı emsal değişikliği; "bu ilçe neden değer kazanıyor" sorusunun en doğrudan cevabı.
 2. **Meclis kararlarının tam metni.** Değişikliğin öncesi, sonrası ve gerekçesi; 2012'ye kadar geri gidiyor.
 3. **Kentsel dönüşüm sınırları ve 2026 performans programı.** Nerede dönüşüm var, nerede iptal edilmiş, sıradaki hangisi.

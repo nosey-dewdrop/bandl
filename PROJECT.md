@@ -1,4 +1,4 @@
-# emsal
+# bandl
 
 Ankara'nın ilçelerini **değerlenebilir / değer korur / değeri düşer** diye sınıflayan
 ve bu sınıfın nedenini, haritada gösterilen projelere ve tarihte olanlara kaynaklı olarak
@@ -7,17 +7,6 @@ bağlayan harita. MVP Ankara; sonra Türkiye, sonra dünya.
 Yapım: Lovable. İlk sahne: 26 Eyl 2026, GarajX "Ship in Ankara".
 
 ---
-
-## İsim neden emsal?
-
-Emlakta üç anlamı da ürünün kendisi:
-- **emsal fiyat:** benzer mülkün fiyatı (emlakçı dili)
-- **imar emsali:** yapılaşma katsayısı. Emsal artışı en büyük değer tetikleyicilerinden
-  biri (İncek 2017: 0,33'ten 2'ye çıkarıldı, mahkeme iptal etti)
-- **sözlük anlamı:** öncül, örnek. Ürünün iddiası bu: bugünkü projeyi tarihteki emsaliyle okumak
-
-Bilinen risk: Google'da "emsal" araması Yargıtay emsal kararlarına gidiyor; emsal.io ve
-emsal.co alınmış. Etkinlik için lovable.app alt alan adı yeter.
 
 ## Neden var?
 
@@ -36,7 +25,7 @@ Yani **sadece "3 sınıfa ayırmak" fark değil**; Endeksa'nın skoru bunu yapı
 
 **Boşluk:** hiçbir ürün fiyatın **neden** oynadığını (metro, hastane, dönüşüm, imar,
 kurum taşınması) fiyat serisine bağlayıp kaynağıyla göstermiyor. Endeksa'nın skoru
-kapalı kutu. emsal'in farkı = **neden katmanı**: her sınıfın yanında hangi projenin,
+kapalı kutu. bandl'ın farkı = **neden katmanı**: her sınıfın yanında hangi projenin,
 hangi tarihte, hangi kaynağa göre olduğu.
 
 ## Ne yapıyor?
@@ -261,7 +250,7 @@ Seçilirse: 3 Ekim Sell Sprint + VC Demo Hour.
 **Project knowledge** (Settings → Knowledge, 10k karakter sınırı):
 
 ```
-emsal: Ankara district real-estate value map. Turkish UI, all lowercase.
+bandl: Ankara district real-estate value map. Turkish UI, all lowercase.
 Data: only from src/data/*.json. Never invent numbers, dates or sources. Every fact
 shown in the UI has a source link from the data. If a field is empty, show
 "kaynak bulunamadı", never a guess.
@@ -291,7 +280,7 @@ Build a single-page app: a full-screen Mapbox map of Ankara (use the Mapbox
 connector), centered on 39.93, 32.85, zoom 9.5, a light/white base style.
 Load district polygons from src/data/ilceler.geojson and district data from
 src/data/ilceler.json (join on "id"). Fill each district with its class color at
-0.55 opacity; hover darkens it. Top-left: the word "emsal" and one line of
+0.55 opacity; hover darkens it. Top-left: the word "bandl" and one line of
 placeholder text I will replace. Bottom-left: legend with the three classes.
 Clicking a district opens a right-side panel (not a modal), 420px wide, full height,
 scrollable; clicking the map outside closes it. For now the panel shows the district
@@ -348,7 +337,6 @@ keyed by district id + text hash (reuse if it exists, to save credits), and play
 
 ## Açık kalanlar
 
-- İsim: Damla onaylayacak.
 - Esenboğa hattı durakları:
   - Siteler ve Solfasol OSM'de Altındağ, Demirlibahçe Mamak mahallesi. İlçe, durakla aynı adı taşıyan mahalleden geliyor; durağın kendi koordinatı değil.
   - Kuyubaşı, Sarayköy, Kuzey Ankara, Fuar, YBÜ bulunamadı.
