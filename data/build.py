@@ -81,7 +81,7 @@ PROJELER = [
          kaynak_url="https://yatirimlar.com/haber/ankara-ya-4-yeni-metro-hatti-toplam-44-kilometrelik-dev-ulasim-hamlesi_249147", not_="Bağlıca–Eryaman YHT, 12,5 km; tasarım onayı 23 Tem 2025; 2026 bütçesinde yok (ABB proje sayfası 258)"),
     dict(id="koru_ext", ad="M2 Koru–Yaşamkent ve Koru–Bağlıca uzatması", tur="rayli", durum="planli", tarih="2026-07", yaklasik=True,
          geometri={"type": "MultiLineString", "coordinates": [ln("koru", "yasamkent")["coordinates"], ln("koru", "baglica")["coordinates"]]},
-         kaynak_url="https://www.ankara.bel.tr/proje/x-177", not_="9,36 km; 2026 ulusal yatırım programında (RG 15 Oca 2026); meclis 16 Tem 2026 karar 933 dış borçlanma; ihale sonucu bulunamadı"),
+         kaynak_url="https://www.ankara.bel.tr/proje/x-177", not_="9,36 km; UİP ve NİP onayı 11 Haz 2025, meclis karar 831 (ABB plan/PlanRaporu katmanı); 2026 ulusal yatırım programında (RG 15 Oca 2026); meclis 16 Tem 2026 karar 933 dış borçlanma; ihale sonucu bulunamadı"),
     dict(id="m7", ad="M7 Gar–Esenboğa metrosu", tur="rayli", durum="sozlesmeli", tarih="2026-09", yaklasik=True,
          geometri=ln("gar", "demirlibahce", "siteler", "solfasol", "pursaklar_merkez", "esenboga"),
          kaynak_url="https://www.haberankara.com/ankara/pursaklar-esenboga-metro-ihalesi-tamamlandi-319433",
