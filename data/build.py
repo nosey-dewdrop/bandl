@@ -208,7 +208,7 @@ def main():
     r = statistics.correlation(xs, ys)
     egim = statistics.covariance(xs, ys) / statistics.variance(xs); kes = statistics.mean(ys) - egim * statistics.mean(xs)
     fmt = lambda x: ("+" if x >= 0 else "−") + f"%{abs(x) * 100:.0f}"
-    YAPI = f"Ankara'da 2019'dan beri fiyat merkezden çevreye kaydı: ilçenin Kızılay'a uzaklığı ile göreli fiyat değişimi arasında r = {r:.2f} (11 ilçe)."
+    YAPI = f"Ankara'da 2019'dan beri fiyat merkezden çevreye kaydı: ilçenin Kızılay'a uzaklığı ile göreli fiyat değişimi arasında r = {r:.2f} (11 ilçe).".replace(".", ",", 1).replace("r = 0,", "r = 0,")
     ilceler = []
     for iid, (ad, f19, f20, f26) in ILCE.items():
         goreli = {2019: f19 / medyan[2019], 2020: f20 / medyan[2020], 2026: f26 / medyan[2026]}
@@ -224,7 +224,7 @@ def main():
         else:
             sinif = "korur"
             kural = "ilk iki kural geçerli değil"
-        neden = (f"{YAPI} {ad} Kızılay'a {y['kizilay_km']:.0f} km, {y['bina_km2']} bina/km². "
+        neden = (f"{YAPI} {ad}: orta noktası Kızılay'a {y['kizilay_km']:.0f} km, {y['bina_km2']} bina/km². "
                  f"Ankara medyanına göre fiyatı {fmt(degisim)}; uzaklığa göre beklenen {fmt(beklenen)}. {YEREL[iid]}").strip()
         ilceler.append(dict(
             id=iid, ad=ad, sinif=sinif, kural=kural, neden=neden,

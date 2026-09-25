@@ -4,7 +4,7 @@
   "ad": "Çankaya",
   "sinif": "korur",
   "kural": "ilk iki kural geçerli değil",
-  "neden": "Ankara'da 2019'dan beri fiyat merkezden çevreye kaydı: ilçenin Kızılay'a uzaklığı ile göreli fiyat değişimi arasında r = 0.85 (11 ilçe). Çankaya Kızılay'a 12 km, 143 bina/km². Ankara medyanına göre fiyatı +%12; uzaklığa göre beklenen −%1. Bilkent Şehir Hastanesi 2019'da açıldı; beklenenin üstündeki farkla bağı kanıtlanmadı.",
+  "neden": "Ankara'da 2019'dan beri fiyat merkezden çevreye kaydı: ilçenin Kızılay'a uzaklığı ile göreli fiyat değişimi arasında r = 0,85 (11 ilçe). Çankaya: orta noktası Kızılay'a 12 km, 143 bina/km². Ankara medyanına göre fiyatı +%12; uzaklığa göre beklenen −%1. Bilkent Şehir Hastanesi 2019'da açıldı; beklenenin üstündeki farkla bağı kanıtlanmadı.",
   "goreli": {
    "2019": 1.637,
    "2020": 1.677,
@@ -229,7 +229,7 @@
   "ad": "Gölbaşı",
   "sinif": "korur",
   "kural": "ilk iki kural geçerli değil",
-  "neden": "Ankara'da 2019'dan beri fiyat merkezden çevreye kaydı: ilçenin Kızılay'a uzaklığı ile göreli fiyat değişimi arasında r = 0.85 (11 ilçe). Gölbaşı Kızılay'a 39 km, 25 bina/km². Ankara medyanına göre fiyatı +%30; uzaklığa göre beklenen +%27. Çevreye kayışla uyumlu yükseldi, ama Gölbaşı–İncek için 2026'da arz fazlası uyarısı var.",
+  "neden": "Ankara'da 2019'dan beri fiyat merkezden çevreye kaydı: ilçenin Kızılay'a uzaklığı ile göreli fiyat değişimi arasında r = 0,85 (11 ilçe). Gölbaşı: orta noktası Kızılay'a 39 km, 25 bina/km². Ankara medyanına göre fiyatı +%30; uzaklığa göre beklenen +%27. Çevreye kayışla uyumlu yükseldi, ama Gölbaşı–İncek için 2026'da arz fazlası uyarısı var.",
   "goreli": {
    "2019": 1.555,
    "2020": 1.601,
@@ -301,7 +301,7 @@
   "ad": "Yenimahalle",
   "sinif": "korur",
   "kural": "ilk iki kural geçerli değil",
-  "neden": "Ankara'da 2019'dan beri fiyat merkezden çevreye kaydı: ilçenin Kızılay'a uzaklığı ile göreli fiyat değişimi arasında r = 0.85 (11 ilçe). Yenimahalle Kızılay'a 15 km, 257 bina/km². Ankara medyanına göre fiyatı +%4; uzaklığa göre beklenen +%2. Etlik Şehir Hastanesi 2022'de açıldı; ilçe fiyatı uzaklığa göre beklenen düzeyde kaldı.",
+  "neden": "Ankara'da 2019'dan beri fiyat merkezden çevreye kaydı: ilçenin Kızılay'a uzaklığı ile göreli fiyat değişimi arasında r = 0,85 (11 ilçe). Yenimahalle: orta noktası Kızılay'a 15 km, 257 bina/km². Ankara medyanına göre fiyatı +%4; uzaklığa göre beklenen +%2. Etlik Şehir Hastanesi 2022'de açıldı; ilçe fiyatı uzaklığa göre beklenen düzeyde kaldı.",
   "goreli": {
    "2019": 1.366,
    "2020": 1.372,
@@ -472,7 +472,7 @@
   "ad": "Etimesgut",
   "sinif": "korur",
   "kural": "ilk iki kural geçerli değil",
-  "neden": "Ankara'da 2019'dan beri fiyat merkezden çevreye kaydı: ilçenin Kızılay'a uzaklığı ile göreli fiyat değişimi arasında r = 0.85 (11 ilçe). Etimesgut Kızılay'a 22 km, 85 bina/km². Ankara medyanına göre fiyatı +%14; uzaklığa göre beklenen +%9.",
+  "neden": "Ankara'da 2019'dan beri fiyat merkezden çevreye kaydı: ilçenin Kızılay'a uzaklığı ile göreli fiyat değişimi arasında r = 0,85 (11 ilçe). Etimesgut: orta noktası Kızılay'a 22 km, 85 bina/km². Ankara medyanına göre fiyatı +%14; uzaklığa göre beklenen +%9.",
   "goreli": {
    "2019": 1.187,
    "2020": 1.243,
@@ -571,7 +571,7 @@
   "ad": "Pursaklar",
   "sinif": "korur",
   "kural": "ilk iki kural geçerli değil",
-  "neden": "Ankara'da 2019'dan beri fiyat merkezden çevreye kaydı: ilçenin Kızılay'a uzaklığı ile göreli fiyat değişimi arasında r = 0.85 (11 ilçe). Pursaklar Kızılay'a 21 km, 65 bina/km². Ankara medyanına göre fiyatı +%3; uzaklığa göre beklenen +%8. Esenboğa metrosu sözleşmeli. Ankara emsali: Keçiören metrosu 2023'te Kızılay'a bağlandı, ilçenin göreli fiyatı yerinde saydı. Metronun etkisi durak çevresindeki mahallelerde aranmalı; onların fiyat geçmişi elimizde yok.",
+  "neden": "Ankara'da 2019'dan beri fiyat merkezden çevreye kaydı: ilçenin Kızılay'a uzaklığı ile göreli fiyat değişimi arasında r = 0,85 (11 ilçe). Pursaklar: orta noktası Kızılay'a 21 km, 65 bina/km². Ankara medyanına göre fiyatı +%3; uzaklığa göre beklenen +%8. Esenboğa metrosu sözleşmeli. Ankara emsali: Keçiören metrosu 2023'te Kızılay'a bağlandı, ilçenin göreli fiyatı yerinde saydı. Metronun etkisi durak çevresindeki mahallelerde aranmalı; onların fiyat geçmişi elimizde yok.",
   "goreli": {
    "2019": 1.052,
    "2020": 1.128,
@@ -625,7 +625,7 @@
   "ad": "Çubuk",
   "sinif": "degerlenebilir",
   "kural": "çevre ilçesi (Kızılay'a ≥30 km), göreli fiyatı 2019'dan beri artmış, arz fazlası uyarısı yok",
-  "neden": "Ankara'da 2019'dan beri fiyat merkezden çevreye kaydı: ilçenin Kızılay'a uzaklığı ile göreli fiyat değişimi arasında r = 0.85 (11 ilçe). Çubuk Kızılay'a 46 km, 19 bina/km². Ankara medyanına göre fiyatı +%36; uzaklığa göre beklenen +%34. Esenboğa Havalimanı ve metronun havalimanı ucu burada; 11 Ağu 2026'da merkezde ~165 ha yeni imar planı onaylandı.",
+  "neden": "Ankara'da 2019'dan beri fiyat merkezden çevreye kaydı: ilçenin Kızılay'a uzaklığı ile göreli fiyat değişimi arasında r = 0,85 (11 ilçe). Çubuk: orta noktası Kızılay'a 46 km, 19 bina/km². Ankara medyanına göre fiyatı +%36; uzaklığa göre beklenen +%34. Esenboğa Havalimanı ve metronun havalimanı ucu burada; 11 Ağu 2026'da merkezde ~165 ha yeni imar planı onaylandı.",
   "goreli": {
    "2019": 0.737,
    "2020": 0.804,
@@ -697,7 +697,7 @@
   "ad": "Keçiören",
   "sinif": "duser",
   "kural": "yoğun merkez ilçesi (≥150 bina/km²) ve göreli fiyatı 2019'dan beri artmamış",
-  "neden": "Ankara'da 2019'dan beri fiyat merkezden çevreye kaydı: ilçenin Kızılay'a uzaklığı ile göreli fiyat değişimi arasında r = 0.85 (11 ilçe). Keçiören Kızılay'a 16 km, 225 bina/km². Ankara medyanına göre fiyatı −%1; uzaklığa göre beklenen +%3. M4 2017'de açıldı, 2023'te Kızılay'a bağlandı; göreli fiyat yine de yerinde saydı.",
+  "neden": "Ankara'da 2019'dan beri fiyat merkezden çevreye kaydı: ilçenin Kızılay'a uzaklığı ile göreli fiyat değişimi arasında r = 0,85 (11 ilçe). Keçiören: orta noktası Kızılay'a 16 km, 225 bina/km². Ankara medyanına göre fiyatı −%1; uzaklığa göre beklenen +%3. M4 2017'de açıldı, 2023'te Kızılay'a bağlandı; göreli fiyat yine de yerinde saydı.",
   "goreli": {
    "2019": 1.0,
    "2020": 1.0,
@@ -778,7 +778,7 @@
   "ad": "Altındağ",
   "sinif": "duser",
   "kural": "yoğun merkez ilçesi (≥150 bina/km²) ve göreli fiyatı 2019'dan beri artmamış",
-  "neden": "Ankara'da 2019'dan beri fiyat merkezden çevreye kaydı: ilçenin Kızılay'a uzaklığı ile göreli fiyat değişimi arasında r = 0.85 (11 ilçe). Altındağ Kızılay'a 14 km, 197 bina/km². Ankara medyanına göre fiyatı −%7; uzaklığa göre beklenen +%1. Numune (2019) ve Dışkapı hastaneleri (2022) ilçeden taşındı. Esenboğa metrosu ve Hıdırlıktepe dönüşümü geliyor; Keçiören emsali metronun ilçe düzeyinde tek başına yetmediğini gösteriyor.",
+  "neden": "Ankara'da 2019'dan beri fiyat merkezden çevreye kaydı: ilçenin Kızılay'a uzaklığı ile göreli fiyat değişimi arasında r = 0,85 (11 ilçe). Altındağ: orta noktası Kızılay'a 14 km, 197 bina/km². Ankara medyanına göre fiyatı −%7; uzaklığa göre beklenen +%1. Numune (2019) ve Dışkapı hastaneleri (2022) ilçeden taşındı. Esenboğa metrosu ve Hıdırlıktepe dönüşümü geliyor; Keçiören emsali metronun ilçe düzeyinde tek başına yetmediğini gösteriyor.",
   "goreli": {
    "2019": 0.998,
    "2020": 0.932,
@@ -931,7 +931,7 @@
   "ad": "Sincan",
   "sinif": "degerlenebilir",
   "kural": "çevre ilçesi (Kızılay'a ≥30 km), göreli fiyatı 2019'dan beri artmış, arz fazlası uyarısı yok",
-  "neden": "Ankara'da 2019'dan beri fiyat merkezden çevreye kaydı: ilçenin Kızılay'a uzaklığı ile göreli fiyat değişimi arasında r = 0.85 (11 ilçe). Sincan Kızılay'a 35 km, 39 bina/km². Ankara medyanına göre fiyatı +%10; uzaklığa göre beklenen +%23. Çevre ilçesi, ama uzaklığa göre beklenenin altında kaldı; nedeni için kaynak bulunamadı.",
+  "neden": "Ankara'da 2019'dan beri fiyat merkezden çevreye kaydı: ilçenin Kızılay'a uzaklığı ile göreli fiyat değişimi arasında r = 0,85 (11 ilçe). Sincan: orta noktası Kızılay'a 35 km, 39 bina/km². Ankara medyanına göre fiyatı +%10; uzaklığa göre beklenen +%23. Çevre ilçesi, ama uzaklığa göre beklenenin altında kaldı; nedeni için kaynak bulunamadı.",
   "goreli": {
    "2019": 0.844,
    "2020": 0.869,
@@ -1003,7 +1003,7 @@
   "ad": "Mamak",
   "sinif": "korur",
   "kural": "ilk iki kural geçerli değil",
-  "neden": "Ankara'da 2019'dan beri fiyat merkezden çevreye kaydı: ilçenin Kızılay'a uzaklığı ile göreli fiyat değişimi arasında r = 0.85 (11 ilçe). Mamak Kızılay'a 16 km, 93 bina/km². Ankara medyanına göre fiyatı +%0; uzaklığa göre beklenen +%3. Dikimevi–Natoyolu hattı yapımda (hedef 2029), Yeni Mamak dönüşümü sürüyor. Keçiören emsali metronun ilçe düzeyinde tek başına yetmediğini gösteriyor; durak çevresi mahalleler ayrıca izlenmeli.",
+  "neden": "Ankara'da 2019'dan beri fiyat merkezden çevreye kaydı: ilçenin Kızılay'a uzaklığı ile göreli fiyat değişimi arasında r = 0,85 (11 ilçe). Mamak: orta noktası Kızılay'a 16 km, 93 bina/km². Ankara medyanına göre fiyatı +%0; uzaklığa göre beklenen +%3. Dikimevi–Natoyolu hattı yapımda (hedef 2029), Yeni Mamak dönüşümü sürüyor. Keçiören emsali metronun ilçe düzeyinde tek başına yetmediğini gösteriyor; durak çevresi mahalleler ayrıca izlenmeli.",
   "goreli": {
    "2019": 0.884,
    "2020": 0.852,
@@ -1084,7 +1084,7 @@
   "ad": "Akyurt",
   "sinif": "degerlenebilir",
   "kural": "çevre ilçesi (Kızılay'a ≥30 km), göreli fiyatı 2019'dan beri artmış, arz fazlası uyarısı yok",
-  "neden": "Ankara'da 2019'dan beri fiyat merkezden çevreye kaydı: ilçenin Kızılay'a uzaklığı ile göreli fiyat değişimi arasında r = 0.85 (11 ilçe). Akyurt Kızılay'a 33 km, 21 bina/km². Ankara medyanına göre fiyatı +%28; uzaklığa göre beklenen +%20. Yükselişi açıklayan tek bir proje bulunamadı; çevreye kayışla uyumlu.",
+  "neden": "Ankara'da 2019'dan beri fiyat merkezden çevreye kaydı: ilçenin Kızılay'a uzaklığı ile göreli fiyat değişimi arasında r = 0,85 (11 ilçe). Akyurt: orta noktası Kızılay'a 33 km, 21 bina/km². Ankara medyanına göre fiyatı +%28; uzaklığa göre beklenen +%20. Yükselişi açıklayan tek bir proje bulunamadı; çevreye kayışla uyumlu.",
   "goreli": {
    "2019": 0.624,
    "2020": 0.645,

@@ -24,6 +24,14 @@ Bu dosya: neden var, hangi kaynaklara bakıldı, repoda hangi varlıklar var.
 
 Hangi semtin gerçekten öne geçtiği ancak böyle görünüyor.
 
+**Ankara'yı son 7 yılda projeler değil, merkezden çevreye kayış sürükledi.**
+- İlçenin Kızılay'a uzaklığı ile göreli fiyat değişimi arasında r = 0,85 (11 ilçe).
+- Keçiören'in metrosu 2023'te Kızılay'a bağlandı; ilçenin göreli fiyatı yerinde saydı.
+- Hastanelerini kaybeden Altındağ en çok geride kalan merkez ilçe oldu.
+
+Bu, "metro geliyorsa değer artar" sezgisinin Ankara'da ilçe düzeyinde tutmadığını gösteriyor.
+Ayrıntı: PROJECT.md, "Nasıl sınıflıyor?".
+
 **Mevcut araçlar "neden" sorusunu cevaplamıyor.** Endeksa/Emlakjet şunları gösteriyor:
 - mahalle fiyatı
 - reel/nominal geçiş
@@ -360,7 +368,7 @@ var. Önce/sonra karşılaştırması kendi fiyat serimizden kurulacak.
 | `data/ilceler.geojson` | 11 ilçe poligonu, `properties.id` ile | OSM Nominatim, relation ID'leriyle |
 | `data/ilceler.json` | 11 ilçe: fiyat (2019, 2020, 2026), Ankara medyanına göre oran, sınıf, kural, neden, olaylar | `build.py` |
 | `data/projeler.json` | 49 proje: raylı, hastane, kurum, AVM, dönüşüm, imar, yol, havalimanı, risk. Durum, tarih, ilçe, geometri, kaynak. | `build.py` |
-| `data/build.py` | Seed verisi (fiyatlar, projeler, koordinatlar) ve sınıflama kuralı | `python3 data/build.py`; hatları her çalıştırmada OSM API'sinden çeker |
+| `data/build.py` | Seed verisi (fiyatlar, projeler, koordinatlar, ABB bina sayıları) ve v1 sınıflama kuralı (yapı + emsal) | `python3 data/build.py`; hatları her çalıştırmada OSM API'sinden çeker |
 
 ## Lisans ve atıf nasıl?
 
