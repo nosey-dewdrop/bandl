@@ -1,0 +1,5 @@
+.rabadon/state.json
+.rabadon/sessions/
+.rabadon/handoff.md
+.DS_Store
+__pycache__/

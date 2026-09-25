@@ -1,0 +1,1013 @@
+[
+ {
+  "id": "cankaya",
+  "ad": "Çankaya",
+  "sinif": "korur",
+  "kural": "ilk iki kural geçerli değil",
+  "neden": "Ankara medyanına göre fiyat 2019'dan bu yana +%12. M7 Gar–Esenboğa metrosu, Dikimevi–Natoyolu hafif raylı ilçede yapımda ya da sözleşmeli, ama göreli fiyat zaten artmış.",
+  "goreli": {
+   "2019": 1.637,
+   "2020": 1.677,
+   "2026": 1.826
+  },
+  "goreli_degisim": 0.115,
+  "fiyat": [
+   {
+    "yil": 2019,
+    "ay": "Haziran",
+    "tl_m2": 2474,
+    "kaynak": "Endeksa (Baret Dergisi)",
+    "kaynak_url": "https://www.baretdergisi.com/ankarada-konut-fiyatlari-2020-yilinin-ilk-6-ayinda-yuzde-799-artti/20007/"
+   },
+   {
+    "yil": 2020,
+    "ay": "Haziran",
+    "tl_m2": 2869,
+    "kaynak": "Endeksa (Baret Dergisi)",
+    "kaynak_url": "https://www.baretdergisi.com/ankarada-konut-fiyatlari-2020-yilinin-ilk-6-ayinda-yuzde-799-artti/20007/"
+   },
+   {
+    "yil": 2026,
+    "ay": "Ağustos",
+    "tl_m2": 66165,
+    "kaynak": "Endeksa (Emlakjet)",
+    "kaynak_url": "https://www.emlakjet.com/emlak-piyasasi/satilik-konut/ankara-cankaya"
+   }
+  ],
+  "olaylar": [
+   {
+    "id": "m7",
+    "tarih": "2026-09",
+    "baslik": "M7 Gar–Esenboğa metrosu",
+    "tur": "rayli",
+    "durum": "sozlesmeli",
+    "kaynak_url": "https://www.haberankara.com/ankara/pursaklar-esenboga-metro-ihalesi-tamamlandi-319433",
+    "not": "36 km, 12 durak; üç paket sözleşmesi Ağu–Eyl 2026 (34,0 + 42,4 + 54,4 mlr TL). Güzergâh durak adlarının mahalle merkezlerinden; Keçiören'deki duraklar bulunamadı"
+   },
+   {
+    "id": "koru_ext",
+    "tarih": "2026-07",
+    "baslik": "M2 Koru–Yaşamkent ve Koru–Bağlıca uzatması",
+    "tur": "rayli",
+    "durum": "planli",
+    "kaynak_url": "https://rayhaber.com/2026/07/koru-yasamkent-ve-koru-baglica-metrosunda-geri-sayim-basladi/",
+    "not": "ihale Temmuz 2026'da ilan edildi, sonuç bulunamadı"
+   },
+   {
+    "id": "a2",
+    "tarih": "2025-06-13",
+    "baslik": "Dikimevi–Natoyolu hafif raylı",
+    "tur": "rayli",
+    "durum": "yapimda",
+    "kaynak_url": "https://www.ego.gov.tr/sayfa/2281/dikimevinatoyolu-ankaray-hafif-rayli-sistem-hatti",
+    "not": "temel atma 13 Haz 2025, 8 durak. Güzergâh durak adlarının mahalle merkezlerinden"
+   },
+   {
+    "id": "m5",
+    "tarih": "2025-04-30",
+    "baslik": "M5 Kızılay–Dikmen",
+    "tur": "rayli",
+    "durum": "planli",
+    "kaynak_url": "https://www.ego.gov.tr/sayfa/2284/m5-kizilaydikmen-hatti",
+    "not": "kesin proje onaylandı; 2026 yatırım programında değil. Güzergâh OSM'deki taslaktan"
+   },
+   {
+    "id": "bilkent_sh",
+    "tarih": "2019-03-14",
+    "baslik": "Bilkent Şehir Hastanesi",
+    "tur": "hastane",
+    "durum": "acik",
+    "kaynak_url": "https://en.wikipedia.org/wiki/Ankara_Bilkent_City_Hospital",
+    "not": ""
+   },
+   {
+    "id": "b1",
+    "tarih": "2018-04-12",
+    "baslik": "Başkentray Sincan–Kayaş",
+    "tur": "rayli",
+    "durum": "acik",
+    "kaynak_url": "https://www.yenisafak.com/ekonomi/dev-proje-bugun-aciliyor-3224470",
+    "not": "Temmuz 2016'da kapatılıp yenilendi"
+   },
+   {
+    "id": "m4",
+    "tarih": "2017-01-05",
+    "baslik": "M4 Şehitler–AKM",
+    "tur": "rayli",
+    "durum": "acik",
+    "kaynak_url": "https://en.wikipedia.org/wiki/Ankara_Metro",
+    "not": ""
+   },
+   {
+    "id": "gar",
+    "tarih": "2016-10-29",
+    "baslik": "Ankara YHT Garı",
+    "tur": "rayli",
+    "durum": "acik",
+    "kaynak_url": "https://en.wikipedia.org/wiki/Ankara_Tren_Gar%C4%B1",
+    "not": ""
+   },
+   {
+    "id": "m2",
+    "tarih": "2014-03-13",
+    "baslik": "M2 Kızılay–Koru",
+    "tur": "rayli",
+    "durum": "acik",
+    "kaynak_url": "https://en.wikipedia.org/wiki/Koru_(Ankara_Metro)",
+    "not": ""
+   },
+   {
+    "id": "nextlevel",
+    "tarih": "2013-10-24",
+    "baslik": "Next Level",
+    "tur": "avm",
+    "durum": "acik",
+    "kaynak_url": "https://www.haberler.com/politika/next-level-avm-nin-acilisi-5212253-haberi/",
+    "not": ""
+   },
+   {
+    "id": "taurus",
+    "tarih": "2013-10",
+    "baslik": "Taurus",
+    "tur": "avm",
+    "durum": "acik",
+    "kaynak_url": "https://retailturkiye.com/avm/taurus-avm-acildi/",
+    "not": ""
+   },
+   {
+    "id": "kentpark",
+    "tarih": "2010-02-12",
+    "baslik": "Kentpark",
+    "tur": "avm",
+    "durum": "acik",
+    "kaynak_url": "https://www.tercihiniyap.net/kentpark-avm-kacta-acilir-kacta-kapanir-calisma-saatleri-nasil-h11234.html",
+    "not": "tarih zayıf kaynaktan"
+   },
+   {
+    "id": "gordion",
+    "tarih": "2009-09-17",
+    "baslik": "Gordion",
+    "tur": "avm",
+    "durum": "acik",
+    "kaynak_url": "https://www.hurriyet.com.tr/ekonomi/gordion-avm-17-eylulde-acilacak-12443678",
+    "not": ""
+   },
+   {
+    "id": "panora",
+    "tarih": "2007-12-10",
+    "baslik": "Panora",
+    "tur": "avm",
+    "durum": "acik",
+    "kaynak_url": "https://www.yeniankara.com.tr/ankara/panora-avm-ne-zaman-acildi-nerede-ve-nasil-gidilir-110667",
+    "not": ""
+   },
+   {
+    "id": "cepa",
+    "tarih": "2007-08-23",
+    "baslik": "Cepa",
+    "tur": "avm",
+    "durum": "acik",
+    "kaynak_url": "https://cepaavm.com.tr/hakkimizda/",
+    "not": ""
+   },
+   {
+    "id": "m1",
+    "tarih": "1997-12-28",
+    "baslik": "M1 Kızılay–Batıkent",
+    "tur": "rayli",
+    "durum": "acik",
+    "kaynak_url": "https://www.dogrula.org/ekipten/ankara-buyuksehir-belediyesi-rayli-sistem-tarihcesi/",
+    "not": "kaynaklar 28 ve 29 Aralık diyor"
+   },
+   {
+    "id": "portakal",
+    "tarih": "1997",
+    "baslik": "Portakal Çiçeği Vadisi dönüşümü",
+    "tur": "donusum",
+    "durum": "acik",
+    "kaynak_url": "https://kentselstrateji.com/ankara-portakal-cicegi-vadisi-kentsel-donusum-projesi/",
+    "not": "konutlar 1994–97"
+   },
+   {
+    "id": "a1",
+    "tarih": "1996-08-30",
+    "baslik": "A1 Ankaray AŞTİ–Dikimevi",
+    "tur": "rayli",
+    "durum": "acik",
+    "kaynak_url": "https://www.dogrula.org/ekipten/ankara-buyuksehir-belediyesi-rayli-sistem-tarihcesi/",
+    "not": ""
+   },
+   {
+    "id": "dikmen_vadisi",
+    "tarih": "1996",
+    "baslik": "Dikmen Vadisi dönüşümü",
+    "tur": "donusum",
+    "durum": "yapimda",
+    "kaynak_url": "https://www.ankara.bel.tr/proje/dikmen-vadisi-son-etap-kentsel-donusum-projesi-84",
+    "not": "etaplar 1996, 2002, 2009'da bitti; son etap sürüyor"
+   },
+   {
+    "id": "kizilay_cekim",
+    "tarih": "",
+    "baslik": "Kızılay'ın çekim kaybı",
+    "tur": "risk",
+    "durum": "belirsiz",
+    "kaynak_url": "https://www.yeniankara.com.tr/ankara/ankarada-eski-populerligini-kaypeden-7-semt-183561",
+    "not": "nitel; sayı yok"
+   }
+  ]
+ },
+ {
+  "id": "golbasi",
+  "ad": "Gölbaşı",
+  "sinif": "korur",
+  "kural": "ilk iki kural geçerli değil",
+  "neden": "Ankara medyanına göre fiyat 2019'dan bu yana +%30. İlçe ölçeğinde yapımda ya da sözleşmeli bir tetikleyici yok.",
+  "goreli": {
+   "2019": 1.555,
+   "2020": 1.601,
+   "2026": 2.02
+  },
+  "goreli_degisim": 0.3,
+  "fiyat": [
+   {
+    "yil": 2019,
+    "ay": "Haziran",
+    "tl_m2": 2349,
+    "kaynak": "Endeksa (Baret Dergisi)",
+    "kaynak_url": "https://www.baretdergisi.com/ankarada-konut-fiyatlari-2020-yilinin-ilk-6-ayinda-yuzde-799-artti/20007/"
+   },
+   {
+    "yil": 2020,
+    "ay": "Haziran",
+    "tl_m2": 2739,
+    "kaynak": "Endeksa (Baret Dergisi)",
+    "kaynak_url": "https://www.baretdergisi.com/ankarada-konut-fiyatlari-2020-yilinin-ilk-6-ayinda-yuzde-799-artti/20007/"
+   },
+   {
+    "yil": 2026,
+    "ay": "Ağustos",
+    "tl_m2": 73190,
+    "kaynak": "Endeksa (Emlakjet)",
+    "kaynak_url": "https://www.emlakjet.com/emlak-piyasasi/satilik-konut/ankara-golbasi"
+   }
+  ],
+  "olaylar": [
+   {
+    "id": "golbasi_arz",
+    "tarih": "2026",
+    "baslik": "Gölbaşı–İncek arz fazlası uyarısı",
+    "tur": "risk",
+    "durum": "belirsiz",
+    "kaynak_url": "https://www.ekonomiankara.com/ankaraya-binlerce-yeni-konut-geliyor-hangi-bolgelerde-arz-yogunlasacak/14501",
+    "not": ""
+   },
+   {
+    "id": "nigde_otoyolu",
+    "tarih": "2020-12",
+    "baslik": "Ankara–Niğde otoyolu",
+    "tur": "yol",
+    "durum": "acik",
+    "kaynak_url": "https://www.aa.com.tr/tr/turkiye/ankara-nigde-otoyolunun-tamami-hizmete-girdi/2078934",
+    "not": "Gölbaşı eşleşmesi doğrulanmadı"
+   },
+   {
+    "id": "incek_imar",
+    "tarih": "2017-02-14",
+    "baslik": "İncek imar değişikliği",
+    "tur": "imar",
+    "durum": "iptal",
+    "kaynak_url": "https://www.gazeteduvar.com.tr/yargi-gokcekin-incekteki-imar-plani-degisikligini-iptal-etti-haber-1552615",
+    "not": "emsal 0,33'ten 2'ye, konut 25'ten 390'a; mahkeme iptal etti"
+   }
+  ]
+ },
+ {
+  "id": "yenimahalle",
+  "ad": "Yenimahalle",
+  "sinif": "korur",
+  "kural": "ilk iki kural geçerli değil",
+  "neden": "Ankara medyanına göre fiyat 2019'dan bu yana +%4. İlçe ölçeğinde yapımda ya da sözleşmeli bir tetikleyici yok.",
+  "goreli": {
+   "2019": 1.366,
+   "2020": 1.372,
+   "2026": 1.425
+  },
+  "goreli_degisim": 0.043,
+  "fiyat": [
+   {
+    "yil": 2019,
+    "ay": "Haziran",
+    "tl_m2": 2064,
+    "kaynak": "Endeksa (Baret Dergisi)",
+    "kaynak_url": "https://www.baretdergisi.com/ankarada-konut-fiyatlari-2020-yilinin-ilk-6-ayinda-yuzde-799-artti/20007/"
+   },
+   {
+    "yil": 2020,
+    "ay": "Haziran",
+    "tl_m2": 2347,
+    "kaynak": "Endeksa (Baret Dergisi)",
+    "kaynak_url": "https://www.baretdergisi.com/ankarada-konut-fiyatlari-2020-yilinin-ilk-6-ayinda-yuzde-799-artti/20007/"
+   },
+   {
+    "yil": 2026,
+    "ay": "Ağustos",
+    "tl_m2": 51607,
+    "kaynak": "Endeksa (Emlakjet)",
+    "kaynak_url": "https://www.emlakjet.com/emlak-piyasasi/satilik-konut/ankara-yenimahalle"
+   }
+  ],
+  "olaylar": [
+   {
+    "id": "etlik_sh",
+    "tarih": "2022-09-28",
+    "baslik": "Etlik Şehir Hastanesi",
+    "tur": "hastane",
+    "durum": "acik",
+    "kaynak_url": "https://en.wikipedia.org/wiki/Ankara_Etlik_City_Hospital",
+    "not": ""
+   },
+   {
+    "id": "ankapark",
+    "tarih": "2020-02",
+    "baslik": "Ankapark",
+    "tur": "kurum",
+    "durum": "kapandi",
+    "kaynak_url": "https://www.sozcu.com.tr/750-milyon-dolar-harcanan-ankapark-kapatildi-wp5618555",
+    "not": "2019'da açıldı, Şub 2020'de kapandı, Tem 2022'de ABB'ye devredildi"
+   },
+   {
+    "id": "b1",
+    "tarih": "2018-04-12",
+    "baslik": "Başkentray Sincan–Kayaş",
+    "tur": "rayli",
+    "durum": "acik",
+    "kaynak_url": "https://www.yenisafak.com/ekonomi/dev-proje-bugun-aciliyor-3224470",
+    "not": "Temmuz 2016'da kapatılıp yenilendi"
+   },
+   {
+    "id": "m4",
+    "tarih": "2017-01-05",
+    "baslik": "M4 Şehitler–AKM",
+    "tur": "rayli",
+    "durum": "acik",
+    "kaynak_url": "https://en.wikipedia.org/wiki/Ankara_Metro",
+    "not": ""
+   },
+   {
+    "id": "kulliye",
+    "tarih": "2014-10-29",
+    "baslik": "Cumhurbaşkanlığı Külliyesi",
+    "tur": "kurum",
+    "durum": "acik",
+    "kaynak_url": "https://en.wikipedia.org/wiki/Presidential_Complex_(Turkey)",
+    "not": ""
+   },
+   {
+    "id": "m3",
+    "tarih": "2014-02-12",
+    "baslik": "M3 Batıkent–OSB Törekent",
+    "tur": "rayli",
+    "durum": "acik",
+    "kaynak_url": "https://en.wikipedia.org/wiki/OSB-Törekent_(Ankara_Metro)",
+    "not": "kaynaklar 12 Şubat ve 13 Mart diyor"
+   },
+   {
+    "id": "atlantis",
+    "tarih": "2011-08-19",
+    "baslik": "Atlantis",
+    "tur": "avm",
+    "durum": "acik",
+    "kaynak_url": "https://www.aksam.com.tr/ekonomi/atlantis-avm-acildi--63965h/haber-63965",
+    "not": ""
+   },
+   {
+    "id": "acity",
+    "tarih": "2008-04-05",
+    "baslik": "Acity",
+    "tur": "avm",
+    "durum": "acik",
+    "kaynak_url": "https://www.milliyet.com.tr/emlak/acity-outlet-bir-ilkle-aciliyor-66466",
+    "not": ""
+   },
+   {
+    "id": "armada",
+    "tarih": "2002-09-28",
+    "baslik": "Armada",
+    "tur": "avm",
+    "durum": "acik",
+    "kaynak_url": "https://tr.wikipedia.org/wiki/Armada_Al%C4%B1%C5%9Fveri%C5%9F_ve_%C4%B0%C5%9F_Merkezi",
+    "not": ""
+   },
+   {
+    "id": "ankamall",
+    "tarih": "1999-08-27",
+    "baslik": "ANKAmall",
+    "tur": "avm",
+    "durum": "acik",
+    "kaynak_url": "https://en.wikipedia.org/wiki/ANKAmall",
+    "not": ""
+   },
+   {
+    "id": "m1",
+    "tarih": "1997-12-28",
+    "baslik": "M1 Kızılay–Batıkent",
+    "tur": "rayli",
+    "durum": "acik",
+    "kaynak_url": "https://www.dogrula.org/ekipten/ankara-buyuksehir-belediyesi-rayli-sistem-tarihcesi/",
+    "not": "kaynaklar 28 ve 29 Aralık diyor"
+   },
+   {
+    "id": "a1",
+    "tarih": "1996-08-30",
+    "baslik": "A1 Ankaray AŞTİ–Dikimevi",
+    "tur": "rayli",
+    "durum": "acik",
+    "kaynak_url": "https://www.dogrula.org/ekipten/ankara-buyuksehir-belediyesi-rayli-sistem-tarihcesi/",
+    "not": ""
+   },
+   {
+    "id": "yamacevler",
+    "tarih": "",
+    "baslik": "Yamaçevler dönüşümü",
+    "tur": "donusum",
+    "durum": "yapimda",
+    "kaynak_url": "https://www.yenimahalle.bel.tr/ProjeDetay/yamacevler-kentsel-donusum-projesi/15",
+    "not": "66 ha, ~4.000 konut"
+   },
+   {
+    "id": "demetevler",
+    "tarih": "",
+    "baslik": "Demetevler dönüşümü",
+    "tur": "donusum",
+    "durum": "planli",
+    "kaynak_url": "https://www.haberturk.com/ankara-haberleri/30530321-yenimahalle-belediyesinden-demetevlerde-kentsel-donusum-cagrisi",
+    "not": "öncelikli alan, başlamadı"
+   }
+  ]
+ },
+ {
+  "id": "etimesgut",
+  "ad": "Etimesgut",
+  "sinif": "korur",
+  "kural": "ilk iki kural geçerli değil",
+  "neden": "Ankara medyanına göre fiyat 2019'dan bu yana +%14. İlçe ölçeğinde yapımda ya da sözleşmeli bir tetikleyici yok.",
+  "goreli": {
+   "2019": 1.187,
+   "2020": 1.243,
+   "2026": 1.349
+  },
+  "goreli_degisim": 0.136,
+  "fiyat": [
+   {
+    "yil": 2019,
+    "ay": "Haziran",
+    "tl_m2": 1794,
+    "kaynak": "Endeksa (Baret Dergisi)",
+    "kaynak_url": "https://www.baretdergisi.com/ankarada-konut-fiyatlari-2020-yilinin-ilk-6-ayinda-yuzde-799-artti/20007/"
+   },
+   {
+    "yil": 2020,
+    "ay": "Haziran",
+    "tl_m2": 2126,
+    "kaynak": "Endeksa (Baret Dergisi)",
+    "kaynak_url": "https://www.baretdergisi.com/ankarada-konut-fiyatlari-2020-yilinin-ilk-6-ayinda-yuzde-799-artti/20007/"
+   },
+   {
+    "yil": 2026,
+    "ay": "Ağustos",
+    "tl_m2": 48878,
+    "kaynak": "Endeksa (Emlakjet)",
+    "kaynak_url": "https://www.emlakjet.com/emlak-piyasasi/satilik-konut/ankara-etimesgut"
+   }
+  ],
+  "olaylar": [
+   {
+    "id": "koru_ext",
+    "tarih": "2026-07",
+    "baslik": "M2 Koru–Yaşamkent ve Koru–Bağlıca uzatması",
+    "tur": "rayli",
+    "durum": "planli",
+    "kaynak_url": "https://rayhaber.com/2026/07/koru-yasamkent-ve-koru-baglica-metrosunda-geri-sayim-basladi/",
+    "not": "ihale Temmuz 2026'da ilan edildi, sonuç bulunamadı"
+   },
+   {
+    "id": "m6",
+    "tarih": "2025-12-08",
+    "baslik": "M6 Çayyolu–Sincan",
+    "tur": "rayli",
+    "durum": "planli",
+    "kaynak_url": "https://yatirimlar.com/haber/ankara-ya-4-yeni-metro-hatti-toplam-44-kilometrelik-dev-ulasim-hamlesi_249147",
+    "not": "Bağlıca–Eryaman YHT, 12,5 km; belediye meclisi onayı, yatırım programı bekleniyor"
+   },
+   {
+    "id": "b1",
+    "tarih": "2018-04-12",
+    "baslik": "Başkentray Sincan–Kayaş",
+    "tur": "rayli",
+    "durum": "acik",
+    "kaynak_url": "https://www.yenisafak.com/ekonomi/dev-proje-bugun-aciliyor-3224470",
+    "not": "Temmuz 2016'da kapatılıp yenilendi"
+   },
+   {
+    "id": "metromall",
+    "tarih": "2017-09-28",
+    "baslik": "Metromall",
+    "tur": "avm",
+    "durum": "acik",
+    "kaynak_url": "https://tr.wikipedia.org/wiki/Metromall_AVM",
+    "not": ""
+   },
+   {
+    "id": "m3",
+    "tarih": "2014-02-12",
+    "baslik": "M3 Batıkent–OSB Törekent",
+    "tur": "rayli",
+    "durum": "acik",
+    "kaynak_url": "https://en.wikipedia.org/wiki/OSB-Törekent_(Ankara_Metro)",
+    "not": "kaynaklar 12 Şubat ve 13 Mart diyor"
+   },
+   {
+    "id": "optimum",
+    "tarih": "2004-10-29",
+    "baslik": "Optimum Outlet",
+    "tur": "avm",
+    "durum": "acik",
+    "kaynak_url": "https://optimumankara.com/tr/hakkimizda",
+    "not": ""
+   }
+  ]
+ },
+ {
+  "id": "pursaklar",
+  "ad": "Pursaklar",
+  "sinif": "degerlenebilir",
+  "kural": "yapımda ya da sözleşmeli, ilçe ölçeğinde tetikleyici var ve göreli fiyat 2019'dan beri %5'ten fazla artmamış",
+  "neden": "M7 Gar–Esenboğa metrosu ilçede yapımda ya da sözleşmeli. Ankara medyanına göre fiyat 2019'dan bu yana +%3: tetikleyici henüz fiyata yansımamış görünüyor.",
+  "goreli": {
+   "2019": 1.052,
+   "2020": 1.128,
+   "2026": 1.084
+  },
+  "goreli_degisim": 0.031,
+  "fiyat": [
+   {
+    "yil": 2019,
+    "ay": "Haziran",
+    "tl_m2": 1589,
+    "kaynak": "Endeksa (Baret Dergisi)",
+    "kaynak_url": "https://www.baretdergisi.com/ankarada-konut-fiyatlari-2020-yilinin-ilk-6-ayinda-yuzde-799-artti/20007/"
+   },
+   {
+    "yil": 2020,
+    "ay": "Haziran",
+    "tl_m2": 1930,
+    "kaynak": "Endeksa (Baret Dergisi)",
+    "kaynak_url": "https://www.baretdergisi.com/ankarada-konut-fiyatlari-2020-yilinin-ilk-6-ayinda-yuzde-799-artti/20007/"
+   },
+   {
+    "yil": 2026,
+    "ay": "Ağustos",
+    "tl_m2": 39268,
+    "kaynak": "Endeksa (Emlakjet)",
+    "kaynak_url": "https://www.emlakjet.com/emlak-piyasasi/satilik-konut/ankara-pursaklar"
+   }
+  ],
+  "olaylar": [
+   {
+    "id": "m7",
+    "tarih": "2026-09",
+    "baslik": "M7 Gar–Esenboğa metrosu",
+    "tur": "rayli",
+    "durum": "sozlesmeli",
+    "kaynak_url": "https://www.haberankara.com/ankara/pursaklar-esenboga-metro-ihalesi-tamamlandi-319433",
+    "not": "36 km, 12 durak; üç paket sözleşmesi Ağu–Eyl 2026 (34,0 + 42,4 + 54,4 mlr TL). Güzergâh durak adlarının mahalle merkezlerinden; Keçiören'deki duraklar bulunamadı"
+   }
+  ]
+ },
+ {
+  "id": "cubuk",
+  "ad": "Çubuk",
+  "sinif": "korur",
+  "kural": "ilk iki kural geçerli değil",
+  "neden": "Ankara medyanına göre fiyat 2019'dan bu yana +%36. M7 Gar–Esenboğa metrosu ilçede yapımda ya da sözleşmeli, ama göreli fiyat zaten artmış. Göreli yükselişi açıklayan bir kaynak bulunamadı. Esenboğa Havalimanı ilçe sınırında.",
+  "goreli": {
+   "2019": 0.737,
+   "2020": 0.804,
+   "2026": 1.0
+  },
+  "goreli_degisim": 0.356,
+  "fiyat": [
+   {
+    "yil": 2019,
+    "ay": "Haziran",
+    "tl_m2": 1114,
+    "kaynak": "Endeksa (Baret Dergisi)",
+    "kaynak_url": "https://www.baretdergisi.com/ankarada-konut-fiyatlari-2020-yilinin-ilk-6-ayinda-yuzde-799-artti/20007/"
+   },
+   {
+    "yil": 2020,
+    "ay": "Haziran",
+    "tl_m2": 1375,
+    "kaynak": "Endeksa (Baret Dergisi)",
+    "kaynak_url": "https://www.baretdergisi.com/ankarada-konut-fiyatlari-2020-yilinin-ilk-6-ayinda-yuzde-799-artti/20007/"
+   },
+   {
+    "yil": 2026,
+    "ay": "Ağustos",
+    "tl_m2": 36227,
+    "kaynak": "Endeksa (Emlakjet)",
+    "kaynak_url": "https://www.emlakjet.com/emlak-piyasasi/satilik-konut/ankara-cubuk"
+   }
+  ],
+  "olaylar": [
+   {
+    "id": "m7",
+    "tarih": "2026-09",
+    "baslik": "M7 Gar–Esenboğa metrosu",
+    "tur": "rayli",
+    "durum": "sozlesmeli",
+    "kaynak_url": "https://www.haberankara.com/ankara/pursaklar-esenboga-metro-ihalesi-tamamlandi-319433",
+    "not": "36 km, 12 durak; üç paket sözleşmesi Ağu–Eyl 2026 (34,0 + 42,4 + 54,4 mlr TL). Güzergâh durak adlarının mahalle merkezlerinden; Keçiören'deki duraklar bulunamadı"
+   },
+   {
+    "id": "esenboga",
+    "tarih": "2006-10-16",
+    "baslik": "Esenboğa yeni dış hatlar terminali",
+    "tur": "havalimani",
+    "durum": "acik",
+    "kaynak_url": "https://en.wikipedia.org/wiki/Esenbo%C4%9Fa_International_Airport",
+    "not": ""
+   }
+  ]
+ },
+ {
+  "id": "kecioren",
+  "ad": "Keçiören",
+  "sinif": "korur",
+  "kural": "ilk iki kural geçerli değil",
+  "neden": "Ankara medyanına göre fiyat 2019'dan bu yana −%1. İlçe ölçeğinde yapımda ya da sözleşmeli bir tetikleyici yok.",
+  "goreli": {
+   "2019": 1.0,
+   "2020": 1.0,
+   "2026": 0.994
+  },
+  "goreli_degisim": -0.006,
+  "fiyat": [
+   {
+    "yil": 2019,
+    "ay": "Haziran",
+    "tl_m2": 1511,
+    "kaynak": "Endeksa (Baret Dergisi)",
+    "kaynak_url": "https://www.baretdergisi.com/ankarada-konut-fiyatlari-2020-yilinin-ilk-6-ayinda-yuzde-799-artti/20007/"
+   },
+   {
+    "yil": 2020,
+    "ay": "Haziran",
+    "tl_m2": 1711,
+    "kaynak": "Endeksa (Baret Dergisi)",
+    "kaynak_url": "https://www.baretdergisi.com/ankarada-konut-fiyatlari-2020-yilinin-ilk-6-ayinda-yuzde-799-artti/20007/"
+   },
+   {
+    "yil": 2026,
+    "ay": "Ağustos",
+    "tl_m2": 36023,
+    "kaynak": "Endeksa (Emlakjet)",
+    "kaynak_url": "https://www.emlakjet.com/emlak-piyasasi/satilik-konut/ankara-kecioren"
+   }
+  ],
+  "olaylar": [
+   {
+    "id": "m4k",
+    "tarih": "2023-04-12",
+    "baslik": "M4 AKM–Gar–Kızılay bağlantısı",
+    "tur": "rayli",
+    "durum": "acik",
+    "kaynak_url": "https://en.wikipedia.org/wiki/Ankara_Metro",
+    "not": "Keçiören hattını Kızılay'a bağladı"
+   },
+   {
+    "id": "m4",
+    "tarih": "2017-01-05",
+    "baslik": "M4 Şehitler–AKM",
+    "tur": "rayli",
+    "durum": "acik",
+    "kaynak_url": "https://en.wikipedia.org/wiki/Ankara_Metro",
+    "not": ""
+   },
+   {
+    "id": "kuzey_ankara",
+    "tarih": "2005-03",
+    "baslik": "Kuzey Ankara Girişi dönüşümü",
+    "tur": "donusum",
+    "durum": "belirsiz",
+    "kaynak_url": "https://www.lexpera.com.tr/mevzuat/kanunlar/kuzey-ankara-girisi-kentsel-donusum-projesi-kanunu",
+    "not": "5104 sayılı kanun; ~18.000 konut planlandı; güncel durumu doğrulanmadı"
+   }
+  ]
+ },
+ {
+  "id": "altindag",
+  "ad": "Altındağ",
+  "sinif": "degerlenebilir",
+  "kural": "yapımda ya da sözleşmeli, ilçe ölçeğinde tetikleyici var ve göreli fiyat 2019'dan beri %5'ten fazla artmamış",
+  "neden": "M7 Gar–Esenboğa metrosu ilçede yapımda ya da sözleşmeli. Ankara medyanına göre fiyat 2019'dan bu yana −%7: tetikleyici henüz fiyata yansımamış görünüyor. İlçeden iki büyük hastane taşındı (Numune 2019, Dışkapı 2022); fiyata etkisini ölçen bir kaynak bulunamadı.",
+  "goreli": {
+   "2019": 0.998,
+   "2020": 0.932,
+   "2026": 0.93
+  },
+  "goreli_degisim": -0.069,
+  "fiyat": [
+   {
+    "yil": 2019,
+    "ay": "Haziran",
+    "tl_m2": 1508,
+    "kaynak": "Endeksa (Baret Dergisi)",
+    "kaynak_url": "https://www.baretdergisi.com/ankarada-konut-fiyatlari-2020-yilinin-ilk-6-ayinda-yuzde-799-artti/20007/"
+   },
+   {
+    "yil": 2020,
+    "ay": "Haziran",
+    "tl_m2": 1594,
+    "kaynak": "Endeksa (Baret Dergisi)",
+    "kaynak_url": "https://www.baretdergisi.com/ankarada-konut-fiyatlari-2020-yilinin-ilk-6-ayinda-yuzde-799-artti/20007/"
+   },
+   {
+    "yil": 2026,
+    "ay": "Ağustos",
+    "tl_m2": 33678,
+    "kaynak": "Endeksa (Emlakjet)",
+    "kaynak_url": "https://www.emlakjet.com/emlak-piyasasi/satilik-konut/ankara-altindag"
+   }
+  ],
+  "olaylar": [
+   {
+    "id": "m7",
+    "tarih": "2026-09",
+    "baslik": "M7 Gar–Esenboğa metrosu",
+    "tur": "rayli",
+    "durum": "sozlesmeli",
+    "kaynak_url": "https://www.haberankara.com/ankara/pursaklar-esenboga-metro-ihalesi-tamamlandi-319433",
+    "not": "36 km, 12 durak; üç paket sözleşmesi Ağu–Eyl 2026 (34,0 + 42,4 + 54,4 mlr TL). Güzergâh durak adlarının mahalle merkezlerinden; Keçiören'deki duraklar bulunamadı"
+   },
+   {
+    "id": "hidirliktepe",
+    "tarih": "2026-01-30",
+    "baslik": "Hıdırlıktepe–Atıfbey–İsmetpaşa dönüşümü",
+    "tur": "donusum",
+    "durum": "yapimda",
+    "kaynak_url": "https://www.ankara.bel.tr/en/proje/hidirliktepe-atifbey-ismetpasa-kentsel-donusum-ve-gelisim-projesi-305",
+    "not": "60 ay"
+   },
+   {
+    "id": "diskapi",
+    "tarih": "2022-08-17",
+    "baslik": "Dışkapı hastaneleri Etlik'e taşındı",
+    "tur": "kurum",
+    "durum": "kapandi",
+    "kaynak_url": "https://en.wikipedia.org/wiki/Ankara_Etlik_City_Hospital",
+    "not": ""
+   },
+   {
+    "id": "numune",
+    "tarih": "2019-05-26",
+    "baslik": "Numune Hastanesi kapandı (Bilkent'e taşındı)",
+    "tur": "kurum",
+    "durum": "kapandi",
+    "kaynak_url": "https://en.wikipedia.org/wiki/Ankara_Bilkent_City_Hospital",
+    "not": ""
+   },
+   {
+    "id": "b1",
+    "tarih": "2018-04-12",
+    "baslik": "Başkentray Sincan–Kayaş",
+    "tur": "rayli",
+    "durum": "acik",
+    "kaynak_url": "https://www.yenisafak.com/ekonomi/dev-proje-bugun-aciliyor-3224470",
+    "not": "Temmuz 2016'da kapatılıp yenilendi"
+   },
+   {
+    "id": "m4",
+    "tarih": "2017-01-05",
+    "baslik": "M4 Şehitler–AKM",
+    "tur": "rayli",
+    "durum": "acik",
+    "kaynak_url": "https://en.wikipedia.org/wiki/Ankara_Metro",
+    "not": ""
+   },
+   {
+    "id": "gultepe",
+    "tarih": "2006",
+    "baslik": "Gültepe–Aktaş dönüşümü",
+    "tur": "donusum",
+    "durum": "belirsiz",
+    "kaynak_url": "https://www.yapi.com.tr/ankaranin-olayli-mahallesi-cincine-3-bin-210-konut",
+    "not": "3.210 TOKİ konutu"
+   },
+   {
+    "id": "ulus",
+    "tarih": "2005-07-15",
+    "baslik": "Ulus Tarihi Kent Merkezi planı",
+    "tur": "donusum",
+    "durum": "belirsiz",
+    "kaynak_url": "https://ankaradergisi.org/jvi.aspx?pdir=jas&plng=tur&un=JAS-44154",
+    "not": "207 ha; plan onayı"
+   },
+   {
+    "id": "kuzey_ankara",
+    "tarih": "2005-03",
+    "baslik": "Kuzey Ankara Girişi dönüşümü",
+    "tur": "donusum",
+    "durum": "belirsiz",
+    "kaynak_url": "https://www.lexpera.com.tr/mevzuat/kanunlar/kuzey-ankara-girisi-kentsel-donusum-projesi-kanunu",
+    "not": "5104 sayılı kanun; ~18.000 konut planlandı; güncel durumu doğrulanmadı"
+   },
+   {
+    "id": "m1",
+    "tarih": "1997-12-28",
+    "baslik": "M1 Kızılay–Batıkent",
+    "tur": "rayli",
+    "durum": "acik",
+    "kaynak_url": "https://www.dogrula.org/ekipten/ankara-buyuksehir-belediyesi-rayli-sistem-tarihcesi/",
+    "not": "kaynaklar 28 ve 29 Aralık diyor"
+   }
+  ]
+ },
+ {
+  "id": "sincan",
+  "ad": "Sincan",
+  "sinif": "korur",
+  "kural": "ilk iki kural geçerli değil",
+  "neden": "Ankara medyanına göre fiyat 2019'dan bu yana +%10. İlçe ölçeğinde yapımda ya da sözleşmeli bir tetikleyici yok.",
+  "goreli": {
+   "2019": 0.844,
+   "2020": 0.869,
+   "2026": 0.928
+  },
+  "goreli_degisim": 0.099,
+  "fiyat": [
+   {
+    "yil": 2019,
+    "ay": "Haziran",
+    "tl_m2": 1275,
+    "kaynak": "Endeksa (Baret Dergisi)",
+    "kaynak_url": "https://www.baretdergisi.com/ankarada-konut-fiyatlari-2020-yilinin-ilk-6-ayinda-yuzde-799-artti/20007/"
+   },
+   {
+    "yil": 2020,
+    "ay": "Haziran",
+    "tl_m2": 1487,
+    "kaynak": "Endeksa (Baret Dergisi)",
+    "kaynak_url": "https://www.baretdergisi.com/ankarada-konut-fiyatlari-2020-yilinin-ilk-6-ayinda-yuzde-799-artti/20007/"
+   },
+   {
+    "yil": 2026,
+    "ay": "Ağustos",
+    "tl_m2": 33605,
+    "kaynak": "Endeksa (Emlakjet)",
+    "kaynak_url": "https://www.emlakjet.com/emlak-piyasasi/satilik-konut/ankara-sincan"
+   }
+  ],
+  "olaylar": [
+   {
+    "id": "m6",
+    "tarih": "2025-12-08",
+    "baslik": "M6 Çayyolu–Sincan",
+    "tur": "rayli",
+    "durum": "planli",
+    "kaynak_url": "https://yatirimlar.com/haber/ankara-ya-4-yeni-metro-hatti-toplam-44-kilometrelik-dev-ulasim-hamlesi_249147",
+    "not": "Bağlıca–Eryaman YHT, 12,5 km; belediye meclisi onayı, yatırım programı bekleniyor"
+   },
+   {
+    "id": "b1",
+    "tarih": "2018-04-12",
+    "baslik": "Başkentray Sincan–Kayaş",
+    "tur": "rayli",
+    "durum": "acik",
+    "kaynak_url": "https://www.yenisafak.com/ekonomi/dev-proje-bugun-aciliyor-3224470",
+    "not": "Temmuz 2016'da kapatılıp yenilendi"
+   },
+   {
+    "id": "m3",
+    "tarih": "2014-02-12",
+    "baslik": "M3 Batıkent–OSB Törekent",
+    "tur": "rayli",
+    "durum": "acik",
+    "kaynak_url": "https://en.wikipedia.org/wiki/OSB-Törekent_(Ankara_Metro)",
+    "not": "kaynaklar 12 Şubat ve 13 Mart diyor"
+   }
+  ]
+ },
+ {
+  "id": "mamak",
+  "ad": "Mamak",
+  "sinif": "degerlenebilir",
+  "kural": "yapımda ya da sözleşmeli, ilçe ölçeğinde tetikleyici var ve göreli fiyat 2019'dan beri %5'ten fazla artmamış",
+  "neden": "M7 Gar–Esenboğa metrosu, Dikimevi–Natoyolu hafif raylı, Yeni Mamak dönüşümü ilçede yapımda ya da sözleşmeli. Ankara medyanına göre fiyat 2019'dan bu yana +%0: tetikleyici henüz fiyata yansımamış görünüyor.",
+  "goreli": {
+   "2019": 0.884,
+   "2020": 0.852,
+   "2026": 0.884
+  },
+  "goreli_degisim": 0.0,
+  "fiyat": [
+   {
+    "yil": 2019,
+    "ay": "Haziran",
+    "tl_m2": 1335,
+    "kaynak": "Endeksa (Baret Dergisi)",
+    "kaynak_url": "https://www.baretdergisi.com/ankarada-konut-fiyatlari-2020-yilinin-ilk-6-ayinda-yuzde-799-artti/20007/"
+   },
+   {
+    "yil": 2020,
+    "ay": "Haziran",
+    "tl_m2": 1457,
+    "kaynak": "Endeksa (Baret Dergisi)",
+    "kaynak_url": "https://www.baretdergisi.com/ankarada-konut-fiyatlari-2020-yilinin-ilk-6-ayinda-yuzde-799-artti/20007/"
+   },
+   {
+    "yil": 2026,
+    "ay": "Ağustos",
+    "tl_m2": 32010,
+    "kaynak": "Endeksa (Emlakjet)",
+    "kaynak_url": "https://www.emlakjet.com/emlak-piyasasi/satilik-konut/ankara-mamak"
+   }
+  ],
+  "olaylar": [
+   {
+    "id": "m7",
+    "tarih": "2026-09",
+    "baslik": "M7 Gar–Esenboğa metrosu",
+    "tur": "rayli",
+    "durum": "sozlesmeli",
+    "kaynak_url": "https://www.haberankara.com/ankara/pursaklar-esenboga-metro-ihalesi-tamamlandi-319433",
+    "not": "36 km, 12 durak; üç paket sözleşmesi Ağu–Eyl 2026 (34,0 + 42,4 + 54,4 mlr TL). Güzergâh durak adlarının mahalle merkezlerinden; Keçiören'deki duraklar bulunamadı"
+   },
+   {
+    "id": "a2",
+    "tarih": "2025-06-13",
+    "baslik": "Dikimevi–Natoyolu hafif raylı",
+    "tur": "rayli",
+    "durum": "yapimda",
+    "kaynak_url": "https://www.ego.gov.tr/sayfa/2281/dikimevinatoyolu-ankaray-hafif-rayli-sistem-hatti",
+    "not": "temel atma 13 Haz 2025, 8 durak. Güzergâh durak adlarının mahalle merkezlerinden"
+   },
+   {
+    "id": "b1",
+    "tarih": "2018-04-12",
+    "baslik": "Başkentray Sincan–Kayaş",
+    "tur": "rayli",
+    "durum": "acik",
+    "kaynak_url": "https://www.yenisafak.com/ekonomi/dev-proje-bugun-aciliyor-3224470",
+    "not": "Temmuz 2016'da kapatılıp yenilendi"
+   },
+   {
+    "id": "yeni_mamak",
+    "tarih": "2008",
+    "baslik": "Yeni Mamak dönüşümü",
+    "tur": "donusum",
+    "durum": "yapimda",
+    "kaynak_url": "https://www.yeniankara.com.tr/mamak/yeni-mamak-kentsel-donusumde-son-durum-2026da-hangi-etaplar-teslim-edilecek-170851",
+    "not": "8.006 konut, 1.363'ü teslim (2026 1. çeyrek); Oca 2026'da 56,6 mlr TL ihale"
+   }
+  ]
+ },
+ {
+  "id": "akyurt",
+  "ad": "Akyurt",
+  "sinif": "korur",
+  "kural": "ilk iki kural geçerli değil",
+  "neden": "Ankara medyanına göre fiyat 2019'dan bu yana +%28. İlçe ölçeğinde yapımda ya da sözleşmeli bir tetikleyici yok. Göreli yükselişi açıklayan bir kaynak bulunamadı.",
+  "goreli": {
+   "2019": 0.624,
+   "2020": 0.645,
+   "2026": 0.802
+  },
+  "goreli_degisim": 0.285,
+  "fiyat": [
+   {
+    "yil": 2019,
+    "ay": "Haziran",
+    "tl_m2": 943,
+    "kaynak": "Endeksa (Baret Dergisi)",
+    "kaynak_url": "https://www.baretdergisi.com/ankarada-konut-fiyatlari-2020-yilinin-ilk-6-ayinda-yuzde-799-artti/20007/"
+   },
+   {
+    "yil": 2020,
+    "ay": "Haziran",
+    "tl_m2": 1103,
+    "kaynak": "Endeksa (Baret Dergisi)",
+    "kaynak_url": "https://www.baretdergisi.com/ankarada-konut-fiyatlari-2020-yilinin-ilk-6-ayinda-yuzde-799-artti/20007/"
+   },
+   {
+    "yil": 2026,
+    "ay": "Ağustos",
+    "tl_m2": 29042,
+    "kaynak": "Endeksa (Emlakjet)",
+    "kaynak_url": "https://www.emlakjet.com/emlak-piyasasi/satilik-konut/ankara-akyurt"
+   }
+  ],
+  "olaylar": []
+ }
+]
