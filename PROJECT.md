@@ -21,6 +21,31 @@ Yani:
 
 Etkinlik MVP'si bunun ilk parçası (yatırım katmanı).
 
+**Karar (Damla, 25 Eyl 2026 gece):** "almayacağım sadece ürün çıkartıyorum". Komisyon yok, aracılık yok.
+- Emlakçı yetki belgesi gerekmiyor, fiziksel ofis gerekmiyor.
+- İlan gösterildiği an bandl hukuken "ilan platformu" oluyor (TTY m.12/2). O zaman EİDS entegrasyonu zorunlu.
+- EİDS kodunu Bakanlık "ilanlara elektronik ortam sağlayan gerçek veya tüzel kişilere" veriyor (entegrasyon dokümanı v2.2). Yani şirket şartı yazmıyor. Başvuru yolu da yazmıyor: eids@ticaret.gov.tr.
+
+### Plan: ürün ne, veri nereden?
+
+| Ekranda | Veri | Bugün durum |
+|---|---|---|
+| Harita: premium aks mahalleleri | ABB: bina yaşı, plan değişikliği, dava, dönüşüm alanı; raylı hatlar | 18 mahalle çekildi. Ticari kullanım için ABB'den yazılı izin şart. |
+| İlan pinleri ve ilan kartı (fiyat, m², mahalle) | EİDS'ten sonra: ofislerin sahibinden anahtarı, RE/MAX API'si, malikin kendi ilanı | EİDS yok, ilan yok |
+| İlan kartında "bu parselin çevresinde ne değişti?" | İlandaki ada/parsel (EİDS'te zorunlu) + ABB imar adası, plan değişikliği, dava | İlan gelince birleşir. Kimse göstermiyor; Emlakjet'in skorunda bunlar yok. |
+| Mahalle sınıfı (değerlenebilir / korur / düşer) | Mahalle fiyat geçmişi | Yok. Endeksa ya da REIDIN lisansı gerek. Platformun kendi ilan fiyatları zamanla seri olur (sahibinden API koşulu buna izin veriyor mu (D)). |
+
+**Sıra:**
+1. **26 Eyl, GarajX:** ilçe MVP'si olduğu gibi kalıyor.
+2. **Mahalle katmanı:**
+   - Ben: 18 premium mahalle verisini `data/`ya kaynaklı yazarım, Lovable promptunu hazırlarım.
+   - Sen: ABB CBS birimine izin e-postası gönderirsin; taslağı ben yazarım.
+3. **EİDS:** eids@ticaret.gov.tr'ye "gerçek kişi olarak entegre olabilir miyim, şartlar ne?" diye sorulur. Taslağı ben, göndereni sen.
+4. **İlk ilanlar:** sahibinden API'si ofis ofis çalışıyor, her ofis bandl'a kendi anahtarını vermeli.
+   - Hedef mahallelerdeki ofislerle görüşülür: RE/MAX'in Ankara'da 47 ofisi var, Oran ve Dikmen'de yok.
+   - RE/MAX API formu doldurulur.
+5. **Fiyat:** Endeksa ve REIDIN'e lisans fiyatı sorulur.
+
 **10–20 milyon TL ne alır?** Endeksa, Ağu 2026 m² fiyatlarıyla:
 
 | Yer | TL/m² | 10–20 mn TL ile |

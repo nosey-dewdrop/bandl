@@ -31,11 +31,12 @@
 **AÇIK İŞ (blokör):**
 1. 26 Eyl GarajX MVP. Damla: Lovable Pro, Mapbox `pk.` token. Ben: Lovable repo adı gelince `data/` → `src/data/`.
 2. "Sonraki ürün": blokörler 25 Eyl gece araştırıldı (PROJECT.md "Blokörler: ne bulundu?", kaynaklar README'de).
-   Karar Damla'da: ürün şekli (sadece analiz / EİDS'li ilan platformu / yetki belgeli aracı). Türkiye'de "Fine Estate" adlı şirket bulunamadı; tahminle bir şirkete bağlama.
+   Damla karar verdi: komisyon yok, aracılık yok, "sadece ürün". Yetki belgesi ve ofis yok; ilan gelince EİDS. Plan: PROJECT.md "Plan: ürün ne, veri nereden?". Türkiye'de "Fine Estate" adlı şirket bulunamadı; tahminle bir şirkete bağlama.
 3. Premium aks: 18 mahalle için ABB bina yaşı, plan değişikliği, dönüşüm tablosu PROJECT.md'de. Mahalle fiyat serisi hâlâ yok
    (açık seri yok; Endeksa ya da REIDIN lisansı; TKGM Değer Bilgi Merkezi Ankara'ya 2027 ortası).
 
 **KALICI KARARLAR:**
+- bandl aracı değil, ürün: komisyon almaz (Damla, 25 Eyl 2026). Emlakçı yetki belgesi önerme.
 - Uydurma veri yok. Her sayı kaynak URL'li; kaynak yoksa "kaynak bulunamadı".
 - Nominal TL yok; ölçü ilçe m² fiyatının 11 ilçe medyanına oranı. v1 = yapı + Ankara emsalleri + kural; v0'ı geri getirme.
 - Lovable mevcut repoyu içeri alamaz: bu repo spec ve veriyi tutar, uygulama reposu ayrı.
