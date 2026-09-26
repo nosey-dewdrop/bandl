@@ -1,6 +1,6 @@
 """bandl seed -> data/ilceler.json + data/projeler.json
 
-python3 data/build.py
+python3 data/mahalle.py && python3 data/build.py
 
 Kaynaklar README.md'de. Koordinatlar 25 Eyl 2026'da OSM Nominatim'den alındı;
 raylı hat güzergâhları her çalıştırmada OSM API'sinden çekilir.
@@ -153,7 +153,10 @@ YEREL = {
 # --- güçler: "neye göre artar, azalır?" (PROJECT.md "Model"). 26 Eyl 2026 sorguları; ağ çağrısı yok, sabit.
 # bina dönemi: ABB ilçe katmanı; plan ve dava: UİP+NİP değişiklik sınırları (ilçe poligonuyla kesişen);
 # dönüşüm: kentsel dönüşüm alanları; istasyon: metro+ankaray+başkentray; sel: 2017–2025 su baskını kayıtları;
-# okul/park/sağlık: OSM Overpass sayımı. Çubuk ve Akyurt'ta binaların yalnızca %11 ve %25'inin dönemi girilmiş.
+# okul/park/sağlık: OSM Overpass sayımı.
+# ABB'de beşinci bir dönem daha var: "2007 Deprem Yönetmeliği Öncesi" (y2007Oncesi). 1998 öncesi mi sonrası mı ayrılmamış binalar.
+# 26 Eyl ölçümü bunu atladı, Çubuk ve Akyurt'u "dönemi girilmemiş" sandı. 27 Eyl'de düzeltildi: 2018 sonrası payı bütün binalar
+# üstünden; 1998 öncesi payı, binaların %20'sinden fazlası bu kovadaysa ölçülmedi sayılır.
 GUC_HAM = {  # id: (1998 öncesi, 1998–2006, 2007–2017, 2018 sonrası, plan top, plan 2020+, plan davalı, dönüşüm, istasyon, sel, okul, park, sağlık)
     "cankaya": (23276, 31488, 7762, 1920, 3714, 764, 273, 40, 27, 3369, 246, 548, 98),
     "golbasi": (3902, 22708, 3364, 3633, 830, 316, 72, 15, 0, 389, 52, 111, 8),
@@ -169,6 +172,8 @@ GUC_HAM = {  # id: (1998 öncesi, 1998–2006, 2007–2017, 2018 sonrası, plan 
 }
 ABB = "https://baskentcbs.ankara.bel.tr/server/rest/services/"
 OVERPASS = "https://overpass-api.de/api/interpreter"
+Y07_ONCESI = {"cubuk": 19137, "akyurt": 5691, "golbasi": 3896, "sincan": 789}  # ABB ilçe katmanı, 27 Eyl 2026 sorgusu
+AYRILMAMIS_SINIR = 0.2
 GUC_TANIM = [  # id, ad, birim, kaynak
     ("kizilay_km", "Kızılay'a uzaklık", "km", "https://www.openstreetmap.org/"),
     ("bina_km2", "bina yoğunluğu", "bina/km²", ABB_BINA_URL),
@@ -178,6 +183,7 @@ GUC_TANIM = [  # id, ad, birim, kaynak
     ("dava", "davalı plan değişikliği payı", "%", ABB + "plan/PlanRaporu/MapServer/3"),
     ("donusum", "kentsel dönüşüm alanı", "/10.000 bina", ABB + "plan/PlanRaporu/MapServer/2"),
     ("istasyon", "raylı istasyon", "/10.000 bina", ABB + "kentrehberi/ego_kent_Rehberi/MapServer/4"),
+    ("istasyon_km", "raylı istasyona uzaklık (bina ağırlıklı)", "km", ABB + "kentrehberi/ego_kent_Rehberi/MapServer/4"),
     ("kurum", "kurum girişi − çıkışı (2019–2026)", "adet", ""),
     ("sel", "su baskını kaydı (2017–2025)", "/1000 bina", ABB + "hidroloji_analizi/Ankara_Hidroloji_Analizi/MapServer/0"),
     ("okul", "okul", "/1000 bina", OVERPASS),
@@ -195,6 +201,7 @@ HUKUM = {
 GUC_NOT = {
     "yeni_arz": "Endeksa ilan tabanlı: yeni binalar çoğaldıkça ortalama m² karışım yüzünden de yükselir. Neden değil, birlikte hareket.",
     "kurum": "hastane açılışı +1, kurum kapanışı −1; kaynaklar olay listesinde.",
+    "istasyon_km": "Her mahallenin orta noktasından en yakın açık istasyona, bina sayısıyla ağırlıklı. r pozitif: istasyondan uzak ilçeler 2019–2026'da daha çok yükseldi. Birlikte hareket, neden değil.",
 }
 EMSAL = {  # bekleyen proje türü -> Ankara'nın kendi emsali
     "rayli": "Ankara emsali: Keçiören'in metrosu 2023'te Kızılay'a bağlandı, ilçenin göreli fiyatı yerinde saydı. Etki durak çevresinde aranmalı.",
@@ -207,14 +214,17 @@ GELECEK_DURUM = ("sozlesmeli", "yapimda", "planli", "onaylandi")
 
 def guc_olcu(iid, yapi, projeler):
     y98o, y98, y07, y18, pt, p20, pd, dn, ist, sel, okul, park, sag = GUC_HAM[iid]
-    per, b = y98o + y98 + y07 + y18, BINA[iid]
+    b = BINA[iid]; per = y98o + y98 + y07 + y18 + Y07_ONCESI.get(iid, 0)
+    eski = None if Y07_ONCESI.get(iid, 0) / per > AYRILMAMIS_SINIR else y98o / per * 100
     kurum = (sum(1 for p in projeler if iid in p["ilceler"] and p["tur"] == "hastane" and "2019" <= p["tarih"][:4] <= "2026")
              - sum(1 for p in projeler if iid in p["ilceler"] and p["tur"] == "kurum" and p["durum"] == "kapandi" and "2019" <= p["tarih"][:4] <= "2026"))
-    return dict(kizilay_km=yapi["kizilay_km"], bina_km2=yapi["bina_km2"], yeni_arz=y18 / per * 100, eski_stok=y98o / per * 100,
+    return dict(kizilay_km=yapi["kizilay_km"], bina_km2=yapi["bina_km2"], yeni_arz=y18 / per * 100, eski_stok=eski,
                 plan_2020=p20 / b * 1000, dava=pd / pt * 100, donusum=dn / b * 10000, istasyon=ist / b * 10000,
                 kurum=kurum, sel=sel / b * 1000, okul=okul / b * 1000, park=park / b * 1000, saglik=sag / b * 1000)
 
 def guc_hukum(xs, ys, ds, ana):
+    k = [i for i, x in enumerate(xs) if x is not None]  # ölçülemeyen ilçe hükme girmez
+    xs, ys, ds = [xs[i] for i in k], [ys[i] for i in k], [ds[i] for i in k]
     n = len(xs)
     r = statistics.correlation(xs, ys)
     loo = [statistics.correlation([xs[i] for i in range(n) if i != j], [ys[i] for i in range(n) if i != j]) for j in range(n)]
@@ -290,28 +300,33 @@ def main():
     YAPI = f"Ankara'da 2019'dan beri fiyat merkezden çevreye kaydı: ilçenin Kızılay'a uzaklığı ile göreli fiyat değişimi arasında r = {r:.2f} (11 ilçe).".replace(".", ",", 1).replace("r = 0,", "r = 0,")
     # güçler: her birinin 2019–2026 göreli değişimle ilişkisi, 11 ilçede ölçülür; hüküm sayıdan çıkar, elle yazılmaz
     olcu = {iid: guc_olcu(iid, yapi[iid], projeler) for iid in ILCE}
+    mah = json.load(open(D / "mahalleler.json"))["mahalleler"]  # önce: python3 data/mahalle.py
+    for iid in ILCE:
+        ms = [m for m in mah if m["ilce"] == iid and m["bina"]]
+        olcu[iid]["istasyon_km"] = sum(m["bina"] * m["olcu"]["istasyon_km"] for m in ms) / sum(m["bina"] for m in ms)
     ids = list(ILCE); dy = [yapi[i]["degisim"] for i in ids]; dd = [yapi[i]["kizilay_km"] for i in ids]
     hukum = {}
     for gid, gad, birim, kaynak in GUC_TANIM:
         gx = [olcu[i][gid] for i in ids]
         h, gr, gk, loo = guc_hukum(gx, dy, dd, ana=(gid == "kizilay_km"))
         hukum[gid] = dict(hukum=h, r=round(gr, 2), kismi=None if gk is None else round(gk, 2),
-                          aralik=[round(min(loo), 2), round(max(loo), 2)], medyan=statistics.median(gx))
+                          aralik=[round(min(loo), 2), round(max(loo), 2)], medyan=statistics.median(x for x in gx if x is not None),
+                          n=sum(1 for x in gx if x is not None))
     ilceler = []
     for iid, (ad, f19, f20, f26) in ILCE.items():
         goreli = {2019: f19 / medyan[2019], 2020: f20 / medyan[2020], 2026: f26 / medyan[2026]}
         gucler = []
         for gid, gad, birim, kaynak in GUC_TANIM:
             v, H = olcu[iid][gid], hukum[gid]
-            sira = 1 + sum(1 for i in ids if olcu[i][gid] > v)
+            sira = None if v is None else 1 + sum(1 for i in ids if olcu[i][gid] is not None and olcu[i][gid] > v)
             yon = None  # yalnızca kanıtı tutan güçte: bu ilçenin değeri medyanın hangi tarafında, Ankara'da o taraf ne yaptı
-            if H["hukum"] in ("ana", "bagimsiz") and v != H["medyan"]:
+            if v is not None and H["hukum"] in ("ana", "bagimsiz") and v != H["medyan"]:
                 yon = "yukseltir" if (v > H["medyan"]) == (H["r"] > 0) else "dusurur"
             not_ = GUC_NOT.get(gid, "")
-            kapsam = sum(GUC_HAM[iid][:4]) / BINA[iid]
-            if gid in ("yeni_arz", "eski_stok") and kapsam < 0.5:
-                not_ = (f"Bu ilçede binaların yalnızca %{kapsam * 100:.0f}'inin yapım dönemi girilmiş; pay güvenilir değil. " + not_).strip()
-            gucler.append(dict(id=gid, ad=gad, deger=round(v, 1), birim=birim, sira=sira, n=len(ids),
+            if gid == "eski_stok" and v is None:
+                not_ = (f"Bu ilçede binaların %{Y07_ONCESI[iid] / BINA[iid] * 100:.0f}'i ABB'de yalnızca \"2007 öncesi\" diye girilmiş; "
+                        "1998 öncesi payı ayrılamıyor, ölçülmedi. " + not_).strip()
+            gucler.append(dict(id=gid, ad=gad, deger=None if v is None else round(v, 1), birim=birim, sira=sira, n=H["n"],
                                hukum=H["hukum"], hukum_metin=HUKUM[H["hukum"]], r=H["r"], kismi=H["kismi"], aralik=H["aralik"],
                                yon=yon, not_=not_, kaynak_url=kaynak))
         gelecek = [dict(id=p["id"], baslik=p["ad"], tur=p["tur"], durum=p["durum"], tarih=p["tarih"], hedef=p.get("hedef", ""),
