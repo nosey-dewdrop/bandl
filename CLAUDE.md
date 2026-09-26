@@ -1,6 +1,18 @@
 # bandl — şu an ne doğru?
 
-## nerede kaldık — DEVRİ DAİM (26 Eyl 2026, 15:00; GarajX demosu yapıldı)
+## nerede kaldık — DEVRİ DAİM (27 Eyl 2026; mahalle katmanı ve "sana göre" canlı)
+
+**27 Eyl'de ne oldu:** Damla "yap" dedi, iki karar verdi: kapsam 11 ilçenin bütün mahalleleri; ilçenin değer sınıfı
+"sana göre" sıralamasına girmez, yanında durur. ABB verisi için: "ticari kullanım yok, bilgi tasnifi sadece".
+- Canlıda: 608 mahalle sınırı (yakınlık ≥12'de görünür), mahalle paneli (12 ölçü, medyan, kaynak), "sana göre" paneli
+  (12 ölçüte +/−, ilk 10 liste, harita uyuma göre boyanır, seçim adreste `?p=okul,-sel` ve tarayıcıda kalır),
+  ilçe panelinde "mahallelerine bak". Telefon (390 px) CDP emülasyonuyla ilk kez doğrulandı.
+- **Düzeltme, canlıda yanlış yazıyordu:** "2018 sonrası bina payı +0,87 uzaklıktan bağımsız" hatalıydı. ABB'nin "2007 öncesi"
+  kovası atlanmıştı (Çubuk'ta binaların %89'u). Düzeltilince +0,45, zayıf. Ayrıntı PROJECT.md "Okuma".
+- Yeni güç: raylı istasyona uzaklık (bina ağırlıklı) r +0,90, uzaklıktan bağımsız; ama Kızılay'a uzaklıkla r 0,91 iç içe.
+- `CLAUDE.md` canlıda herkese açıktı; `.vercelignore` eklendi, artık yalnızca `index.html` + `src/data/*.json|geojson` yayında.
+- Ekran görüntüsü aracı: `node shot.mjs <url> <png> <w> <h> [mobil] [js]` (CDP; Chrome headless, 390 px emülasyon çalışıyor).
+  Script bu oturumun scratchpad'indeydi; lazım olursa aynı yolla yeniden yazılır (Page.navigate + Emulation.setDeviceMetricsOverride).
 
 **DÜŞÜLEN TUZAKLAR — yeni Claude buna düşme:**
 - Damla konumlanmayı kararlaştırırken kod yazmaya atlama. 26 Eyl: "ui başlamadık", "hâlâ prensipleri
@@ -27,26 +39,24 @@ karar. İstatistiksel bak." Hüküm dili ihtimal, kesin değil. İlan/aracılık
 - Emlakjet, sahibinden, hepsiemlak kazıma yasak. ABB ArcGIS toplu çekimden önce yazılı izin.
 
 **KOD DURUMU:**
-- `bandl/data/build.py` (stdlib): seed + v1 kuralı + 13 güç; çıktılar `ilceler.json`, `projeler.json`, `ilceler.geojson`.
-  Çıktılar `bandl-app/src/data/` altına kopyalanır (elle: `cp bandl/data/*.json* bandl-app/src/data/`).
+- Sıra: `python3 data/mahalle.py && python3 data/build.py` (stdlib). `mahalle.py` ABB + OSM'den 608 mahalleyi çeker
+  (`data/ham/` önbellek, `--cek` yeniler), `mahalleler.json|geojson` yazar. `build.py` 14 güç + v1 kuralı, `ilceler.json`, `projeler.json`;
+  durağa uzaklığı `mahalleler.json`'dan okur. Kopya: `cp bandl/data/*.json bandl/data/*.geojson bandl-app/src/data/`.
 - `bandl-app/index.html`: tek dosya, Leaflet 1.9.4 + OSM karo, ilçe boyası, proje katmanı (40 geometri),
-  sağ panel (sınıf, neden, güçler, gelecek, geçmiş, kaynak linkleri), ilçe linki `#kecioren`.
+  sağ panel (ilçe `#kecioren` ya da mahalle `#cankaya-cayyolu`), sol "sana göre" paneli. Mahalle dosyaları ilk gerektiğinde yüklenir.
 - Canlı: https://bandl.noseydewdrop.com (Vercel proje `bandl-app`; `cd bandl-app && vercel deploy --prod --yes`).
-- Ölçülenler (11 ilçe, 2019→2026 göreli): Kızılay'a uzaklık r=+0,85; 2018 sonrası bina payı +0,87 (uzaklıktan bağımsız +0,66).
+- Ölçülenler (11 ilçe, 2019→2026 göreli): Kızılay'a uzaklık r=+0,85 (ana); durağa uzaklık +0,90 (bağımsız, ama uzaklıkla iç içe);
+  2018 sonrası bina payı +0,45 (zayıf; 27 Eyl düzeltmesi).
   Tablo PROJECT.md "Nasıl sınıflıyor?".
 
-**AÇIK İŞ — Damla'nın 26 Eyl 15:00 yönü:** "daha çok veri çeksin, mahalle düzeyine insin, özelleştirilebilsin,
-+/- onun önceliklerine göre semt önersin."
-1. Mahalle düzeyi. Blokör: mahalle fiyat serisi yok (Endeksa 2020+, lisans; REIDIN 2007+, ücretli; TKGM Ankara 2027 ortası).
-   Fiyatsız yapılabilen: 18 premium mahallenin ABB verisi (bina yaşı, plan değişikliği, dönüşüm, plan adası emsal) zaten çekildi,
-   PROJECT.md "Premium aks". Önce bunu haritaya taşımak fiyat lisansı beklemez.
-2. Daha çok veri. Adaylar PROJECT.md "Güçler" tablosunda: durağa mesafe (hesaplanmadı), kurum giriş/çıkış mahalle düzeyi,
-   ABB jeolojik etüt (katman çoğu yerde boş). Her yeni güç aynı hüküm kuralından geçer (r, tek ilçe çıkarma, uzaklık sabit).
-3. Özelleştirme: kullanıcı önceliklerini seçer (metro, yeni yapı, merkeze yakınlık, sel riski, okul...), güçler ağırlıklanır,
-   ilçe/mahalle sıralaması buna göre değişir, "sana göre" listesi çıkar. Tasarım kararı Damla'nın; önce kâğıt üstünde ne
-   sorulacağı, sonra kod. Hukuk: "sana şu semti öneriyoruz" reklam iddiasıdır; kaynaklı ve "yatırım tavsiyesi değildir" ile.
-4. Zihne giriş aracı (Ries "zihin") ertelendi; kanal Ankara yerel basını.
-5. Telefonda gerçek görünüm DOĞRULANMADI (headless 390 px'e inmiyor). Damla'dan bir bakış yeter.
+**AÇIK İŞ — Damla'nın 26 Eyl yönü:** "daha çok veri çeksin, mahalle düzeyine insin, özelleştirilebilsin, +/- onun önceliklerine göre semt önersin."
+1. ✅ Mahalle düzeyi ve ✅ +/- öncelik sıralaması (27 Eyl). Mahalle fiyat serisi hâlâ yok (Endeksa 2020+ lisans; REIDIN ücretli;
+   TKGM Ankara 2027 ortası); bu yüzden mahalleye sınıf yok, ölçülerin fiyatla ilişkisi mahalle düzeyinde ölçülmedi.
+2. Daha çok veri: ✅ durağa uzaklık. Kalan adaylar: kurum giriş/çıkış mahalle düzeyi, ABB jeolojik etüt (katman çoğu yerde boş),
+   OSM'de eksik okul/park (resmî MEB listesi aranmadı). Her yeni güç aynı hüküm kuralından geçer.
+3. Bütçe süzgeci (10–20 mn TL) yapılamıyor: mahalle m² fiyatı yalnızca PROJECT.md'deki 9 mahallede var ve Emlakjet kaynaklı.
+4. Zihne giriş aracı ertelendi; kanal Ankara yerel basını.
+5. Veri gist'i (Lovable için) güncellenmedi, eski +0,87 hükmünü taşıyor; Lovable bittiği için kullanılmıyor.
 
 **KALICI KARARLAR:**
 - bandl aracı değil, ürün: komisyon yok (25 Eyl). Yetki belgesi önerme.
@@ -55,3 +65,5 @@ karar. İstatistiksel bak." Hüküm dili ihtimal, kesin değil. İlan/aracılık
 - Uygulama tek dosya, Leaflet, Vercel. Tasarım: beyaz zemin, #16191f, tek aksan #17356b, serif başlık, sans gövde,
   sınıf renkleri #2b5cad / #8a94a3 / #c8602a, kutu ve çizgi yok. Karo renkli (Damla 26 Eyl: "daha güzel görünüyor").
 - Bu repo araştırma, spec ve veri; uygulama `bandl-app`.
+- Mahalleye değer sınıfı verilmez (fiyat serisi yok); "sana göre" yalnızca kullanıcının +/- seçimine göre sıralar, "yatırım tavsiyesi değildir".
+- ABB verisi: ticari kullanım yok, bilgi tasnifi (Damla, 27 Eyl).

@@ -8,7 +8,7 @@ bandl satıştan para almaz; her hükmün yanında nedeni, her nedenin yanında 
 - Karşıya konan: **emlakçı** (Endeksa anılmaz)
 - Kategori: **Ankara'nın değer haritası**; isimle birlikte yazılır: "bandl, Ankara'nın değer haritası"
 - İsim: bandl, League of Legends'taki Bandle City'den
-- Ürün: ilçe yaz → hüküm + neden (13 ölçülmüş güç) + geçmiş ve bekleyen projeler, hepsi kaynaklı. 11 ilçe, herkes için, ücretsiz.
+- Ürün: ilçe yaz → hüküm + neden (14 ölçülmüş güç) + geçmiş ve bekleyen projeler, hepsi kaynaklı. Mahalle düzeyinde 12 ölçü ve "sana göre" +/- sıralaması (27 Eyl). 11 ilçe, 608 mahalle, herkes için, ücretsiz.
 - Yok: ilan, aracılık, komisyon.
 - Hüküm dili: ihtimal, kesin değil; dandik olmayacak.
 - Dürüstlük cümlesi: "Paranı nereye yatırman stratejik bir karar. İstatistiksel bak."
@@ -32,7 +32,7 @@ bandl satıştan para almaz; her hükmün yanında nedeni, her nedenin yanında 
 | Bölünme | uyuyor | Skor / neden. |
 | Perspektif | uyuyor | Komisyon yok. |
 | Çizgi uzatma | uymuyor, bilerek | "MVP Ankara; sonra Türkiye, sonra dünya" kalıyor, sahnede söyleniyor. |
-| Fedakârlık | uyuyor | İlan, mahalle, komisyon yok. |
+| Fedakârlık | uyuyor | İlan ve komisyon yok. Mahalle 27 Eyl'de girdi (Damla'nın demo sonrası yönü); mahalleye fiyat sınıfı verilmez. |
 | Nitelik | uyuyor | Kaynak. |
 | Dürüstlük | uyuyor | "Paranı nereye yatırman stratejik bir karar. İstatistiksel bak." |
 | Teklik | uyuyor | Emlakçının komisyonu görünür. |

@@ -30,7 +30,7 @@ Etkinlik MVP'si bunun ilk parçası (yatırım katmanı).
 
 | Ekranda | Veri | Bugün durum |
 |---|---|---|
-| Harita: premium aks mahalleleri | ABB: bina yaşı, plan değişikliği, dava, dönüşüm alanı; raylı hatlar | 18 mahalle çekildi. Ticari kullanım için ABB'den yazılı izin şart. |
+| Harita: premium aks mahalleleri | ABB: bina yaşı, plan değişikliği, dava, dönüşüm alanı; raylı hatlar | 27 Eyl: 11 ilçenin 608 mahallesi çekildi, canlıda. Ticari kullanım yok, bilgi tasnifi (Damla, 27 Eyl). |
 | İlan pinleri ve ilan kartı (fiyat, m², mahalle) | EİDS'ten sonra: ofislerin sahibinden anahtarı, RE/MAX API'si, malikin kendi ilanı | EİDS yok, ilan yok |
 | İlan kartında "bu parselin çevresinde ne değişti?" | İlandaki ada/parsel (EİDS'te zorunlu) + ABB imar adası, plan değişikliği, dava | İlan gelince birleşir. Kimse göstermiyor; Emlakjet'in skorunda bunlar yok. |
 | Mahalle sınıfı (değerlenebilir / korur / düşer) | Mahalle fiyat geçmişi | Yok. Endeksa ya da REIDIN lisansı gerek. Platformun kendi ilan fiyatları zamanla seri olur (sahibinden API koşulu buna izin veriyor mu (D)). |
@@ -38,8 +38,8 @@ Etkinlik MVP'si bunun ilk parçası (yatırım katmanı).
 **Sıra:**
 1. ✅ **26 Eyl, GarajX:** ilçe MVP'si canlı (bandl.noseydewdrop.com, repo `bandl-app`, Leaflet). Demo yapıldı. Lovable kullanılmadı.
 2. **Mahalle katmanı:**
-   - Ben: 18 premium mahalle verisini `data/`ya kaynaklı yazarım, Lovable promptunu hazırlarım.
-   - Sen: ABB CBS birimine izin e-postası gönderirsin; taslağı ben yazarım.
+   - ✅ 27 Eyl: 608 mahalle `data/mahalle.py` ile kaynaklı çekildi; haritada mahalle sınırı, mahalle paneli ve "sana göre" +/- sıralaması canlı.
+   - ABB izin e-postası gerekmedi: ticari kullanım yok, bilgi tasnifi (Damla, 27 Eyl).
 3. **EİDS:** eids@ticaret.gov.tr'ye "gerçek kişi olarak entegre olabilir miyim, şartlar ne?" diye sorulur. Taslağı ben, göndereni sen.
 4. **İlk ilanlar:** sahibinden API'si ofis ofis çalışıyor, her ofis bandl'a kendi anahtarını vermeli.
    - Hedef mahallelerdeki ofislerle görüşülür: RE/MAX'in Ankara'da 47 ofisi var, Oran ve Dikmen'de yok.
@@ -82,7 +82,7 @@ Kuralı Damla ya da ben yazmıyoruz; sistem veriden buluyor.
 |---|---|---|---|
 | Merkezden çevreye kayış | Kızılay'a uzaklık | OSM | ilçe düzeyinde ölçüldü, r = +0,85 |
 | Yapılaşma baskısı (Çukurambar) | plana göre izinli inşaat alanı/km², yıllık plan değişikliği, yeni bina payı | ABB plan adası (emsal, kat), PlanRaporu, bina dönemi | 18 mahallede çekildi |
-| Erişim | raylı durağa uzaklık ve aşama (plan / ihale / yapım / açık) | ABB istasyonlar, EGO, OSM | ilçede istasyon yoğunluğu ölçüldü; durağa mesafe hesaplanmadı |
+| Erişim | raylı durağa uzaklık ve aşama (plan / ihale / yapım / açık) | ABB istasyonlar, EGO, OSM | ilçe: istasyon yoğunluğu ve bina ağırlıklı durağa uzaklık ölçüldü; mahalle: en yakın açık istasyon ve bekleyen hat uzaklığı (27 Eyl) |
 | Kurum girişi ve çıkışı | hastane, üniversite, bakanlık açılışı ve kapanışı | `projeler.json` | ilçe düzeyinde örtüşme var (Altındağ −8, Çankaya +12) |
 | Stok yaşı ve dönüşüm | 1998 öncesi bina payı, dönüşüm alanı | ABB | 18 mahallede çekildi |
 | Hukuki risk | plan iptali, yürütmeyi durdurma | ABB PlanRaporu | 18 mahallede çekildi |
@@ -97,7 +97,7 @@ Kuralı Damla ya da ben yazmıyoruz; sistem veriden buluyor.
   - Endeksa 2020'de başlıyor.
   - Güçler ücretsiz; ağırlıklar lisansa bağlı.
 
-**İlçe düzeyinde ölçüldü (26 Eyl 2026 gecesi, 11 ilçe, 2019–2026 göreli değişim). MVP'ye giren budur.**
+**İlçe düzeyinde ölçüldü (26 Eyl 2026 gecesi, 11 ilçe, 2019–2026 göreli değişim; 27 Eyl'de bina dönemi düzeltildi, durağa uzaklık eklendi). Canlıdaki budur.**
 - Hüküm sayıdan çıkıyor, elle yazılmıyor (`build.py`, `guc_hukum`).
 - Hüküm kuralı:
   - Tek bir ilçe çıkarılınca r'nin işareti değişiyorsa: **kararsız**
@@ -107,9 +107,10 @@ Kuralı Damla ya da ben yazmıyoruz; sistem veriden buluyor.
 | Güç | r | Bir ilçe çıkarılınca | Uzaklık sabitken | Hüküm |
 |---|---|---|---|---|
 | Kızılay'a uzaklık | +0,85 | +0,78 … +0,91 | — | ana güç |
-| 2018 sonrası bina payı | +0,87 | +0,83 … +0,92 | +0,66 | uzaklıktan bağımsız |
+| raylı istasyona uzaklık (bina ağırlıklı) | +0,90 | +0,85 … +0,93 | +0,58 | uzaklıktan bağımsız; ama Kızılay'a uzaklıkla r = 0,91 |
+| 2018 sonrası bina payı | +0,45 | +0,25 … +0,76 | +0,25 | zayıf (26 Eyl'de +0,87 yazıyordu, hatalıydı) |
 | bina yoğunluğu | −0,72 | −0,78 … −0,67 | −0,14 | uzaklığın yansıması |
-| 1998 öncesi bina payı | −0,74 | −0,84 … −0,66 | −0,29 | uzaklığın yansıması |
+| 1998 öncesi bina payı (9 ilçe) | −0,69 | −0,82 … −0,51 | −0,36 | uzaklığın yansıması; Çubuk ve Akyurt ölçülmedi |
 | raylı istasyon (/10.000 bina) | −0,60 | −0,75 … −0,51 | +0,10 | uzaklığın yansıması |
 | su baskını kaydı 2017–2025 | −0,58 | −0,74 … −0,43 | −0,21 | uzaklığın yansıması |
 | okul (/1000 bina) | −0,72 | −0,85 … −0,65 | −0,33 | uzaklığın yansıması |
@@ -123,12 +124,20 @@ Kuralı Damla ya da ben yazmıyoruz; sistem veriden buluyor.
 | yerleşime uygunluk | — | — | — | ölçülemedi: ABB jeolojik etüt katmanı çoğu ilçede boş ya da hata veriyor |
 
 **Okuma:**
-- 2019–2026'da Ankara'yı iki güç sürükledi: merkezden uzaklık ve yeni yapı.
-- Metro, okul, sel, eski stok fiyatla birlikte hareket ediyor, ama bu merkez–çevre farkının yansıması.
-- Yeni yapı payının sonucu Damla'nın Çukurambar sezgisinin (çok bina → düşüş) tersi. Ama iki uyarıyla:
+- 2019–2026'da Ankara'yı sürükleyen güç merkezden uzaklık. Durağa uzaklık da kuraldan "bağımsız" geçiyor, ama Kızılay'a uzaklıkla r = 0,91; 11 noktada ikisini ayırmak zor.
+- Metro yoğunluğu, okul, sel, eski stok fiyatla birlikte hareket ediyor, ama bu merkez–çevre farkının yansıması.
+- **Düzeltme (27 Eyl):** ABB'de beşinci bir bina dönemi var: "2007 öncesi" (1998 öncesi mi sonrası mı ayrılmamış). 26 Eyl ölçümü bunu atladı, Çubuk ve Akyurt'u "dönemi %11 ve %25 girilmiş" sandı. Oysa binaların hepsinin dönemi var: Çubuk'ta %89'u, Akyurt'ta %75'i bu kovada.
+  - Düzeltilince 2018 sonrası payı Çubuk'ta %16,8 → %1,9, Akyurt'ta %21,6 → %5,5; hüküm "uzaklıktan bağımsız, +0,87" → "zayıf, +0,45".
+  - Bu iki ilçe dışındaki 9 ilçede r +0,84, uzaklık sabitken +0,64 kalıyor. Yani kentsel 9 ilçede yeni yapı ile yükseliş birlikte, ama en çok yükselen iki çevre ilçesinde yeni yapı az.
   - Endeksa ilan tabanlı; yeni binalar arttıkça ortalama karışım yüzünden de yükselir.
-  - Çubuk ve Akyurt'ta binaların yalnızca %11 ve %25'inin dönemi girilmiş. Bu iki ilçe çıkarılınca r +0,86, uzaklık sabitken +0,68.
 - Mahalle düzeyinde, bugünkü fiyat seviyesinde tersi görüldü (yeni bina payı ~ fiyat r = −0,51, 9 mahalle). Değişim ölçülmedi.
+
+**Mahalle katmanı (27 Eyl 2026, canlı).**
+- 11 ilçenin 608 mahallesi; üretici `data/mahalle.py`, ham veri `data/ham/` (çekim tarihi ve kaynak URL'si her dosyada).
+- 12 ölçü: Kızılay'a, açık raylı istasyona ve bekleyen raylı hatta uzaklık; 2018 sonrası ve 1998 öncesi bina payı; bina yoğunluğu; su baskını kaydı /1000 bina; 1 km içinde okul, park, hastane ve klinik (OSM); 2020'den beri plan değişikliği /km²; kentsel dönüşüm alanı (mahkemece iptal edilenler hariç).
+- Mahalleye değer sınıfı verilmez: fiyat serisi yok. Panelde ilçenin sınıfı "ilçesi …" diye yazar. Ölçü, hüküm değil.
+- "Sana göre": kullanıcı her ölçüte + ya da − basar; uyum = seçilen ölçütlerde mahallenin 608 içindeki yüzdelik sırasının ortalaması. İlçenin sınıfı sıralamaya girmez (Damla, 27 Eyl). Seçim adreste (`?p=okul,-sel`) ve tarayıcıda kalır.
+- Zayıf yanlar: 1 km sayımları mahallenin orta noktasından (büyük kırsal mahallede yanıltıcı olabilir); OSM'de işaretli olmayan okul ve park sayılmaz; 50'den az binalı mahallede sel oranı ölçülmedi; binalarının %20'sinden fazlası "2007 öncesi" kovasındaysa 1998 öncesi payı ölçülmedi (126 mahalle; 4 mahallede dönem hiç girilmemiş).
 
 **Sınıf kuralı değişmedi (v1).** Güçler panelde "neye göre" olarak görünüyor.
 - Her ilçede her gücün değeri ve 11 ilçe içindeki sırası var.

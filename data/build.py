@@ -201,7 +201,7 @@ HUKUM = {
 GUC_NOT = {
     "yeni_arz": "Endeksa ilan tabanlı: yeni binalar çoğaldıkça ortalama m² karışım yüzünden de yükselir. Neden değil, birlikte hareket.",
     "kurum": "hastane açılışı +1, kurum kapanışı −1; kaynaklar olay listesinde.",
-    "istasyon_km": "Her mahallenin orta noktasından en yakın açık istasyona, bina sayısıyla ağırlıklı. r pozitif: istasyondan uzak ilçeler 2019–2026'da daha çok yükseldi. Birlikte hareket, neden değil.",
+    "istasyon_km": "Her mahallenin orta noktasından en yakın açık istasyona, bina sayısıyla ağırlıklı. r pozitif: istasyondan uzak ilçeler 2019–2026'da daha çok yükseldi. Kızılay'a uzaklıkla çok iç içe (r = 0,91); 11 ilçede ikisini ayırmak zor. Birlikte hareket, neden değil.",
 }
 EMSAL = {  # bekleyen proje türü -> Ankara'nın kendi emsali
     "rayli": "Ankara emsali: Keçiören'in metrosu 2023'te Kızılay'a bağlandı, ilçenin göreli fiyatı yerinde saydı. Etki durak çevresinde aranmalı.",
