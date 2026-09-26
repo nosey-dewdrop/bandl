@@ -4,7 +4,7 @@ Ankara'nın ilçelerini **değerlenebilir / değer korur / değeri düşer** diy
 ve bu sınıfın nedenini, haritada gösterilen projelere ve tarihte olanlara kaynaklı olarak
 bağlayan harita. MVP Ankara; sonra Türkiye, sonra dünya.
 
-Yapım: Lovable. İlk sahne: 26 Eyl 2026, GarajX "Ship in Ankara".
+Yapım: `bandl-app` reposu, tek dosya Leaflet (Lovable 26 Eyl'de denendi, bırakıldı). İlk sahne: 26 Eyl 2026, GarajX "Ship in Ankara", yapıldı.
 
 ---
 
@@ -36,7 +36,7 @@ Etkinlik MVP'si bunun ilk parçası (yatırım katmanı).
 | Mahalle sınıfı (değerlenebilir / korur / düşer) | Mahalle fiyat geçmişi | Yok. Endeksa ya da REIDIN lisansı gerek. Platformun kendi ilan fiyatları zamanla seri olur (sahibinden API koşulu buna izin veriyor mu (D)). |
 
 **Sıra:**
-1. **26 Eyl, GarajX:** ilçe MVP'si olduğu gibi kalıyor.
+1. ✅ **26 Eyl, GarajX:** ilçe MVP'si canlı (bandl.noseydewdrop.com, repo `bandl-app`, Leaflet). Demo yapıldı. Lovable kullanılmadı.
 2. **Mahalle katmanı:**
    - Ben: 18 premium mahalle verisini `data/`ya kaynaklı yazarım, Lovable promptunu hazırlarım.
    - Sen: ABB CBS birimine izin e-postası gönderirsin; taslağı ben yazarım.
