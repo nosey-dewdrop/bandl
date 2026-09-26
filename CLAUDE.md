@@ -43,5 +43,5 @@
 - bandl aracı değil, ürün: komisyon almaz (Damla, 25 Eyl 2026). Emlakçı yetki belgesi önerme.
 - Uydurma veri yok. Her sayı kaynak URL'li; kaynak yoksa "kaynak bulunamadı".
 - Nominal TL yok; ölçü ilçe m² fiyatının 11 ilçe medyanına oranı. v1 = yapı + Ankara emsalleri + kural; v0'ı geri getirme.
-- Lovable mevcut repoyu içeri alamaz: bu repo spec ve veriyi tutar, uygulama reposu ayrı.
+- Bu repo araştırma, spec ve veri. Uygulama: `nosey-dewdrop/bandl-app` (26 Eyl 2026, Damla: "repo aç, araştırmalar ayrı").
 - Tasarım referansı ir-globe'un editoryal dili (PROJECT.md).

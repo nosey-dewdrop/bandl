@@ -4,6 +4,7 @@ Ankara'nın ilçelerini **değerlenebilir / değer korur / değeri düşer** diy
 bu sınıfın nedenini haritadaki projelere ve tarihte olanlara kaynaklı olarak bağlayan harita.
 
 Ürün tanımı, sınıflama kuralları ve Lovable promptları: [PROJECT.md](PROJECT.md).
+Uygulama ayrı repoda: `nosey-dewdrop/bandl-app` (`data/` çıktıları orada `src/data/`).
 Bu dosya: neden var, hangi kaynaklara bakıldı, repoda hangi varlıklar var.
 
 ---
