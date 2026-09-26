@@ -1,6 +1,6 @@
 # bandl — şu an ne doğru?
 
-## nerede kaldık — DEVRİ DAİM (25 Eyl 2026 gece)
+## nerede kaldık — DEVRİ DAİM (26 Eyl 2026 gece; GarajX bugün 11:00)
 
 **DÜŞÜLEN TUZAKLAR — yeni Claude buna düşme:**
 - Siteyi sen kodlamazsın; uygulamayı Lovable yapar. Senin işin plan, mentorluk, veri, araştırma.
@@ -10,6 +10,8 @@
 - "Olmuyor" deme, veriyle dene. Damla: "denesene tekrar nasıl olmuyo." v0 kuralı ("metro geliyorsa
   değerlenebilir") veriyle test edilince çöktü.
 - İsim Damla'nın: bandl. "emsal"i önerdim, reddetti. İsim önerme, anlam uydurma.
+- Araştırmayı yığın olarak verme; ürüne bağla, tasnife çevir. Damla: "sadece araştırma yığını mı var",
+  "araştırmada kalmasını istemiyorum". MVP ilçe düzeyinde kalıyor; mahalle ve ilanlar etkinlikten sonra.
 - Ürünü haritaya küçültme. Yeni yön: "maps + sahibinden + hürriyet emlak karışımı ama üstüne yatırım
   tavsiyeli, remax / fine estate gibi, ama 10-20m'a ev alabilecek insanlar için". Ayrıntı: PROJECT.md "Sonraki ürün".
 
